@@ -1,11 +1,9 @@
-import MegaMenu from "@components/MegaMenu";
-import MegaMenuMobile from "@components/MegaMenuMobile";
+import MegaMenu from "../MegaMenu";
 import device from "../../utils/mediaUtils";
 import styled from "styled-components";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { MyContextTheme } from "pages/_app";
 
 const MegaMenuParent = styled.div`
   width: 100%;
@@ -35,44 +33,35 @@ const MegaMenuParentMobile = styled.div`
   }
 `;
 
-export default function index({ data }) {
+export default function Index() {
   const [n, setN] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [pageUrl, setPageUrl] = useState();
 
   const router = useRouter();
-
-  
-
-  // let flag = true;
-  // if (flag) {
-  // 	setTimeout(() => {
-  // 		setUpdateVar((t) => t + 1);
-  // 	}, 2000);
-
-  // 	flag = false;
-  // }
+  console.log("DEMOOOOOOOOOOOOOOO", n);
   
   return (
     <div>
-		
       <MegaMenuParent>
-        <MegaMenu
-          n={n}
-          setN={setN}
-          loading={loading}
-          setLoading={setLoading}
-        />
+        <MegaMenu n={n} setN={setN} loading={loading} setLoading={setLoading} />
       </MegaMenuParent>
 
-      <MegaMenuParentMobile>
+      {/* <MegaMenuParentMobile>
         <MegaMenuMobile
+          pinCodeModal={pinCodeModal}
+          setPinCodeModal={setPinCodeModal}
+          pinCode={pinCode}
+          setPinCode={setPinCode}
           n={n}
+          pinCodeError={pinCodeError}
+          setPinCodeError={setPinCodeError}
           setN={setN}
           loading={loading}
           setLoading={setLoading}
+          storePinCode={storePinCode}
+          handleZipcodeChange={handleZipcodeChange}
         />
-      </MegaMenuParentMobile>
+      </MegaMenuParentMobile> */}
     </div>
   );
 }
