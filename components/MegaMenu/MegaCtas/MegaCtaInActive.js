@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from "../../../utils/mediaUtils"
+import device from '../../../utils/mediaUtils';
 
 const CtaStyle = styled.span`
 	display: block;

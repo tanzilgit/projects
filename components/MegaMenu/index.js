@@ -1,11 +1,9 @@
 import React from "react";
 import device from "../../utils/mediaUtils";
-// import device from "../../utils/mediaUtils"
 
-// import BlackBar from './BlackBar';
+import BlackBar from "./BlackBar";
 import Garage from "./MenuDropDown/Garage";
 import Outdoor from "./MenuDropDown/Outdoor";
-import TopBar from "./TopBar";
 import WhiteBar from "./WhiteBar";
 
 import styled from "styled-components";
@@ -15,9 +13,7 @@ import Kitchen from "./MenuDropDown/Kitchen";
 import Home from "./MenuDropDown/Home";
 import Flooring from "./MenuDropDown/Flooring";
 import Services from "./MenuDropDown/Services";
-import WhatsNew from "./MenuDropDown/WhatsNew";
-// import InputField from '@components/NAPFormComponents/InputField';
-// import { DefaultButton } from '@components/CommonComponents';
+
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
@@ -59,6 +55,49 @@ const Div = styled.div`
     transition: 0.6s;
     z-index: 2;
   }
+  .pinCode-Modal {
+    position: absolute;
+    width: 800px;
+    height: 200px;
+    background-color: #fff;
+    top: calc(50vh - 85px);
+    left: calc(50vw - 400px);
+    box-shadow: 0 8px 17px 2px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%),
+      0 5px 5px -3px rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      line-height: 1;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .input-field {
+      width: 600px;
+    }
+    .input-field-row {
+      position: relative;
+
+      .loader {
+        position: absolute;
+        right: -56px;
+      }
+    }
+    .field {
+      height: 80px;
+    }
+    /* .input-field-row + .input-field-row {
+			margin-top: 15px;
+		} */
+    p + .input-field-row {
+      margin-top: 15px;
+    }
+  }
 `;
 
 function MegaMenu({ n, setN, loading, setLoading }) {
@@ -82,7 +121,7 @@ function MegaMenu({ n, setN, loading, setLoading }) {
     tempDropDown[index] = true;
     setDropDown([...dropDown]);
     setBackDropToggle(true);
-    setN(n + 1);
+    // setN(n + 1);
   }
   function closeAllDropDownHandler() {
     let tempDropDown = dropDown;
@@ -100,7 +139,6 @@ function MegaMenu({ n, setN, loading, setLoading }) {
       }}
     >
       <Div>
-        <TopBar />
         {/* <BlackBar /> */}
         <WhiteBar
           megaMenuDropDownHandler={megaMenuDropDownHandler}
@@ -116,7 +154,6 @@ function MegaMenu({ n, setN, loading, setLoading }) {
           {dropDown[4] && <Flooring />}
           {dropDown[5] && <Sale />}
           {dropDown[6] && <Services />}
-          {dropDown[7] && <WhatsNew />}
         </div>
 
         {backDropToggle && (

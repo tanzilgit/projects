@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from "../../utils/mediaUtils"
+import device from '../../utils/mediaUtils';
 
 const Div = styled.div`
 	width: 100%;
@@ -115,12 +115,7 @@ function WhiteBar({ megaMenuDropDownHandler, dropDown }) {
 				>
 					Services
 				</div>
-				{/* <div
-					className={dropDown[7] ? 'menu-box active' : 'menu-box'}
-					onClick={() => megaMenuDropDownHandler(7)}
-				>
-					What's New
-				</div> */}
+				
 			</div>
 		</Div>
 	);
