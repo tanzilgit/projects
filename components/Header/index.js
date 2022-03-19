@@ -974,13 +974,13 @@ function Header({ data }) {
         <meta
           name="og:type"
           content={
-            pageUrl == data?.metaID ? data?.metaType : "NEWAGE META Type"
+            pageUrl == data?.metaID ? data?.metaType : "Tanzil META Type"
           }
         />
         <meta
           property="og:title"
           content={
-            pageUrl == data?.metaID ? data?.metaTitle : "NewAge Products"
+            pageUrl == data?.metaID ? data?.metaTitle : "Tanzil WorkBase"
           }
         />
         <meta
@@ -988,7 +988,7 @@ function Header({ data }) {
           content={
             data?.metaDescription != null
               ? data?.metaDescription
-              : "Organize and enjoy your space with premium NewAge home improvement products. Modular designs make it easy to create customized storage solutions for garage, kitchen, outdoor kitchen, home bar and more."
+              : "Meta Description"
           }
         />
 
@@ -1000,7 +1000,7 @@ function Header({ data }) {
               : "https://workbase.vercel.app/"
           }
         />
-        <meta property="og:site_name" content="NewAge Products (US)" />
+        <meta property="og:site_name" content="Tanzil WorkBase Site Name" />
 
         {/* Twitter Meta Fields */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -1009,13 +1009,13 @@ function Header({ data }) {
           content={
             pageUrl == data?.metaID
               ? data?.metaTwitterDescription
-              : "NewAge Products"
+              : "Tanzil WorkBase"
           }
         />
         <meta
           name="twitter:title"
           content={
-            pageUrl == data?.metaID ? data?.metaTwitterTitle : "NewAge Products"
+            pageUrl == data?.metaID ? data?.metaTwitterTitle : "Tanzil WorkBase"
           }
         />
       </Head>
