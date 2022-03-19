@@ -935,9 +935,7 @@ function Header({ data }) {
 
   // getSiteType(setSiteType);
 
-  const handleSearchClick = () => {
-    setShowInput(true);
-  };
+  
 
   return (
     <>
