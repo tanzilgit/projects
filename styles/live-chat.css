@@ -1,0 +1,163 @@
+.embeddedServiceSidebar.modalContainer {
+  display: block !important;
+  position: fixed !important;
+  z-index: 5000 !important;
+  height: 100% ;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0 !important;
+  bottom: 0;
+}
+.embeddedServiceSidebar.layout-docked .dockableContainer.showDockableContainer {
+  font-size: 16px;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+}
+.embeddedServiceSidebarForm.formContent {
+  height: auto !important;
+  margin-bottom: 0 !important;
+}
+.embeddedServiceSidebarForm.formContent .fieldList {
+  margin: 0;
+  padding: 15px 15px 15px;
+}
+.embeddedServiceSidebarForm .embeddedServiceSidebarFormField {
+  margin-left: 0 !important;
+}
+.inputSplitName.embeddedServiceSidebarFormField:nth-child(2) {
+  margin-left: 20px !important;
+}
+.embeddedServiceSidebarForm.buttonWrapper {
+  text-align: right !important;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+label.uiLabel-left.form-element__label.uiLabel span {
+  font-size: 20px;
+  font-family: 'ProximaNova Semi Bold';
+  color: #9FABB7;
+  padding: 0 16px;
+}
+label.uiLabel-left.form-element__label.uiLabel span.required {
+  padding: 0;
+  line-height: normal;
+}
+.embeddedServiceSidebarForm .fieldList .uiInputText:last-child input, .embeddedServiceSidebarFormField .slds-style-inputtext {
+  border: 2px solid #9FABB7 !important;
+  height: 55px !important;
+  border-radius: 20px !important;
+}
+.embeddedServiceSidebarFormField .slds-style-inputtext {
+  display: inline-block;
+  line-height: 30px;
+  box-sizing: border-box;
+  box-shadow: none;
+  height: 58px;
+  border-radius: 20px;
+}
+.buttonWrapper.embeddedServiceSidebarForm {
+  width: 100%;
+  display: block;
+  padding: 0;
+  float: left;
+  height: auto;
+}
+button.startButton.uiButton--default.uiButton.embeddedServiceSidebarButton {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  /* float: right; */
+  font-size: 0;
+  background: url(../public/assets/submit.png) no-repeat #0073C1 center;
+  display: inline-block;
+  border-radius: 50px;
+}
+.buttonWrapper.embeddedServiceSidebarForm {
+  position: relative !important;
+  padding: 0 !important;
+}
+.embeddedServiceLiveAgentStatePrechatDefaultUI {
+  overflow: auto !important;
+}
+.inputSelect.embeddedServiceSidebarFormField {
+  display: none;
+}
+.chasitorInputWrapper.dynamicResizeTextOneRow.text.embeddedServiceLiveAgentStateChatInputFooter {
+  background: none;
+  border-top: 2px solid #707070;
+}
+.embeddedServiceLiveAgentStateChatInputFooter .chasitorControls .uiInput {
+  outline: none !important;
+  border: 0 !important;
+}
+.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.chasitor.plaintextContent {
+  background: #0072BC;
+  font-family: 'PROXIMANOVA REGULAR' !important;
+  font-size: 16px;
+}
+[embeddedservice-chatheader_chatheader-host] {
+  background-color: rgb(0 114 188) !important;
+}
+button.minimizeButton {
+  display: none;
+}
+.embeddedServiceSidebar.layout-docked .dockableContainer {
+  border-radius: 0 !important;
+}
+.embeddedServiceSidebarButton {
+  background-color: #0072bc !important;
+  font-family: 'PROXIMANOVA REGULAR' !important;
+}
+button.dialogButton.dialog-button-1.uiButton--inverse.uiButton.embeddedServiceSidebarButton {
+  background: #CCC !important;
+}
+.waitingStateButtonContainer {
+  padding: 0 !important;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+button.waitingCancelChat.uiButton--inverse.uiButton.embeddedServiceSidebarButton:hover {
+  font-size: 16px;
+  color: #FFF !important;
+  width: 300px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.4s;
+  background-position: 20px;
+}
+
+button.waitingCancelChat.uiButton--inverse.uiButton.embeddedServiceSidebarButton {
+  background: url(../public/assets/back.png) no-repeat #0073C1 center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  margin-right: 20px;
+  font-size: 0;
+  color: #FFF;
+}
+.embeddedServiceSidebarButton.uiButton--inverse .label {
+  color: #FFF;
+}
+button.waitingCancelChat.uiButton--inverse.uiButton.embeddedServiceSidebarButton:focus,
+.embeddedServiceSidebarButton.uiButton--inverse .label {
+  color: #FFF !important;
+  text-decoration: none !important;
+}
+.embeddedServiceLiveAgentStateChat .endChatContainer .endChatButton+button {
+  margin-top: 10px;
+}
+
+/* main css */
+
