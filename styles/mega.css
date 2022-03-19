@@ -1,0 +1,347 @@
+.menu-separator + .menu-separator {
+	margin-top: 30px;
+}
+
+.img-col .menu-separator + .menu-separator {
+	margin-top: auto;
+}
+.MenuCtaHeaderWrapper + .MenuCtaSubLinkWrapper,
+.MenuCtaSubLinkWrapper + .MenuCtaSubLinkWrapper,
+.MegaCtaInActiveWrapper + .MegaCtaSimpleWrapper,
+.MegaCtaSimpleWrapper + .MegaCtaSimpleWrapper {
+	margin-top: 10px;
+}
+.MegaCtaInActiveWrapper {
+	margin-bottom: 10px;
+}
+.img-col img {
+	/* margin-bottom: 30px; */
+	margin-bottom: 15px;
+}
+.ds-flex {
+	display: flex;
+	line-height: 1;
+}
+.ds-flex .popular-section {
+	margin-left: 0;
+}
+
+/*  */
+.right-menu .main-col {
+	width: 100%;
+	/* display: flex;
+	flex-direction: column; */
+}
+.right-menu .main-col {
+    padding: 0;
+}
+.right-menu .main-col + .main-col {
+    /* padding-left: 30px; */
+    margin-left: 20px;
+}
+/* Garage */
+.garage-header-main .left-menu {
+	/* width: 60%;  */
+    width: 810px;
+    justify-content: space-between;
+    /* padding-right: 20px; */
+    padding-right: 0;
+}
+.garage-header-main .right-menu {
+	/* width: 40%; */
+	width: 462px;
+}
+.garage-header-main .left-menu .main-col {
+	/* width: calc(33.33% - 10px); */
+	/* width: 220px; */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.garage-header-main .right-menu {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 2px solid #a6b1bd;
+    /* padding-left: 30px; */
+    width: 542px;	
+    flex-direction: column;
+}
+.right-side-wrapper {
+    display: flex;
+    width: 100%;
+	padding-left: 20px;
+}
+
+/* Outdoor */
+
+.outdoor-header-main .left-menu .main-col {
+	/* width: calc(33.33% - 20px); */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.spacer {
+	flex: 1;
+}
+.outdoor-header-main .left-menu {
+	/* width: 66.66%; */
+	width: 810px;
+	justify-content: space-between;
+	padding-right: 0;
+}
+.main-col {
+	/* width: 33.33%; */
+	width: 100%;
+	padding-right: 20px;
+}
+.outdoor-header-main .left-menu.ca {
+    width: 540px;
+}
+/* .ca .fourth-col.main-col.img-col {
+	width: 50%;
+}
+.ca .first-col.main-col {
+	width: 50%;
+} */
+.services-header-main .main-col {
+	/* width: calc(25% - 20px); */
+	width: 100%;
+}
+
+.outdoor-header-main .right-menu {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 2px solid #a6b1bd;
+    /* padding-left: 30px; */
+    width: 542px;
+	flex-direction: column;
+}
+.outdoor-header-main .right-menu.ca {
+	flex-direction: unset;
+}
+/*  */
+/* .outdoor-header-main .left-menu.ca {
+	width: 50%;
+}
+.outdoor-header-main .right-menu.ca {
+	width: 50%;
+} */
+
+
+/* Kitchen */
+.kitchen-header-main .right-menu {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 2px solid #a6b1bd;
+    /* padding-left: 30px; */
+    width: 542px;
+    flex-direction: column;
+}
+.right-menu .wid-100 {
+	width: 100%;
+	/* height: 15px; */
+	height: auto;
+	padding-left: 20px;
+}
+.sale-header-main .right-menu .wid-100 {
+	/* margin-bottom: 30px; */
+	margin-bottom: 15px;
+}
+
+
+
+/* Kitchen */
+.kitchen-header-main .left-menu {
+	/* width: 50%; */
+	width: 540px;
+}
+.kitchen-header-main .left-menu .main-col,
+.home-header-main .left-menu .main-col {
+	/* width: 50%; */
+}
+/* Home */
+
+.home-header-main .left-menu {
+	width: 540px;
+	/* justify-content: space-between; */
+}
+.home-header-main .right-menu {
+	/* width: 50%;
+	flex-wrap: wrap;
+	border-left: 2px solid #a6b1bd;
+	padding-left: 30px; */
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 2px solid #a6b1bd;
+    /* padding-left: 30px; */
+    width: 542px;
+	flex-direction: column;
+}
+/* Flooring */
+
+.flooring-header-main .left-menu {
+	/* width: 66%; */
+	width: 540px;
+	/* justify-content: space-between; */
+}
+.flooring-header-main .right-menu {
+    width: 252px;
+    flex-wrap: wrap;
+    border-left: 2px solid #a6b1bd;
+    padding-left: 0;
+	flex-direction: column;
+}
+.flooring-header-main .left-menu .main-col {
+	/* width: calc(50% - 15px); */
+}
+.flooring-header-main .right-menu .main-col {
+	width: 100%;
+}
+.flooring-header-main .spacer {
+	display: block;
+	margin-top: 35px;
+}
+/* SALE */
+.sale-header-main .menu-separator + .menu-separator,
+.services-header-main .menu-separator + .menu-separator {
+	margin-top: 15px;
+}
+.sale-header-main .left-menu {
+	/* width: 75%; */
+	width: 810px;
+}
+.sale-header-main .main-col {
+	width: 100%;
+}
+
+.left-menu .sale-title {
+	padding: 5px;
+	padding-left: 0;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.sale-header-main .left-menu .red-title {
+	color: #fff;
+	background-color: red;
+	padding-left: 15px;
+	width: 80%;
+	/* padding: 5px; */
+}
+.sale-header-main .right-menu {
+	width: 252px;
+    flex-wrap: wrap;
+    border-left: 2px solid #a6b1bd;
+    padding-left: 0;
+}
+.sale-header-main .right-menu .menu-separator + .menu-separator {
+	margin-top: 35px;
+}
+.sale-header-main .MenuCtaHeaderWrapper + .MenuCtaHeaderWrapper {
+	margin-top: 10px;
+}
+
+/* Services */
+.services-header-main .left-menu {
+	/* width: 100%; */
+	/* for 4 columns 1080px */
+	/* width: 1080px; */
+
+	/* for 3 columns 800px */
+	width: 800px;
+	justify-content: space-between;
+}
+.ca.services-header-main .left-menu {
+		width: 540px;
+		justify-content: space-between;
+}
+.services-header-main .MenuCtaHeaderWrapper,
+.services-header-main .MenuCtaHeaderWrapper a {
+	display: inline;
+	font-size: 16px;
+}
+.services-header-main .left-menu .sale-title {
+	padding: 0;
+}
+.services-header-main .main-col {
+	padding-right: 0;
+}
+.services-header-main .main-col + .main-col {
+	/* padding-left: 20px; */
+	margin-left: 20px;
+}
+
+/* .main-col {
+	padding-right: 0;
+}
+.main-col + .main-col {
+	padding-left: 30px;
+}
+.main-col.img-col {
+    padding-right: 30px;
+} */
+/* WhatsNew */
+.menu-img {
+	width: 240px;
+}
+.menu-separator .grey {
+	margin-top: 30px;
+}
+.outdoor-header-main .ca .wid-100 {
+	height: auto;
+}
+.garage-header-main .right-menu .wid-100 {
+	/* height: 30px; */
+	height: auto;
+}
+.kitchen-header-main .right-menu .wid-100,
+.home-header-main .right-menu .wid-100 {
+	width: 100%;
+	/* height: 35px; */
+}
+/* Media Queries Start here */
+@media (max-width: 1700px) {
+	/* .outdoor-header-main .left-menu .main-col {
+		width: 24%;
+	} */
+	/* .main-col {
+		padding-right: 30px;
+	} */
+	.left-menu .sale-title {
+		font-size: 18px;
+	}
+	.menu-img {
+		width: 200px;
+	}
+	/* .right-menu .wid-100 {
+		height: 15px;
+	} */
+	/* .outdoor-header-main .right-menu .wid-100 {
+		height: 30px;
+	} */
+}
+@media (max-width: 1410px) {
+	.garage-header-main .left-menu {
+		width: 675px;
+	}
+	.outdoor-header-main .left-menu {
+		width: 675px;
+	}
+}
+@media (max-width: 1300px) {
+	.main-col {
+		padding-right: 15px;
+	}
+	.left-menu .sale-title {
+		font-size: 13px;
+	}
+	.menu-separator span {
+		font-size: 13px;
+	}
+	.services-header-main .MenuCtaHeaderWrapper a {
+		font-size: 13px;
+	}
+	.menu-img {
+		width: auto;
+	}
+}
