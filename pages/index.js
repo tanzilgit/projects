@@ -1,11 +1,44 @@
 import Head from "next/head";
 import Image from "next/image";
+import BannerSwatch from "../components/BannerSwatch";
 import Header from "../components/Header";
 import HeroBanner from "../components/HeroBanner";
 import MegaMenu from "../components/MegaMenu";
 // import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  // Image Swatch Change, Datas
+  const Data1 = {
+    heading: <>Shaker-style design in three distinct colors.</>,
+    description: (
+      <>
+        <h4 className="sub-heading">
+          Our unique finishes and cabinetry colors let you build a bar that’s a
+          show-stopping centrepiece for any space.
+        </h4>
+        <h4 className="sub-heading">
+          Available in classic white, elegant gray, and rich espresso.
+        </h4>
+      </>
+    ),
+    types: [
+      {
+        swatch_color: "/assets/bannerSwatch/reactjs-icon.png",
+        image_url: "/assets/bannerSwatch/reactjs.png",
+        // mobile_image_url: "/assets/mobile/shaker-bar-cabinets-grey.jpg",
+      },
+      {
+        swatch_color: "/assets/bannerSwatch/nextjs-icon-2.png",
+        image_url: "/assets/bannerSwatch/nextjs.jpg",
+        // mobile_image_url: "/assets/mobile/shaker-bar-cabinets-grey.jpg",
+      },
+      {
+        swatch_color: "/assets/bannerSwatch/wp-icon.png",
+        image_url: "/assets/bannerSwatch/wp-banner.jpg",
+        // mobile_image_url: "/assets/mobile/shaker-bar-cabinets-white.jpg",
+      },
+    ],
+  };
   return (
     <div className="">
       <Head>
@@ -16,6 +49,7 @@ export default function Home() {
       <MegaMenu />
       <Header />
       <HeroBanner />
+      <BannerSwatch {...Data1} />
     </div>
   );
 }

@@ -1,0 +1,438 @@
+/***** Adding Font sizes for Large screen Desktops ****/
+.napf-lg-55 {font-size: 55px;}
+.napf-lg-54 {font-size: 54px;}
+.napf-lg-53 {font-size: 53px;}
+.napf-lg-52 {font-size: 52px;}
+.napf-lg-51 {font-size: 51px;}
+.napf-lg-50 {font-size: 50px;}
+.napf-lg-49 {font-size: 49px;}
+.napf-lg-48 {font-size: 48px;}
+.napf-lg-47 {font-size: 47px;}
+.napf-lg-46 {font-size: 46px;}
+.napf-lg-45 {font-size: 45px;}
+.napf-lg-44 {font-size: 44px;}
+.napf-lg-43 {font-size: 43px;}
+.napf-lg-42 {font-size: 42px;}
+.napf-lg-41 {font-size: 41px;}
+.napf-lg-40 {font-size: 40px;}
+.napf-lg-39 {font-size: 39px;}
+.napf-lg-38 {font-size: 38px;}
+.napf-lg-37 {font-size: 37px;}
+.napf-lg-36 {font-size: 36px;}
+.napf-lg-35 {font-size: 35px;}
+.napf-lg-34 {font-size: 34px;}
+.napf-lg-33 {font-size: 33px;}
+.napf-lg-32 {font-size: 32px;}
+.napf-lg-31 {font-size: 31px;}
+.napf-lg-30 {font-size: 30px;}
+.napf-lg-29 {font-size: 29px;}
+.napf-lg-28 {font-size: 28px;}
+.napf-lg-27 {font-size: 27px;}
+.napf-lg-26 {font-size: 26px;}
+.napf-lg-25 {font-size: 25px;}
+.napf-lg-24 {font-size: 24px;}
+.napf-lg-23 {font-size: 23px;}
+.napf-lg-22 {font-size: 22px;}
+.napf-lg-21 {font-size: 21px;}
+.napf-lg-20 {font-size: 20px;}
+.napf-lg-19 {font-size: 19px;}
+.napf-lg-18 {font-size: 18px;}
+.napf-lg-17 {font-size: 17px;}
+.napf-lg-16 {font-size: 16px;}
+.napf-lg-15 {font-size: 15px;}
+.napf-lg-14 {font-size: 14px;}
+.napf-lg-13 {font-size: 13px;}
+.napf-lg-12 {font-size: 12px;}
+.napf-lg-11 {font-size: 11px;}
+.napf-lg-10 {font-size: 10px;}
+
+@media screen and (max-width: 1440px) {
+    /***** Unsetting Font sizes for Large screen Desktops ****/
+    .napf-lg-55 {font-size: unset;}
+    .napf-lg-54 {font-size: unset;}
+    .napf-lg-53 {font-size: unset;}
+    .napf-lg-52 {font-size: unset;}
+    .napf-lg-51 {font-size: unset;}
+    .napf-lg-50 {font-size: unset;}
+    .napf-lg-49 {font-size: unset;}
+    .napf-lg-48 {font-size: unset;}
+    .napf-lg-47 {font-size: unset;}
+    .napf-lg-46 {font-size: unset;}
+    .napf-lg-45 {font-size: unset;}
+    .napf-lg-44 {font-size: unset;}
+    .napf-lg-43 {font-size: unset;}
+    .napf-lg-42 {font-size: unset;}
+    .napf-lg-41 {font-size: unset;}
+    .napf-lg-40 {font-size: unset;}
+    .napf-lg-39 {font-size: unset;}
+    .napf-lg-38 {font-size: unset;}
+    .napf-lg-37 {font-size: unset;}
+    .napf-lg-36 {font-size: unset;}
+    .napf-lg-35 {font-size: unset;}
+    .napf-lg-34 {font-size: unset;}
+    .napf-lg-33 {font-size: unset;}
+    .napf-lg-32 {font-size: unset;}
+    .napf-lg-31 {font-size: unset;}
+    .napf-lg-30 {font-size: unset;}
+    .napf-lg-29 {font-size: unset;}
+    .napf-lg-28 {font-size: unset;}
+    .napf-lg-27 {font-size: unset;}
+    .napf-lg-26 {font-size: unset;}
+    .napf-lg-25 {font-size: unset;}
+    .napf-lg-24 {font-size: unset;}
+    .napf-lg-23 {font-size: unset;}
+    .napf-lg-22 {font-size: unset;}
+    .napf-lg-21 {font-size: unset;}
+    .napf-lg-20 {font-size: unset;}
+    .napf-lg-19 {font-size: unset;}
+    .napf-lg-18 {font-size: unset;}
+    .napf-lg-17 {font-size: unset;}
+    .napf-lg-16 {font-size: unset;}
+    .napf-lg-15 {font-size: unset;}
+    .napf-lg-14 {font-size: unset;}
+    .napf-lg-13 {font-size: unset;}
+    .napf-lg-12 {font-size: unset;}
+    .napf-lg-11 {font-size: unset;}
+    .napf-lg-10 {font-size: unset;}
+    
+    /***** Adding Font sizes for Medium screen Desktops ****/
+    .napf-md-55 {font-size: 55px;}
+    .napf-md-54 {font-size: 54px;}
+    .napf-md-53 {font-size: 53px;}
+    .napf-md-52 {font-size: 52px;}
+    .napf-md-51 {font-size: 51px;}
+    .napf-md-50 {font-size: 50px;}
+    .napf-md-49 {font-size: 49px;}
+    .napf-md-48 {font-size: 48px;}
+    .napf-md-47 {font-size: 47px;}
+    .napf-md-46 {font-size: 46px;}
+    .napf-md-45 {font-size: 45px;}
+    .napf-md-44 {font-size: 44px;}
+    .napf-md-43 {font-size: 43px;}
+    .napf-md-42 {font-size: 42px;}
+    .napf-md-41 {font-size: 41px;}
+    .napf-md-40 {font-size: 40px;}
+    .napf-md-39 {font-size: 39px;}
+    .napf-md-38 {font-size: 38px;}
+    .napf-md-37 {font-size: 37px;}
+    .napf-md-36 {font-size: 36px;}
+    .napf-md-35 {font-size: 35px;}
+    .napf-md-34 {font-size: 34px;}
+    .napf-md-33 {font-size: 33px;}
+    .napf-md-32 {font-size: 32px;}
+    .napf-md-31 {font-size: 31px;}
+    .napf-md-30 {font-size: 30px;}
+    .napf-md-29 {font-size: 29px;}
+    .napf-md-28 {font-size: 28px;}
+    .napf-md-27 {font-size: 27px;}
+    .napf-md-26 {font-size: 26px;}
+    .napf-md-25 {font-size: 25px;}
+    .napf-md-24 {font-size: 24px;}
+    .napf-md-23 {font-size: 23px;}
+    .napf-md-22 {font-size: 22px;}
+    .napf-md-21 {font-size: 21px;}
+    .napf-md-20 {font-size: 20px;}
+    .napf-md-19 {font-size: 19px;}
+    .napf-md-18 {font-size: 18px;}
+    .napf-md-17 {font-size: 17px;}
+    .napf-md-16 {font-size: 16px;}
+    .napf-md-15 {font-size: 15px;}
+    .napf-md-14 {font-size: 14px;}
+    .napf-md-13 {font-size: 13px;}
+    .napf-md-12 {font-size: 12px;}
+    .napf-md-11 {font-size: 11px;}
+    .napf-md-10 {font-size: 10px;}
+}
+
+@media screen and (max-width: 1170px) {
+    /***** Unsetting Font sizes for Medium screen Desktops ****/
+    .napf-md-55 {font-size: unset;}
+    .napf-md-54 {font-size: unset;}
+    .napf-md-53 {font-size: unset;}
+    .napf-md-52 {font-size: unset;}
+    .napf-md-51 {font-size: unset;}
+    .napf-md-50 {font-size: unset;}
+    .napf-md-49 {font-size: unset;}
+    .napf-md-48 {font-size: unset;}
+    .napf-md-47 {font-size: unset;}
+    .napf-md-46 {font-size: unset;}
+    .napf-md-45 {font-size: unset;}
+    .napf-md-44 {font-size: unset;}
+    .napf-md-43 {font-size: unset;}
+    .napf-md-42 {font-size: unset;}
+    .napf-md-41 {font-size: unset;}
+    .napf-md-40 {font-size: unset;}
+    .napf-md-39 {font-size: unset;}
+    .napf-md-38 {font-size: unset;}
+    .napf-md-37 {font-size: unset;}
+    .napf-md-36 {font-size: unset;}
+    .napf-md-35 {font-size: unset;}
+    .napf-md-34 {font-size: unset;}
+    .napf-md-33 {font-size: unset;}
+    .napf-md-32 {font-size: unset;}
+    .napf-md-31 {font-size: unset;}
+    .napf-md-30 {font-size: unset;}
+    .napf-md-29 {font-size: unset;}
+    .napf-md-28 {font-size: unset;}
+    .napf-md-27 {font-size: unset;}
+    .napf-md-26 {font-size: unset;}
+    .napf-md-25 {font-size: unset;}
+    .napf-md-24 {font-size: unset;}
+    .napf-md-23 {font-size: unset;}
+    .napf-md-22 {font-size: unset;}
+    .napf-md-21 {font-size: unset;}
+    .napf-md-20 {font-size: unset;}
+    .napf-md-19 {font-size: unset;}
+    .napf-md-18 {font-size: unset;}
+    .napf-md-17 {font-size: unset;}
+    .napf-md-16 {font-size: unset;}
+    .napf-md-15 {font-size: unset;}
+    .napf-md-14 {font-size: unset;}
+    .napf-md-13 {font-size: unset;}
+    .napf-md-12 {font-size: unset;}
+    .napf-md-11 {font-size: unset;}
+    .napf-md-10 {font-size: unset;}
+    
+    /***** Adding Font sizes for Tablet screens ****/
+    .napf-tab-55 {font-size: 55px;}
+    .napf-tab-54 {font-size: 54px;}
+    .napf-tab-53 {font-size: 53px;}
+    .napf-tab-52 {font-size: 52px;}
+    .napf-tab-51 {font-size: 51px;}
+    .napf-tab-50 {font-size: 50px;}
+    .napf-tab-49 {font-size: 49px;}
+    .napf-tab-48 {font-size: 48px;}
+    .napf-tab-47 {font-size: 47px;}
+    .napf-tab-46 {font-size: 46px;}
+    .napf-tab-45 {font-size: 45px;}
+    .napf-tab-44 {font-size: 44px;}
+    .napf-tab-43 {font-size: 43px;}
+    .napf-tab-42 {font-size: 42px;}
+    .napf-tab-41 {font-size: 41px;}
+    .napf-tab-40 {font-size: 40px;}
+    .napf-tab-39 {font-size: 39px;}
+    .napf-tab-38 {font-size: 38px;}
+    .napf-tab-37 {font-size: 37px;}
+    .napf-tab-36 {font-size: 36px;}
+    .napf-tab-35 {font-size: 35px;}
+    .napf-tab-34 {font-size: 34px;}
+    .napf-tab-33 {font-size: 33px;}
+    .napf-tab-32 {font-size: 32px;}
+    .napf-tab-31 {font-size: 31px;}
+    .napf-tab-30 {font-size: 30px;}
+    .napf-tab-29 {font-size: 29px;}
+    .napf-tab-28 {font-size: 28px;}
+    .napf-tab-27 {font-size: 27px;}
+    .napf-tab-26 {font-size: 26px;}
+    .napf-tab-25 {font-size: 25px;}
+    .napf-tab-24 {font-size: 24px;}
+    .napf-tab-23 {font-size: 23px;}
+    .napf-tab-22 {font-size: 22px;}
+    .napf-tab-21 {font-size: 21px;}
+    .napf-tab-20 {font-size: 20px;}
+    .napf-tab-19 {font-size: 19px;}
+    .napf-tab-18 {font-size: 18px;}
+    .napf-tab-17 {font-size: 17px;}
+    .napf-tab-16 {font-size: 16px;}
+    .napf-tab-15 {font-size: 15px;}
+    .napf-tab-14 {font-size: 14px;}
+    .napf-tab-13 {font-size: 13px;}
+    .napf-tab-12 {font-size: 12px;}
+    .napf-tab-11 {font-size: 11px;}
+    .napf-tab-10 {font-size: 10px;}
+}
+@media screen and (max-width: 990px) {
+
+    /***** Unsetting Font sizes for Tablet screens ****/
+    .napf-tab-55 {font-size: unset;}
+    .napf-tab-54 {font-size: unset;}
+    .napf-tab-53 {font-size: unset;}
+    .napf-tab-52 {font-size: unset;}
+    .napf-tab-51 {font-size: unset;}
+    .napf-tab-50 {font-size: unset;}
+    .napf-tab-49 {font-size: unset;}
+    .napf-tab-48 {font-size: unset;}
+    .napf-tab-47 {font-size: unset;}
+    .napf-tab-46 {font-size: unset;}
+    .napf-tab-45 {font-size: unset;}
+    .napf-tab-44 {font-size: unset;}
+    .napf-tab-43 {font-size: unset;}
+    .napf-tab-42 {font-size: unset;}
+    .napf-tab-41 {font-size: unset;}
+    .napf-tab-40 {font-size: unset;}
+    .napf-tab-39 {font-size: unset;}
+    .napf-tab-38 {font-size: unset;}
+    .napf-tab-37 {font-size: unset;}
+    .napf-tab-36 {font-size: unset;}
+    .napf-tab-35 {font-size: unset;}
+    .napf-tab-34 {font-size: unset;}
+    .napf-tab-33 {font-size: unset;}
+    .napf-tab-32 {font-size: unset;}
+    .napf-tab-31 {font-size: unset;}
+    .napf-tab-30 {font-size: unset;}
+    .napf-tab-29 {font-size: unset;}
+    .napf-tab-28 {font-size: unset;}
+    .napf-tab-27 {font-size: unset;}
+    .napf-tab-26 {font-size: unset;}
+    .napf-tab-25 {font-size: unset;}
+    .napf-tab-24 {font-size: unset;}
+    .napf-tab-23 {font-size: unset;}
+    .napf-tab-22 {font-size: unset;}
+    .napf-tab-21 {font-size: unset;}
+    .napf-tab-20 {font-size: unset;}
+    .napf-tab-19 {font-size: unset;}
+    .napf-tab-18 {font-size: unset;}
+    .napf-tab-17 {font-size: unset;}
+    .napf-tab-16 {font-size: unset;}
+    .napf-tab-15 {font-size: unset;}
+    .napf-tab-14 {font-size: unset;}
+    .napf-tab-13 {font-size: unset;}
+    .napf-tab-12 {font-size: unset;}
+    .napf-tab-11 {font-size: unset;}
+    .napf-tab-10 {font-size: unset;}
+
+    /***** Adding Font sizes for smaller Tablet screens ****/
+    .napf-st-55 {font-size: 55px;}
+    .napf-st-54 {font-size: 54px;}
+    .napf-st-53 {font-size: 53px;}
+    .napf-st-52 {font-size: 52px;}
+    .napf-st-51 {font-size: 51px;}
+    .napf-st-50 {font-size: 50px;}
+    .napf-st-49 {font-size: 49px;}
+    .napf-st-48 {font-size: 48px;}
+    .napf-st-47 {font-size: 47px;}
+    .napf-st-46 {font-size: 46px;}
+    .napf-st-45 {font-size: 45px;}
+    .napf-st-44 {font-size: 44px;}
+    .napf-st-43 {font-size: 43px;}
+    .napf-st-42 {font-size: 42px;}
+    .napf-st-41 {font-size: 41px;}
+    .napf-st-40 {font-size: 40px;}
+    .napf-st-39 {font-size: 39px;}
+    .napf-st-38 {font-size: 38px;}
+    .napf-st-37 {font-size: 37px;}
+    .napf-st-36 {font-size: 36px;}
+    .napf-st-35 {font-size: 35px;}
+    .napf-st-34 {font-size: 34px;}
+    .napf-st-33 {font-size: 33px;}
+    .napf-st-32 {font-size: 32px;}
+    .napf-st-31 {font-size: 31px;}
+    .napf-st-30 {font-size: 30px;}
+    .napf-st-29 {font-size: 29px;}
+    .napf-st-28 {font-size: 28px;}
+    .napf-st-27 {font-size: 27px;}
+    .napf-st-26 {font-size: 26px;}
+    .napf-st-25 {font-size: 25px;}
+    .napf-st-24 {font-size: 24px;}
+    .napf-st-23 {font-size: 23px;}
+    .napf-st-22 {font-size: 22px;}
+    .napf-st-21 {font-size: 21px;}
+    .napf-st-20 {font-size: 20px;}
+    .napf-st-19 {font-size: 19px;}
+    .napf-st-18 {font-size: 18px;}
+    .napf-st-17 {font-size: 17px;}
+    .napf-st-16 {font-size: 16px;}
+    .napf-st-15 {font-size: 15px;}
+    .napf-st-14 {font-size: 14px;}
+    .napf-st-13 {font-size: 13px;}
+    .napf-st-12 {font-size: 12px;}
+    .napf-st-11 {font-size: 11px;}
+    .napf-st-10 {font-size: 10px;}
+}
+@media screen and (max-width: 767px) {
+    /***** Unsetting Font sizes for smaller Tablet screens ****/
+    .napf-st-55 {font-size: unset;}
+    .napf-st-54 {font-size: unset;}
+    .napf-st-53 {font-size: unset;}
+    .napf-st-52 {font-size: unset;}
+    .napf-st-51 {font-size: unset;}
+    .napf-st-50 {font-size: unset;}
+    .napf-st-49 {font-size: unset;}
+    .napf-st-48 {font-size: unset;}
+    .napf-st-47 {font-size: unset;}
+    .napf-st-46 {font-size: unset;}
+    .napf-st-45 {font-size: unset;}
+    .napf-st-44 {font-size: unset;}
+    .napf-st-43 {font-size: unset;}
+    .napf-st-42 {font-size: unset;}
+    .napf-st-41 {font-size: unset;}
+    .napf-st-40 {font-size: unset;}
+    .napf-st-39 {font-size: unset;}
+    .napf-st-38 {font-size: unset;}
+    .napf-st-37 {font-size: unset;}
+    .napf-st-36 {font-size: unset;}
+    .napf-st-35 {font-size: unset;}
+    .napf-st-34 {font-size: unset;}
+    .napf-st-33 {font-size: unset;}
+    .napf-st-32 {font-size: unset;}
+    .napf-st-31 {font-size: unset;}
+    .napf-st-30 {font-size: unset;}
+    .napf-st-29 {font-size: unset;}
+    .napf-st-28 {font-size: unset;}
+    .napf-st-27 {font-size: unset;}
+    .napf-st-26 {font-size: unset;}
+    .napf-st-25 {font-size: unset;}
+    .napf-st-24 {font-size: unset;}
+    .napf-st-23 {font-size: unset;}
+    .napf-st-22 {font-size: unset;}
+    .napf-st-21 {font-size: unset;}
+    .napf-st-20 {font-size: unset;}
+    .napf-st-19 {font-size: unset;}
+    .napf-st-18 {font-size: unset;}
+    .napf-st-17 {font-size: unset;}
+    .napf-st-16 {font-size: unset;}
+    .napf-st-15 {font-size: unset;}
+    .napf-st-14 {font-size: unset;}
+    .napf-st-13 {font-size: unset;}
+    .napf-st-12 {font-size: unset;}
+    .napf-st-11 {font-size: unset;}
+    .napf-st-10 {font-size: unset;}
+    
+    /***** Adding Font sizes for Mobile screens ****/
+    .napf-sm-55 {font-size: 55px;}
+    .napf-sm-54 {font-size: 54px;}
+    .napf-sm-53 {font-size: 53px;}
+    .napf-sm-52 {font-size: 52px;}
+    .napf-sm-51 {font-size: 51px;}
+    .napf-sm-50 {font-size: 50px;}
+    .napf-sm-49 {font-size: 49px;}
+    .napf-sm-48 {font-size: 48px;}
+    .napf-sm-47 {font-size: 47px;}
+    .napf-sm-46 {font-size: 46px;}
+    .napf-sm-45 {font-size: 45px;}
+    .napf-sm-44 {font-size: 44px;}
+    .napf-sm-43 {font-size: 43px;}
+    .napf-sm-42 {font-size: 42px;}
+    .napf-sm-41 {font-size: 41px;}
+    .napf-sm-40 {font-size: 40px;}
+    .napf-sm-39 {font-size: 39px;}
+    .napf-sm-38 {font-size: 38px;}
+    .napf-sm-37 {font-size: 37px;}
+    .napf-sm-36 {font-size: 36px;}
+    .napf-sm-35 {font-size: 35px;}
+    .napf-sm-34 {font-size: 34px;}
+    .napf-sm-33 {font-size: 33px;}
+    .napf-sm-32 {font-size: 32px;}
+    .napf-sm-31 {font-size: 31px;}
+    .napf-sm-30 {font-size: 30px;}
+    .napf-sm-29 {font-size: 29px;}
+    .napf-sm-28 {font-size: 28px;}
+    .napf-sm-27 {font-size: 27px;}
+    .napf-sm-26 {font-size: 26px;}
+    .napf-sm-25 {font-size: 25px;}
+    .napf-sm-24 {font-size: 24px;}
+    .napf-sm-23 {font-size: 23px;}
+    .napf-sm-22 {font-size: 22px;}
+    .napf-sm-21 {font-size: 21px;}
+    .napf-sm-20 {font-size: 20px;}
+    .napf-sm-19 {font-size: 19px;}
+    .napf-sm-18 {font-size: 18px;}
+    .napf-sm-17 {font-size: 17px;}
+    .napf-sm-16 {font-size: 16px;}
+    .napf-sm-15 {font-size: 15px;}
+    .napf-sm-14 {font-size: 14px;}
+    .napf-sm-13 {font-size: 13px;}
+    .napf-sm-12 {font-size: 12px;}
+    .napf-sm-11 {font-size: 11px;}
+    .napf-sm-10 {font-size: 10px;}
+}
