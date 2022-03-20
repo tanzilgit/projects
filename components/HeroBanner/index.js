@@ -6,7 +6,6 @@ import { NAPContainer } from "../CommonComponents"
 
 const Container = styled.section`
   position: relative;
-  margin-bottom: -5px;
   .desc-content {
     position: absolute;
     left: 3%;
