@@ -29,10 +29,14 @@ export const ParentContainer = styled.div`
 
 export const BannerSwatchContainer = styled.div`
   display: flex;
-  flex-direction: ${(props) => (props.flex_direction ? "row-reverse" : "row")};
+  /* flex-direction: ${(props) =>
+    props.flex_direction ? "row-reverse" : "row"}; */
+  flex-direction: ${(props) => props.flex_direction};
+  justify-content: center;
+  text-align: center;
 `;
 export const FloatContent = styled.div`
-  float: left;
+  /* float: left;
   width: 35%;
   position: absolute;
   display: flex;
@@ -41,11 +45,14 @@ export const FloatContent = styled.div`
   color: #fff;
   top: 50%;
   left: 5%;
-  transform: translate(0, -50%);
+  transform: translate(0, -50%); */
+  text-align: center;
 
   .swatch-wrapper {
     display: flex;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin: 20px 0;
+    justify-content: center;
   }
 
   img + img {
@@ -89,6 +96,9 @@ export const SwatchImage = styled.img`
   width: 60px;
   height: 60px;
   cursor: pointer;
+  + img {
+    margin-left: 20px:
+  }
   ${device.tablet} {
     width: 50px;
     height: 50px;
@@ -119,26 +129,33 @@ const BannerSwatch = ({
           />
         </div> */}
 
-        <FloatContent className={`float-swatch ${cname}`}>
-          <h3 className="main-heading ff-psb first-content">{heading}</h3>
-          <h3 className="sub-heading ff-pr second-content">{description}</h3>
-          <div className="swatch-wrapper">
-            {/* Swatch Images here */}
-            {types.map(({ swatch_color }, index) => (
-              <SwatchImage
-                className={`swatch-img ${index}`}
-                key={index}
-                src={swatch_color}
-                activated={index === typeIndex}
-                onClick={() => setTypeIndex(index)}
-              />
-            ))}
-          </div>
-        </FloatContent>
+        <div className="main-container">
+          <FloatContent className={`float-swatch ${cname}`}>
+            <h3 className="main-heading ff-psb first-content">{heading}</h3>
+            <h3 className="sub-heading ff-pr second-content">{description}</h3>
+            <div className="swatch-wrapper">
+              {/* Swatch Images here */}
+              {types.map(({ swatch_color }, index) => (
+                <SwatchImage
+                  className={`swatch-img ${index}`}
+                  key={index}
+                  src={swatch_color}
+                  activated={index === typeIndex}
+                  onClick={() => setTypeIndex(index)}
+                />
+              ))}
+            </div>
+          </FloatContent>
+        </div>
 
         {/* Banner image here */}
         <div className="image-wrapper showInDesktop">
-          <img className=" full-width" src={types[typeIndex].image_url} alt=""  />
+          <img
+            className="full-width"
+            src={types[typeIndex].image_url}
+            layout="responsive"
+            alt=""
+          />
         </div>
 
         {/* When we use Image Tag of NextJS the Images blinks on change click */}
