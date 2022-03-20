@@ -16,7 +16,7 @@ export const ParentContainer = styled.div`
     width: 100%;
   }
   .image-wrapper.showInDesktop span {
-    padding: 0 !important;
+    padding: 18% !important;
   }
   .relative {
     position: relative;
