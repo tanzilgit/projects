@@ -11,8 +11,12 @@ export const ParentContainer = styled.div`
     width: 100%;
   }
   .image-wrapper {
+    position: relative;
     display: inline-block;
     width: 100%;
+  }
+  .image-wrapper.showInDesktop span {
+    padding: 0 !important;
   }
   .relative {
     position: relative;
@@ -97,7 +101,7 @@ export const SwatchImage = styled.img`
   height: 60px;
   cursor: pointer;
   + img {
-    margin-left: 20px:
+    margin-left: 20px;
   }
   ${device.tablet} {
     width: 50px;
@@ -150,10 +154,12 @@ const BannerSwatch = ({
 
         {/* Banner image here */}
         <div className="image-wrapper showInDesktop">
-          <img
-            className="full-width"
+          <Image
+            className="custom-image full-width"
             src={types[typeIndex].image_url}
             layout="responsive"
+            width="100%"
+            height="100%"
             alt=""
           />
         </div>
