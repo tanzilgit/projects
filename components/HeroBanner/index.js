@@ -93,7 +93,7 @@ function HeroBanner({
               height={desktop.height || 950}
               priority={priority}
               layout="responsive"
-              alt={alt || "newage-webbbb"}
+              alt={alt || "alt-image"}
             />
           </DesktopImage>
           {imageDesc && (
@@ -110,7 +110,7 @@ function HeroBanner({
           height={mobile.height || 730}
           layout="responsive"
           priority={priority}
-          alt={alt || "newage-webbbb"}
+          alt={alt || "alt-image"}
         />
       </MobileImage>
       <ContentContainer className="hello content-container" direction="column">
