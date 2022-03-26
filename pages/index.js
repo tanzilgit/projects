@@ -11,6 +11,7 @@ import GridRowItems from "../components/GridRowItems";
 import Slider from "react-slick";
 import CompareSlider from "../components/CompareSlider";
 import LeftRightBanner from "../components/LeftRightBanner";
+import BannerSlider from "../components/BannerSlider";
 
 const IndexWrapper = styled.div`
   header {
@@ -277,7 +278,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      {/*  */}
+      <section className="left-right-component">
+        <header>
+          <h3
+            className="main-heading ff-psb first-content"
+            style={{ marginBottom: "30px" }}
+          >
+            Dynamic Left Right Layout Component
+          </h3>
+        </header>
         <LeftRightBanner
           className="lr-first"
           desktop={{ src: "/assets/LeftRight-banner.jpg" }}
@@ -289,26 +299,78 @@ export default function Home() {
         >
           <header className="showInDesktop">
             <h3 className="main-heading ff-psb first-content">
-              Get creative with floating shelves
+              LeftRight Component Heading
             </h3>
             <p className="sub-heading ff-pr second-content">
-              Perfect for plants, photos, collectibles or glassware, these
-              minimalist shelves let you add your own personal touch to any bar
-              space.
+              LeftRight Component Sub Heading
             </p>
           </header>
           <header className="showInMobile">
             <h3 className="main-heading ff-psb first-content">
-              Floating Shelving
+              LeftRight Component Heading
             </h3>
             <p className="sub-heading ff-pr second-content">
-              Perfect for plants, photos, collectibles or glassware, these
-              minimalist shelves let you add your own personal touch to any bar
-              space.
+              LeftRight Component Sub Heading
+            </p>
+          </header>
+        </LeftRightBanner>
+
+        {/*  */}
+
+        <LeftRightBanner
+          className="lr-first"
+          desktop={{ src: "/assets/LeftRight-banner.jpg" }}
+          mobile={{
+            src: "/assets/LeftRight-banner.jpg",
+            width: 405,
+            height: 390,
+          }}
+          reverse
+          mobReverse
+        >
+          <header className="showInDesktop">
+            <h3 className="main-heading ff-psb first-content">
+              LeftRight Component Heading
+            </h3>
+            <p className="sub-heading ff-pr second-content">
+              LeftRight Component Sub Heading
+            </p>
+          </header>
+          <header className="showInMobile">
+            <h3 className="main-heading ff-psb first-content">
+              LeftRight Component Heading
+            </h3>
+            <p className="sub-heading ff-pr second-content">
+              LeftRight Component Sub Heading
             </p>
           </header>
         </LeftRightBanner>
       </section>
+      {/*  */}
+
+      {/*  */}
+      <section className="banner-slider">
+        <BannerSlider arrows arrowsColor="#FFF">
+          <div className="showInDesktop">
+            <Image
+              src="/assets/1920-1.jpg"
+              alt="Banner-slider"
+              layout="fill"
+            />
+            <Image
+              src="/assets/1920-2.jpg"
+              alt="Banner-slider"
+              layout="fill"
+            />
+            <Image
+              src="/assets/1920-3.jpg"
+              alt="Banner-slider"
+              layout="fill"
+            />
+          </div>
+        </BannerSlider>
+      </section>
+      {/*  */}
 
       {/*  */}
       <section className="bannerSwatch section-top-padding">
