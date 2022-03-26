@@ -1,15 +1,16 @@
-import React from "react"
-import Link from "next/link"
+/* eslint-disable @next/next/no-img-element */
+import React from "react";
+import Link from "next/link";
 
-import styled from "styled-components"
-import { NAPContainer } from "../CommonComponents"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import device from "@utils/mediaUtils"
-import ArrowBackIcon from "@material-ui/icons/ArrowBack"
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward"
-import NAPButton from "@components/NAPButton"
+import styled from "styled-components";
+import { NAPContainer } from "../CommonComponents";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import device from "@utils/mediaUtils";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import NAPButton from "@components/NAPButton";
 const SectionWrap = styled.section`
   position: relative;
   width: 100%;
@@ -19,17 +20,17 @@ const SectionWrap = styled.section`
   ${device.tablet} {
     margin: 0;
   }
-`
+`;
 const Header = styled.header`
   text-align: center;
   color: ${(props) => (props.black ? "white" : "black")};
-`
+`;
 const NapContainer = styled(NAPContainer)`
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-`
+`;
 const Main = styled.h3`
   font-size: 25px;
   color: ${(props) => (props.black ? "#33ccff" : "#337ab7")};
@@ -61,7 +62,7 @@ const Main = styled.h3`
   @media screen and (max-width: 990px) {
     font-size: 20px;
   }
-`
+`;
 const Description = styled.p`
   font-size: 20px;
   padding: 0;
@@ -76,13 +77,13 @@ const Description = styled.p`
     font-size: 14px;
     padding: 0 40px;
   }
-`
+`;
 const Nap2 = styled(NAPContainer)`
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 0;
-`
+`;
 const Contentflex = styled.div`
   display: flex;
   justify-content: space-around;
@@ -91,7 +92,7 @@ const Contentflex = styled.div`
   /* .individual-service:last-child {
     display: none;
   } */
-`
+`;
 const ColOne = styled.div`
   text-align: center;
   margin: 0 30px;
@@ -122,7 +123,7 @@ const ColOne = styled.div`
     width: 100%;
     margin: 0;
   }
-`
+`;
 const SliderContainer = styled.div`
   display: none;
   ${device.tablet} {
@@ -130,7 +131,7 @@ const SliderContainer = styled.div`
     width: 300px;
     margin-left: calc(50% - 150px);
   }
-`
+`;
 const CustomSlider = styled(Slider)`
   .slick-dots {
     bottom: -54px;
@@ -159,7 +160,7 @@ const CustomSlider = styled(Slider)`
   .slick-dots li.slick-active button:before {
     color: transparent;
   }
-`
+`;
 export const ArrowRight = styled(ArrowForwardIcon)`
   position: absolute;
   top: 45%;
@@ -172,7 +173,7 @@ export const ArrowRight = styled(ArrowForwardIcon)`
       color: #32393b;
     }
   }
-`
+`;
 export const ArrowLeft = styled(ArrowBackIcon)`
   position: absolute;
   top: 45%;
@@ -186,7 +187,7 @@ export const ArrowLeft = styled(ArrowBackIcon)`
       color: #32393b;
     }
   }
-`
+`;
 
 const row = [
   {
@@ -223,7 +224,7 @@ const row = [
     ),
     url: "https://www.guidesmanager.shopnewage.com/guides/JXvGeCwoqCCX7P3K5d4ahpoOLIBQYsmn8mR5MDug.pdf",
   },
-]
+];
 function index({ items, bgDark, mainHeading, ...otherProps }) {
   const settings = {
     dots: true,
@@ -236,7 +237,7 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
     nextArrow: <ArrowRight color="#32393b" />,
     prevArrow: <ArrowLeft color="#32393b" />,
     dotsClass: "common-dots",
-  }
+  };
 
   return (
     <SectionWrap {...otherProps} black={bgDark} id="planning-design-install">
@@ -251,7 +252,7 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
             <Contentflex className="content-flex">
               {items?.map((item, index) => (
                 <ColOne key={index} className="individual-service">
-                  <img src={item.img} />
+                  <img src={item.img} alt="" />
                   {item.url && (
                     <Link href={item.url}>
                       <Main black={bgDark}>{item.heading}</Main>
@@ -265,9 +266,9 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
           <div className="showInMobile">
             <SliderContainer>
               <CustomSlider {...settings}>
-                {items?.map((item) => (
-                  <ColOne>
-                    <img src={item.img} />
+                {items?.map((item, index) => (
+                  <ColOne key={index}>
+                    <img src={item.img} alt="" />
                     <Link href={item.url}>
                       <Main black={bgDark}>{item.heading}</Main>
                     </Link>
@@ -286,7 +287,7 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
             <Contentflex className="content-flex">
               {items?.map((item, index) => (
                 <ColOne key={index} className="individual-service">
-                  <img src={item.img} />
+                  <img src={item.img} alt="" />
                   {item.url && (
                     <Link href={item.url}>
                       <Main black={bgDark}>{item.heading}</Main>
@@ -301,8 +302,8 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
             <SliderContainer>
               <CustomSlider {...settings}>
                 {items?.map((item) => (
-                  <ColOne>
-                    <img src={item.img} />
+                  <ColOne key={index}>
+                    <img src={item.img} alt="" />
                     <Link href={item.url}>
                       <Main black={bgDark}>{item.heading}</Main>
                     </Link>
@@ -315,12 +316,12 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
         </Nap2>
       )}
     </SectionWrap>
-  )
+  );
 }
 
 index.defaultProps = {
   items: row,
   mainHeading: "We can help you design, plan and install your purchase.",
-}
+};
 
-export default index
+export default index;
