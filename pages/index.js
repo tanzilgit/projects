@@ -15,6 +15,7 @@ import BannerSlider from "../components/BannerSlider";
 import ServiceBlack from "../components/ServiceBlack";
 import SimpleAccordion from "../components/Accordion";
 import { NAPContainer } from "../components/CommonComponents";
+import Footer from "../components/Footer";
 
 const IndexWrapper = styled.div`
   header {
@@ -438,6 +439,10 @@ export default function Home() {
           <SimpleAccordion />
         </NAPContainer>
       </section>
+      {/*  */}
+
+      {/*  */}
+      <Footer />
       {/*  */}
 
       {/*  */}
