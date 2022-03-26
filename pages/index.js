@@ -12,6 +12,9 @@ import Slider from "react-slick";
 import CompareSlider from "../components/CompareSlider";
 import LeftRightBanner from "../components/LeftRightBanner";
 import BannerSlider from "../components/BannerSlider";
+import ServiceBlack from "../components/ServiceBlack";
+import SimpleAccordion from "../components/Accordion";
+import { NAPContainer } from "../components/CommonComponents";
 
 const IndexWrapper = styled.div`
   header {
@@ -105,6 +108,54 @@ export default function Home() {
       },
     ],
   };
+
+  //Service Black component Datas
+  const row = [
+    {
+      img: "/assets/garage-flooring/install-white.png",
+      heading: <>Heading 1 </>,
+      description: (
+        <>
+          Have your home bar installed quickly and easily by our professional
+          installation experts.
+        </>
+      ),
+      url: "/installation-services/",
+    },
+    {
+      img: "/assets/garage-flooring/design-icon-white2.png",
+      heading: <>Heading 2 </>,
+      description: (
+        <>
+          Let our Home Design Experts help construct the perfect bar for your
+          needs.
+        </>
+      ),
+      url: "/design-services/",
+    },
+    {
+      img: "/assets/garage-flooring/delivery-icon-white3.png",
+      heading: <>Heading 3 </>,
+      description: (
+        <>
+          Home Bar delivery made even easier, with room of choice drop off and
+          unboxing.
+        </>
+      ),
+      url: "/delivery-services/",
+    },
+    {
+      img: "/assets/garage-flooring/diy-support-icon-white.png",
+      heading: <>Heading 4 </>,
+      description: (
+        <>
+          Find the DIY support you need, with videos, installation guides and
+          advice from product experts.
+        </>
+      ),
+      url: "/delivery-services/",
+    },
+  ];
 
   return (
     <IndexWrapper className="">
@@ -351,24 +402,41 @@ export default function Home() {
       {/*  */}
       <section className="banner-slider">
         <BannerSlider arrows arrowsColor="#FFF">
-          <div className="showInDesktop">
-            <Image
-              src="/assets/1920-1.jpg"
-              alt="Banner-slider"
-              layout="fill"
-            />
-            <Image
-              src="/assets/1920-2.jpg"
-              alt="Banner-slider"
-              layout="fill"
-            />
-            <Image
-              src="/assets/1920-3.jpg"
-              alt="Banner-slider"
-              layout="fill"
-            />
-          </div>
+          {/* <div className=""> */}
+          <Image
+            src="/assets/1920-1.jpg"
+            alt="Banner-slider"
+            layout="responsive"
+            width={1920}
+            height={800}
+          />
+          <Image
+            src="/assets/1920-3.jpg"
+            alt="Banner-slider"
+            layout="responsive"
+            width={1920}
+            height={800}
+          />
+          {/* </div> */}
         </BannerSlider>
+      </section>
+      {/*  */}
+
+      {/*  */}
+      <section className="bg-section">
+        <ServiceBlack
+          items={row}
+          bgDark
+          mainHeading="Component with Dynamic Background"
+        />
+      </section>
+      {/*  */}
+
+      {/*  */}
+      <section className="accordion">
+        <NAPContainer>
+          <SimpleAccordion />
+        </NAPContainer>
       </section>
       {/*  */}
 
