@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import device from "../../utils/mediaUtils";
-import Image from "next/Image";
+import Image from 'next/image'
+
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
