@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import BannerSwatch from "../components/BannerSwatch";
@@ -8,6 +9,7 @@ import MegaMenu from "../components/MegaMenu";
 import styled from "styled-components";
 import GridRowItems from "../components/GridRowItems";
 import Slider from "react-slick";
+import CompareSlider from "../components/CompareSlider";
 
 const IndexWrapper = styled.div`
   header {
@@ -16,7 +18,32 @@ const IndexWrapper = styled.div`
   /*  */
 `;
 
+// Granite and Melamine Buttons
+const TabButton = styled.button`
+  font-family: "ProximaNova Semi Bold";
+  display: inline-block;
+  padding: 12px 50px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #707070;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  background-color: ${(props) => (props.active ? "#e4e4e4" : "transparent")};
+  &:hover {
+    background-color: #e4e4e4;
+  }
+  + button {
+    margin-left: 30px;
+  }
+`;
+
 export default function Home() {
+  // States
+  const [tabContent, setTabContent] = useState("content-one");
+
+  // Slider
   const YMAL = {
     dots: false,
     infinite: true,
@@ -65,6 +92,7 @@ export default function Home() {
       },
     ],
   };
+
   return (
     <IndexWrapper className="">
       <Head>
@@ -81,35 +109,131 @@ export default function Home() {
       <GridRowItems className="quality-cabinets inspiration" mobileSlider>
         {/* <Slider {...YMAL}> */}
         <div className="item">
-          <Image
-            src="/assets/bannerSwatch/reactjs.jpg"
-            width={525}
-            height={375}
-            alt=""
-          />
+          <Image src="/assets/test-image.jpg" width={525} height={375} alt="" />
           <h3 className="category-sub-heading ff-psb">Sub Headings 1</h3>
         </div>
         <div className="item">
-          <Image
-            src="/assets/bannerSwatch/reactjs.jpg"
-            width={525}
-            height={375}
-            alt=""
-          />
+          <Image src="/assets/test-image.jpg" width={525} height={375} alt="" />
           <h3 className="category-sub-heading ff-psb">Sub Headings 2</h3>
         </div>
         <div className="item">
-          <Image
-            src="/assets/bannerSwatch/reactjs.jpg"
-            width={525}
-            height={375}
-            alt=""
-          />
+          <Image src="/assets/test-image.jpg" width={525} height={375} alt="" />
           <h3 className="category-sub-heading ff-psb">Sub Headings 3</h3>
         </div>
         {/* </Slider> */}
       </GridRowItems>
       {/*  */}
+
+      {/*  */}
+      <CompareSlider />
+      {/*  */}
+
+      <section className="countertops section-top-padding section-bottom-padding ">
+        <header>
+          <h3 className="main-heading ff-psb first-content">
+            Tabs Based Components
+          </h3>
+        </header>
+        <div className="tab-wrapper">
+          <TabButton
+            className="tabs"
+            active={tabContent === "content-one" ? 1 : 0}
+            onClick={() => setTabContent("content-one")}
+          >
+            Tab One
+          </TabButton>
+          <TabButton
+            className="tabs"
+            active={tabContent === "content-two" ? 1 : 0}
+            onClick={() => setTabContent("content-two")}
+          >
+            Tab Two
+          </TabButton>
+        </div>
+        <div className="contents-wrapper ">
+          {/* Content One Datas */}
+          {tabContent === "content-one" && (
+            <div className="content-one">
+              <header>
+                <h3 className="main-heading ff-psb first-content">
+                  Tab One Contents Heading
+                </h3>
+                <p className="sub-heading ff-pr second-content">
+                  Tab One Contents Sub Heading
+                </p>
+              </header>
+              <GridRowItems className="">
+                <div className="first">
+                  <Image
+                    src="/assets/test-image.jpg"
+                    width={525}
+                    height={375}
+                    alt=""
+                  />
+
+                  <h3 className="grid-heading ff-psb">White Pearl Granite</h3>
+                </div>
+                <div className="second">
+                  <Image
+                    src="/assets/test-image.jpg"
+                    width={525}
+                    height={375}
+                    alt=""
+                  />
+
+                  <h3 className="grid-heading ff-psb">Gold Sand Granite</h3>
+                </div>
+                <div className="third">
+                  <Image
+                    src="/assets/test-image.jpg"
+                    width={525}
+                    height={375}
+                    alt=""
+                  />
+
+                  <h3 className="grid-heading ff-psb">Black Galaxy Granite</h3>
+                </div>
+              </GridRowItems>
+            </div>
+          )}
+
+          {/* Content Two Datas */}
+          {tabContent === "content-two" && (
+            <div className="content-two">
+              <header>
+                <h3 className="main-heading ff-psb first-content">
+                  Tab Two Contents Heading
+                </h3>
+                <p className="sub-heading ff-pr second-content">
+                  Tab Two Contents Sub Heading
+                </p>
+              </header>
+              <GridRowItems className="">
+                <div className="first">
+                  <Image
+                    src="/assets/test-image.jpg"
+                    width={525}
+                    height={375}
+                    alt=""
+                  />
+
+                  <h3 className="grid-heading ff-psb">White Melamine</h3>
+                </div>
+                <div className="second">
+                  <Image
+                    src="/assets/test-image.jpg"
+                    width={525}
+                    height={375}
+                    alt=""
+                  />
+
+                  <h3 className="grid-heading ff-psb">Espresso Melamine</h3>
+                </div>
+              </GridRowItems>
+            </div>
+          )}
+        </div>
+      </section>
 
       {/*  */}
       <section className="bannerSwatch section-top-padding">
