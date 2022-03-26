@@ -66,6 +66,7 @@ const CustomItemContainer = styled(NAPContainer)`
       margin-left: 0;
     }
   }
+  text-align: center;
 
   ${(props) => props.twoItems && `max-width: 1300px;`}
 
