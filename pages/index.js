@@ -6,6 +6,8 @@ import HeroBanner from "../components/HeroBanner";
 import MegaMenu from "../components/MegaMenu";
 // import styles from "../styles/Home.module.css";
 import styled from "styled-components";
+import GridRowItems from "../components/GridRowItems";
+import Slider from "react-slick";
 
 const IndexWrapper = styled.div`
   header {
@@ -15,6 +17,25 @@ const IndexWrapper = styled.div`
 `;
 
 export default function Home() {
+  
+  const YMAL = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 9999,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 767,
+      },
+    ],
+  };
+
   // Image Swatch Change, Datas
   const Data1 = {
     heading: <>FrameWorks </>,
@@ -54,7 +75,52 @@ export default function Home() {
       </Head>
       <MegaMenu />
       <Header />
+
       <HeroBanner />
+
+      {/*  */}
+      <GridRowItems className="quality-cabinets inspiration">
+        <Slider {...YMAL} className="three-way-layout">
+          <div className="first">
+            <Image
+              src="/assets/bannerSwatch/reactjs.jpg"
+              width={525}
+              height={375}
+              alt=""
+            />
+            <p className="category-sub-heading">
+              Durable construction stands up to everyday use with an easy-clean,
+              stain-resistant finish.
+            </p>
+          </div>
+          <div className="second">
+            <Image
+              src="/assets/bannerSwatch/reactjs.jpg"
+              width={525}
+              height={375}
+              alt=""
+            />
+            <p className="category-sub-heading">
+              Thick 18mm frames provide a sturdy foundation for years of
+              dependable performance.
+            </p>
+          </div>
+          <div className="third">
+            <Image
+              src="/assets/bannerSwatch/reactjs.jpg"
+              width={525}
+              height={375}
+              alt=""
+            />
+            <p className="category-sub-heading">
+              Our pre-configured sets include everything you need to complete
+              your design. Plus they arrive fully assembled and ready to
+              install.
+            </p>
+          </div>
+        </Slider>
+      </GridRowItems>
+      {/*  */}
 
       {/*  */}
       <section className="bannerSwatch section-top-padding">
