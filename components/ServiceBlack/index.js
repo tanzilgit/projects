@@ -293,7 +293,7 @@ function ServiceBlack({ items, bg, mainHeading, ...otherProps }) {
       <Nap2>
         <Contentflex className="content-flex">
           {items?.map((item, index) => (
-            <ColOne key={index}>
+            <ColOne key={`col-${index}`}>
               <Main className="" black={bg}>
                 {item.heading}
               </Main>
