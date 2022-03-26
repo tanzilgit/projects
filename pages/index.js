@@ -10,6 +10,7 @@ import styled from "styled-components";
 import GridRowItems from "../components/GridRowItems";
 import Slider from "react-slick";
 import CompareSlider from "../components/CompareSlider";
+import LeftRightBanner from "../components/LeftRightBanner";
 
 const IndexWrapper = styled.div`
   header {
@@ -117,26 +118,56 @@ export default function Home() {
       <HeroBanner />
 
       {/*  */}
-      <GridRowItems className="quality-cabinets inspiration" mobileSlider>
-        {/* <Slider {...YMAL}> */}
-        <div className="item">
-          <Image src="/assets/test-image.jpg" width={525} height={375} alt="" />
-          <h3 className="category-sub-heading ff-psb">Sub Headings 1</h3>
-        </div>
-        <div className="item">
-          <Image src="/assets/test-image.jpg" width={525} height={375} alt="" />
-          <h3 className="category-sub-heading ff-psb">Sub Headings 2</h3>
-        </div>
-        <div className="item">
-          <Image src="/assets/test-image.jpg" width={525} height={375} alt="" />
-          <h3 className="category-sub-heading ff-psb">Sub Headings 3</h3>
-        </div>
-        {/* </Slider> */}
-      </GridRowItems>
+      <section className="grid-component">
+        <header>
+          <h3 className="main-heading ff-psb first-content">Grid Component</h3>
+        </header>
+        <GridRowItems className="quality-cabinets inspiration" mobileSlider>
+          {/* <Slider {...YMAL}> */}
+          <div className="item">
+            <Image
+              src="/assets/test-image.jpg"
+              width={525}
+              height={375}
+              alt=""
+            />
+            <h3 className="category-sub-heading ff-psb">Sub Headings 1</h3>
+          </div>
+          <div className="item">
+            <Image
+              src="/assets/test-image.jpg"
+              width={525}
+              height={375}
+              alt=""
+            />
+            <h3 className="category-sub-heading ff-psb">Sub Headings 2</h3>
+          </div>
+          <div className="item">
+            <Image
+              src="/assets/test-image.jpg"
+              width={525}
+              height={375}
+              alt=""
+            />
+            <h3 className="category-sub-heading ff-psb">Sub Headings 3</h3>
+          </div>
+          {/* </Slider> */}
+        </GridRowItems>
+      </section>
       {/*  */}
 
       {/*  */}
-      <CompareSlider />
+      <section className="image-compare-slider">
+        <header>
+          <h3
+            className="main-heading ff-psb first-content"
+            style={{ marginBottom: "30px" }}
+          >
+            Image Compare Slider Component
+          </h3>
+        </header>
+        <CompareSlider />
+      </section>
       {/*  */}
 
       <section className="tabs-based-components section-top-padding section-bottom-padding ">
@@ -244,6 +275,39 @@ export default function Home() {
             </div>
           )}
         </div>
+      </section>
+
+      <section>
+        <LeftRightBanner
+          className="lr-first"
+          desktop={{ src: "/assets/LeftRight-banner.jpg" }}
+          mobile={{
+            src: "/assets/LeftRight-banner.jpg",
+            width: 405,
+            height: 390,
+          }}
+        >
+          <header className="showInDesktop">
+            <h3 className="main-heading ff-psb first-content">
+              Get creative with floating shelves
+            </h3>
+            <p className="sub-heading ff-pr second-content">
+              Perfect for plants, photos, collectibles or glassware, these
+              minimalist shelves let you add your own personal touch to any bar
+              space.
+            </p>
+          </header>
+          <header className="showInMobile">
+            <h3 className="main-heading ff-psb first-content">
+              Floating Shelving
+            </h3>
+            <p className="sub-heading ff-pr second-content">
+              Perfect for plants, photos, collectibles or glassware, these
+              minimalist shelves let you add your own personal touch to any bar
+              space.
+            </p>
+          </header>
+        </LeftRightBanner>
       </section>
 
       {/*  */}
