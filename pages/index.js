@@ -16,6 +16,17 @@ const IndexWrapper = styled.div`
     margin-bottom: 30px;
   }
   /*  */
+  .tabs-based-components {
+    .tab-wrapper {
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .contents-wrapper {
+      margin-top: 30px;
+    }
+  }
 `;
 
 // Granite and Melamine Buttons
@@ -128,7 +139,7 @@ export default function Home() {
       <CompareSlider />
       {/*  */}
 
-      <section className="countertops section-top-padding section-bottom-padding ">
+      <section className="tabs-based-components section-top-padding section-bottom-padding ">
         <header>
           <h3 className="main-heading ff-psb first-content">
             Tabs Based Components
