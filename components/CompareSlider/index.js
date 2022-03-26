@@ -67,6 +67,8 @@ function CompareSlider({
               src={mobileSrc1}
               alt={altTextLeft}
               className="showInMobile"
+              width={375}
+              height={375}
             />
           </div>
         }
@@ -81,6 +83,8 @@ function CompareSlider({
               src={mobileSrc2}
               alt={altTextRight}
               className="showInMobile"
+              width={375}
+              height={375}
             />
           </div>
         }
@@ -90,10 +94,10 @@ function CompareSlider({
 }
 
 CompareSlider.defaultProps = {
-  src1: "/assets/kitchen/kitchen-sinks/left-slider-new.jpg",
-  src2: "/assets/kitchen/kitchen-sinks/right-slider-new.jpg",
-  mobileSrc1: "/assets/kitchen/kitchen-sinks/mobile/slider1.png",
-  mobileSrc2: "/assets/kitchen/kitchen-sinks/mobile/slider2.png",
+  src1: "/assets/left.jpg",
+  src2: "/assets/right.jpg",
+  mobileSrc1: "/assets/left-m.jpg",
+  mobileSrc2: "/assets/right-m.jpg",
 };
 
 export default CompareSlider;
