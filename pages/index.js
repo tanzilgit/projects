@@ -17,6 +17,9 @@ import SimpleAccordion from "../components/Accordion";
 import { NAPContainer } from "../components/CommonComponents";
 import Footer from "../components/Footer";
 
+import FetchAsync from "../components/APIFetching/FetchAsync";
+import FetchPromise from "../components/APIFetching/FetchPromise";
+
 const IndexWrapper = styled.div`
   header {
     margin-bottom: 30px;
@@ -170,7 +173,7 @@ export default function Home() {
       <MegaMenu />
       <Header />
       {/*  */}
-      
+
       {/*  */}
       <HeroBanner />
       {/*  */}
@@ -435,6 +438,28 @@ export default function Home() {
           bgDark
           mainHeading="Component with Dynamic Background"
         />
+      </section>
+      {/*  */}
+
+      {/*  */}
+      <section className="content-fetching section-top-padding section-bottom-padding">
+        <header>
+          <h3 className="main-heading ff-psb first-content">
+            Contents Fetching
+          </h3>
+        </header>
+        <div className="FetchAsync">
+          <header>
+            <h3 className="main-heading ff-psb first-content">FetchAsync</h3>
+          </header>
+          <FetchAsync />
+        </div>
+        <div className="FetchPromise">
+          <header>
+            <h3 className="main-heading ff-psb first-content">FetchPromise</h3>
+          </header>
+          <FetchPromise />
+        </div>
       </section>
       {/*  */}
 
