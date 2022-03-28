@@ -296,7 +296,7 @@ const HeaderContent = styled.div`
   }
   @media (max-width: 1200px) {
     width: 95%;
-    /* Services Tab */
+    /* Menu 2 Tab */
     .services-image-warpper {
       width: 70%;
     }
@@ -936,8 +936,6 @@ function Header({ data }) {
 
   // getSiteType(setSiteType);
 
-  
-
   return (
     <>
       <Head>
@@ -1019,279 +1017,213 @@ function Header({ data }) {
         />
       </Head>
 
-      <ClickAwayListener onClickAway={() => {setHeader(null); setShowInput(false)}}>
+      <ClickAwayListener
+        onClickAway={() => {
+          setHeader(null);
+          setShowInput(false);
+        }}
+      >
+        <HeaderContainer className="header-container">
+          <LeftHeader>
+            <NavItem
+              active={header === "departments"}
+              onClick={() => setHeader("departments")}
+            >
+              Menu 1
+            </NavItem>
+            <NavItem
+              active={header === "services"}
+              onClick={() => setHeader("services")}
+            >
+              Menu 2
+            </NavItem>
+            <NavItem
+              active={header === "inspiration"}
+              onClick={() => setHeader("inspiration")}
+            >
+              Menu 3
+            </NavItem>
 
-      <HeaderContainer className="header-container">
-        <LeftHeader>
-          <NavItem
-            active={header === "departments"}
-            onClick={() => setHeader("departments")}
-          >
-            Departments
-          </NavItem>
-          <NavItem
-            active={header === "services"}
-            onClick={() => setHeader("services")}
-          >
-            Services
-          </NavItem>
-          <NavItem
-            active={header === "inspiration"}
-            onClick={() => setHeader("inspiration")}
-          >
-            Inspiration
-          </NavItem>
-        </LeftHeader>
-        
-        {header === "departments" && (
-          <ExpandHeader className="header-contents">
-            <HeaderContent className="checkinggg">
-              {departmentTab.map((item, index) => (
-                <div key={index}>
-                  {item.map((i, index) => (
-                    <div key={index}>
-                      <Link href={i.mainMenuBtnLink} passHref>
-                        <MainMenu onClick={() => setHeader(null)}>
-                          {i.mainMenu}
-                        </MainMenu>
-                      </Link>
-                      <NAPButton
-                        className="sna_link"
-                        type="link"
-                        text={i.mainMenuBtnText}
+            <NavItem>
+              <Link href="/fetch/">
+                <a>Basic API Fetch</a>
+              </Link>
+            </NavItem>
+          </LeftHeader>
+
+          {header === "departments" && (
+            <ExpandHeader className="header-contents">
+              <HeaderContent className="checkinggg">
+                {departmentTab.map((item, index) => (
+                  <div key={index}>
+                    {item.map((i, index) => (
+                      <div key={index}>
+                        <Link href={i.mainMenuBtnLink} passHref>
+                          <MainMenu onClick={() => setHeader(null)}>
+                            {i.mainMenu}
+                          </MainMenu>
+                        </Link>
+                        <NAPButton
+                          className="sna_link"
+                          type="link"
+                          text={i.mainMenuBtnText}
+                        />
+                        {i?.links?.map((l, index) => (
+                          <div key={index}>
+                            {l.type === "primary" ? (
+                              <Link href={l.link} passHref>
+                                <PrimaryLink onClick={() => setHeader(null)}>
+                                  {l.text}
+                                </PrimaryLink>
+                              </Link>
+                            ) : (
+                              <Link href={l.link} passHref>
+                                <SecondaryLink onClick={() => setHeader(null)}>
+                                  {l.text}
+                                </SecondaryLink>
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+                <div>
+                  <Link href="/why-buy-from-newage">
+                    <Image
+                      onClick={() => setHeader(null)}
+                      src="/assets/department-1.jpg"
+                      className="header-img"
+                      alt="dept"
+                      height={300}
+                      width={300}
+                    />
+                  </Link>
+                </div>
+              </HeaderContent>
+            </ExpandHeader>
+          )}
+          {header === "services" && (
+            <ExpandHeader>
+              <HeaderContent className="header-content">
+                <div>
+                  <MainMenu>Garage</MainMenu>
+                  <SecondaryLink href="/design-services">
+                    3D Design Studio
+                  </SecondaryLink>
+                  <SecondaryLink>Installation</SecondaryLink>
+                  <MainMenu>Online Support</MainMenu>
+                  <SecondaryLink>Videos &amp; Guides</SecondaryLink>
+                  <SecondaryLink>FAQ</SecondaryLink>
+                  <MainMenu>Order Support</MainMenu>
+                  <SecondaryLink>Track Shipping</SecondaryLink>
+                  <SecondaryLink>Product Replacement</SecondaryLink>
+                  <SecondaryLink>Warranty Registration</SecondaryLink>
+                  <SecondaryLink>Return Policy</SecondaryLink>
+                </div>
+                <div className="services-image-warpper">
+                  <div>
+                    <a href="#">
+                      <img
+                        src="/assets/header/design.jpg"
+                        className="header-img"
+                        alt="header-logo"
                       />
-                      {i?.links?.map((l, index) => (
-                        <div key={index}>
-                          {l.type === "primary" ? (
-                            <Link href={l.link} passHref>
-                              <PrimaryLink onClick={() => setHeader(null)}>
-                                {l.text}
-                              </PrimaryLink>
-                            </Link>
-                          ) : (
-                            <Link href={l.link} passHref>
-                              <SecondaryLink onClick={() => setHeader(null)}>
-                                {l.text}
-                              </SecondaryLink>
-                            </Link>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  ))}
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <img
+                        src="/assets/header/register.jpg"
+                        className="header-img"
+                        alt="header-logo"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <img
+                        src="/assets/header/support.jpg"
+                        className="header-img"
+                        alt="header-logo"
+                      />
+                    </a>
+                  </div>
                 </div>
-              ))}
-              <div>
-                <Link href="/why-buy-from-newage">
-                  <Image
-                    onClick={() => setHeader(null)}
-                    src="/assets/department-1.jpg"
+              </HeaderContent>
+            </ExpandHeader>
+          )}
+          {header === "inspiration" && (
+            <ExpandHeader>
+              <HeaderContent className="inspiration-tab">
+                <div className="image-offers left-image-offers first-component">
+                  <div className="text-component">
+                    <p className="ff-pr">Shop by Spaces.</p>
+                    <p className="ff-psb">
+                      See our products in
+                      <br />
+                      unique spaces, and get
+                      <br />
+                      inspired for your next
+                      <br />
+                      renovation project.
+                    </p>
+                  </div>
+                </div>
+                {/*  */}
+                <div>
+                  <img
+                    src="/assets/header/inspiration-garage.jpg"
                     className="header-img"
-                    alt="dept"
-                    height={300}
-                    width={300}
+                    alt="header-logoaaa"
                   />
-                </Link>
-              </div>
-            </HeaderContent>
-          </ExpandHeader>
-        )}
-        {header === "services" && (
-          <ExpandHeader>
-            <HeaderContent className="header-content">
-              <div>
-                <MainMenu>Garage</MainMenu>
-                <SecondaryLink href="/design-services">
-                  3D Design Studio
-                </SecondaryLink>
-                <SecondaryLink>Installation</SecondaryLink>
-                <MainMenu>Online Support</MainMenu>
-                <SecondaryLink>Videos &amp; Guides</SecondaryLink>
-                <SecondaryLink>FAQ</SecondaryLink>
-                <MainMenu>Order Support</MainMenu>
-                <SecondaryLink>Track Shipping</SecondaryLink>
-                <SecondaryLink>Product Replacement</SecondaryLink>
-                <SecondaryLink>Warranty Registration</SecondaryLink>
-                <SecondaryLink>Return Policy</SecondaryLink>
-              </div>
-              <div className="services-image-warpper">
-                <div>
-                  <a href="#">
-                    <img
-                      src="/assets/header/design.jpg"
-                      className="header-img"
-                      alt="header-logo"
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <img
-                      src="/assets/header/register.jpg"
-                      className="header-img"
-                      alt="header-logo"
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="#">
-                    <img
-                      src="/assets/header/support.jpg"
-                      className="header-img"
-                      alt="header-logo"
-                    />
-                  </a>
-                </div>
-              </div>
-            </HeaderContent>
-          </ExpandHeader>
-        )}
-        {header === "inspiration" && (
-          <ExpandHeader>
-            <HeaderContent className="inspiration-tab">
-              <div className="image-offers left-image-offers first-component">
-                <div className="text-component">
-                  <p className="ff-pr">Shop by Spaces.</p>
-                  <p className="ff-psb">
-                    See our products in
-                    <br />
-                    unique spaces, and get
-                    <br />
-                    inspired for your next
-                    <br />
-                    renovation project.
-                  </p>
-                </div>
-              </div>
-              {/*  */}
-              <div>
-                <img
-                  src="/assets/header/inspiration-garage.jpg"
-                  className="header-img"
-                  alt="header-logoaaa"
-                />
-                <NAPButton
-                  type="link"
-                  text="Shop All Garage"
-                  url="/all-spaces/residential-improvement/garagesolution"
-                />
-              </div>
-              <div>
-                <img
-                  src="/assets/header/inspiration-garage.jpg"
-                  className="header-img"
-                  alt="header-logo"
-                />
-                <NAPButton
-                  type="link"
-                  text="Shop All Kitchen"
-                  url="/all-spaces/residential-improvement/kitchen-solution"
-                />
-              </div>
-              <div>
-                <img
-                  src="/assets/header/inspiration-kitchen.jpg"
-                  className="header-img"
-                  alt="header-logo"
-                />
-                <NAPButton
-                  type="link"
-                  text="Shop All Flooring"
-                  url="/flooring/residential-flooring/"
-                />
-              </div>
-              <div>
-                <img
-                  src="/assets/header/inspiration-all.jpg"
-                  className="header-img"
-                  alt="header-logo"
-                />
-                <NAPButton
-                  type="link"
-                  text="Shop All Deals"
-                  url="/all-spaces/residential-improvement/"
-                />
-              </div>
-            </HeaderContent>
-          </ExpandHeader>
-        )}
-        {header === "shop" && (
-          <ExpandHeader>
-            <HeaderContent className="shop-header-content">
-              <div className="shop-department">
-                <MainMenu>Shop By Department</MainMenu>
-                <NAPButton
-                  className="sna_link"
-                  marginBottom={10}
-                  type="link"
-                  text="Shop All Offers"
-                />
-
-                <SecondaryLink>Garage</SecondaryLink>
-                <SecondaryLink>Outdoor</SecondaryLink>
-                <SecondaryLink>Kitchen</SecondaryLink>
-                <SecondaryLink>Home Bar</SecondaryLink>
-                <SecondaryLink>Laundry</SecondaryLink>
-                <SecondaryLink>Flooring</SecondaryLink>
-                <div className="shop-row-two">
-                  <MainMenu>More Ways to Save</MainMenu>
                   <NAPButton
-                    marginBottom={10}
                     type="link"
-                    text="Buy More Save More"
-                  />
-                  <br />
-                  <NAPButton
-                    marginBottom={10}
-                    type="link"
-                    text="Affirm Financing"
-                  />
-                  <br />
-                  <NAPButton
-                    marginBottom={10}
-                    type="link"
-                    text="Delivery Services"
+                    text="Shop All Garage"
+                    url="/all-spaces/residential-improvement/garagesolution"
                   />
                 </div>
-              </div>
-              <div className="offers">
                 <div>
                   <img
-                    src="/assets/header/main.jpg"
+                    src="/assets/header/inspiration-garage.jpg"
                     className="header-img"
                     alt="header-logo"
+                  />
+                  <NAPButton
+                    type="link"
+                    text="Shop All Kitchen"
+                    url="/all-spaces/residential-improvement/kitchen-solution"
                   />
                 </div>
-                <div className="flex-col">
+                <div>
                   <img
-                    src="/assets/header/top-left.jpg"
+                    src="/assets/header/inspiration-kitchen.jpg"
                     className="header-img"
                     alt="header-logo"
                   />
-                  <img
-                    src="/assets/header/bottom-left.jpg"
-                    className="header-img"
-                    alt="header-logo"
-                  />
-                </div>
-                <div className="flex-col">
-                  <img
-                    src="/assets/header/top-right.jpg"
-                    className="header-img"
-                    alt="header-logo"
-                  />
-                  <img
-                    src="/assets/header/bottom-right.jpg"
-                    className="header-img"
-                    alt="header-logo"
+                  <NAPButton
+                    type="link"
+                    text="Shop All Flooring"
+                    url="/flooring/residential-flooring/"
                   />
                 </div>
-              </div>
-            </HeaderContent>
-          </ExpandHeader>
-        )}
-      </HeaderContainer>
-
+                <div>
+                  <img
+                    src="/assets/header/inspiration-all.jpg"
+                    className="header-img"
+                    alt="header-logo"
+                  />
+                  <NAPButton
+                    type="link"
+                    text="Shop All Deals"
+                    url="/all-spaces/residential-improvement/"
+                  />
+                </div>
+              </HeaderContent>
+            </ExpandHeader>
+          )}
+        </HeaderContainer>
       </ClickAwayListener>
       <MobileHeader className="mobile-header">
         <MobileContainer className="mobile-header-container">
@@ -1301,10 +1233,6 @@ function Header({ data }) {
               onClick={() => setDrawer(true)}
             />
           </div>
-          <MobileLogo>
-            {/* <img src="/assets/logo-white.svg" alt="logo" /> */}
-          </MobileLogo>
-          <div />
         </MobileContainer>
         <StyledDrawer
           anchor="left"
@@ -1332,9 +1260,9 @@ function Header({ data }) {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  Departments
+                  Menu 1
                 </AccordionSummary>
-                <AccordionDetails header="Departments" key="1">
+                <AccordionDetails header="Menu 1" key="1">
                   <Accordion expandIconPosition="right">
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
@@ -1455,10 +1383,10 @@ function Header({ data }) {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  Services
+                  Menu 2
                 </AccordionSummary>
                 <AccordionDetails>
-                  <MobileDrawerLink>Our Services</MobileDrawerLink>
+                  <MobileDrawerLink>Our Menu 2</MobileDrawerLink>
                   <MobileDrawerLink>Online Support</MobileDrawerLink>
                   <MobileDrawerLink>Order Support</MobileDrawerLink>
                 </AccordionDetails>
@@ -1469,55 +1397,13 @@ function Header({ data }) {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  Inspiration
+                  Menu 3
                 </AccordionSummary>
                 <AccordionDetails>
                   <MobileDrawerLink>Garage</MobileDrawerLink>
                   <MobileDrawerLink>Kitchen</MobileDrawerLink>
                   <MobileDrawerLink>Flooring</MobileDrawerLink>
                   <MobileDrawerLink>See All Spaces</MobileDrawerLink>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  Shop
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Accordion>
-                    <AccordionSummary>Shop By Department</AccordionSummary>
-                    <AccordionDetails>
-                      <MobileDrawerLink>Shop All Offers</MobileDrawerLink>
-                      <MobileDrawerLink>Garage</MobileDrawerLink>
-                      <MobileDrawerLink>Outdoor</MobileDrawerLink>
-                      <MobileDrawerLink>Kitchen</MobileDrawerLink>
-                      <MobileDrawerLink>Home Bar</MobileDrawerLink>
-                      <MobileDrawerLink>Laundry</MobileDrawerLink>
-                      <MobileDrawerLink>Flooring</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary>More Ways to Save</AccordionSummary>
-                    <AccordionDetails>
-                      <MobileDrawerLink>Buy More Save More</MobileDrawerLink>
-                      <MobileDrawerLink>Affirm Financing</MobileDrawerLink>
-                      <MobileDrawerLink>Delivery Services</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary>NewAge Deals</AccordionSummary>
-                    <AccordionDetails>
-                      <MobileDrawerLink>
-                        Organization Month Sale
-                      </MobileDrawerLink>
-                      <MobileDrawerLink>Deal of the Week</MobileDrawerLink>
-                      <MobileDrawerLink>Delivery Services</MobileDrawerLink>
-                      <MobileDrawerLink>Buy More Save More</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
                 </AccordionDetails>
               </Accordion>
             </DrawerContent>
