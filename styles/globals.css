@@ -159,6 +159,10 @@
   margin-top: 20px;
 }
 
+* {
+  font-family: "ProximaNova Regular", sans-serif;
+}
+
 html,
 body {
   padding: 0;

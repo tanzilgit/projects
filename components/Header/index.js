@@ -199,18 +199,20 @@ const NavItem = styled.div`
     border: 1px solid red;
   }
   + {
-    margin-left: 10px;
+    margin-left: 10px; 
   }
 `;
 const ExpandHeader = styled.div`
   position: absolute;
   padding: 20px;
   top: 0;
-  margin-top: 93px;
+  /* margin-top: 93px; */
+  margin-top: 74px;
   background-color: #fff;
   /* width: 100%; */
   width: auto;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); */
+  box-shadow: -3px 5px 25px rgb(0 0 0 / 50%);   
   z-index: 10;
   /* Shop Tab */
   .flex-col {
@@ -395,502 +397,168 @@ const MobileDrawerLink = styled.a`
 export const departmentTab = [
   [
     {
-      mainMenu: "Garage",
-      mainMenuBtnText: "Shop All Garage",
-      mainMenuBtnLink: "/garage-storage-organization-solutions",
+      mainMenu: "Main Category 1",
+      mainMenuBtnText: "Shop Category",
+      mainMenuBtnLink: "#",
       links: [
         {
-          category: "Garage",
-          text: "Garage Cabinets",
-          link: "/garage-storage-cabinets",
+          category: "Main Category 1",
+          text: "Sub Category 1",
+          link: "#",
           type: "primary",
         },
         {
-          category: "Garage",
-          text: "Pro Series",
-          link: "/garage-storage-cabinets-pro-3-0-series",
+          category: "Main Category 1",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Garage",
-          text: "Bold Series",
-          link: "/garage-storage-cabinets-bold-3-0-series",
+          category: "Main Category 1",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Garage",
-          text: "Racks & Shelving",
-          link: "/shelves-and-off-the-floor-storage",
+          category: "Main Category 1",
+          text: "Sub Category 2",
+          link: "#",
           type: "primary",
         },
         {
-          category: "Garage",
-          text: "Wall Mounted Shelves",
-          link: "/pro-series-wall-mounted-steel-shelves",
+          category: "Main Category 1",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Garage",
-          text: "Wall Mounted Racks",
-          link: "/wall-mounted-racks",
+          category: "Main Category 1",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Garage",
-          text: "Slatwall & Accessories",
-          link: "/slatwall",
+          category: "Main Category 1",
+          text: "Sub Category 3",
+          link: "#",
           type: "primary",
         },
         {
-          category: "Garage",
-          text: "PVC Slatwall",
-          link: "/slatwall/pvc-slatwall",
+          category: "Main Category 1",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Garage",
-          text: "Steel Slatwall",
-          link: "/slatwall/steel-slatwall",
+          category: "Main Category 1",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Garage",
-          text: "Slatwall Backsplash",
-          link: "/slatwall/steel-slatwall-backsplash",
+          category: "Main Category 1",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
+        
         {
-          category: "Garage",
-          text: "Slatwall Accessories",
-          link: "/slatwall/slatwall-accessories",
-          type: "secondary",
-        },
-        {
-          category: "Garage",
-          text: "Workbench Solutions",
-          link: "/garage-storage-organization-solutions/workbenches/",
+          category: "Main Category 1",
+          text: "Sub Category 4",
+          link: "#",
           type: "primary",
         },
-        {
-          category: "Garage",
-          text: "Garage Accessories",
-          link: "/garage-storage-organization-solutions/garage-accessories",
-          type: "primary",
-        },
-        {
-          category: "Garage",
-          text: "Linkable Shop Lights",
-          link: "/linkable-shop-lights",
-          type: "secondary",
-        },
-        {
-          category: "Garage",
-          text: "Infrared Heater",
-          link: "/garage-storage-organization-solutions/garage-accessories/infrared-heater",
-          type: "secondary",
-        },
-        {
-          category: "Garage",
-          text: "Cabinets Lights",
-          link: "https://shopnewage.com/collections/cabinet-lighting/",
-          type: "secondary",
-        },
+        
       ],
     },
   ],
   [
     {
-      mainMenu: "Outdoor",
-      mainMenuBtnText: "Shop All Outdoor",
-      mainMenuBtnLink: "/outdoor-kitchen",
+      mainMenu: "Main Category 2",
+      mainMenuBtnText: "Shop Category",
+      mainMenuBtnLink: "#",
       links: [
         {
-          category: "Outdoor",
-          text: "Kitchen Cabinets",
-          link: "/outdoor-kitchen",
+          category: "Main Category 2",
+          text: "Sub Category 1",
+          link: "#",
           type: "primary",
         },
         {
-          category: "Outdoor",
-          text: "Countertops",
-          link: "/outdoor-kitchen/kitchen-cabinets/counter-top",
+          category: "Main Category 2",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Outdoor",
-          text: "Aluminum Collection",
-          link: "/outdoor-kitchen-cabinets-aluminum",
+          category: "Main Category 2",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Outdoor",
-          text: "Stainless Steel Collection",
-          link: "/outdoor-kitchen-cabinets-stainless-steel",
-          type: "secondary",
-        },
-        {
-          category: "Outdoor",
-          text: "BBQ and Grills",
-          link: "/outdoor-kitchen/bbq-gril",
+          category: "Main Category 2",
+          text: "Sub Category 2",
+          link: "#",
           type: "primary",
         },
         {
-          category: "Outdoor",
-          text: "Gas Grills",
-          link: "/outdoor-kitchen/bbq-gril?tab=gas&id#grills",
+          category: "Main Category 2",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Outdoor",
-          text: "Charcoal Grills",
-          link: "/outdoor-kitchen/bbq-gril?tab=charcoal&id#grills",
+          category: "Main Category 2",
+          text: "Basic Name",
+          link: "#",
           type: "secondary",
         },
-        {
-          category: "Outdoor",
-          text: "Side Burners",
-          link: "/outdoor-kitchen/bbq-gril?tab=burner&id#grills",
-          type: "secondary",
-        },
-      ],
-      // links: [
-      //   {
-      //     text: 'Kitchen Cabinet',
-      //     link: '#',
-      //     type: 'primary'
-      //   },
-      //   {
-      //     text: 'Countertops',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Stainless Steel Collection',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Alumunium Collection',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Cooking Appliances',
-      //     link: '#',
-      //     type: 'primary'
-      //   },
-      //   {
-      //     text: 'Grills',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Dual Side Burners',
-      //     link: '#',
-      //     type: 'secondary'
-      //   }
-      // ]
-    },
-  ],
-  [
-    {
-      mainMenu: "Kitchen",
-      mainMenuBtnLink: "/kitchen",
-      mainMenuBtnText: "Shop All Kitchen",
-      links: [
-        {
-          category: "Kitchen",
-          text: "Cabinets",
-          link: "/kitchen/kitchen-cabinets",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Sinks",
-          link: "/kitchen/kitchen-sinks",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Faucets",
-          link: "/kitchen/kitchen-faucets",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Granite Countertops",
-          link: "/kitchen/granite-countertops",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Backsplash",
-          link: "/kitchen/backsplash-tile",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Cabinet Hardware",
-          link: "/kitchen/cabinet-hardware",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Millwork",
-          link: "/kitchen/kitchen-millwork",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Cabinets Organization",
-          link: "/kitchen/kitchen-organization",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Lighting",
-          link: "/kitchen/kitchen-lighting",
-          type: "secondary",
-        },
-        {
-          category: "Kitchen",
-          text: "Flooring",
-          link: "/inspiration/kitchenflooring",
-          type: "secondary",
-        },
+        
+        
       ],
     },
   ],
   [
     {
-      mainMenu: "Home Bar",
-      mainMenuBtnLink: "/home-bar-cabinets",
-      mainMenuBtnText: "Shop All Home Bar",
+      mainMenu: "Main Category 3",
+      mainMenuBtnLink: "#",
+      mainMenuBtnText: "Shop Main Category 3",
       links: [
         {
-          category: "Home Bar",
-          text: '21" Home Bar Solutions',
-          link: "/home-bar-cabinets/21in-home-bar-cabinets",
+          category: "Main Category 3",
+          text: 'Sub Category 1',
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Home Bar",
-          text: '24" Home Bar Solutions',
-          link: "/home-bar-cabinets/24in-home-bar-cabinets",
+          category: "Main Category 3",
+          text: 'Sub Category 2',
+          link: "#",
           type: "secondary",
         },
       ],
     },
     {
-      mainMenu: "Laundry",
-      mainMenuBtnLink: "/laundry-room-cabinets",
-      mainMenuBtnText: "Shop All Home Bar",
+      mainMenu: "Main Category 4",
+      mainMenuBtnLink: "#",
+      mainMenuBtnText: "Shop Main Category 4",
     },
     {
-      mainMenu: "Flooring",
-      mainMenuBtnLink: "/flooring",
-      mainMenuBtnText: "Shop All Flooring",
+      mainMenu: "Main Category 5",
+      mainMenuBtnLink: "#",
+      mainMenuBtnText: "Shop Main Category 5",
       links: [
         {
-          category: "Flooring",
-          text: "Luxury Vinyl Plank",
-          link: "/flooring/luxury-vinyl-plank",
+          category: "Main Category 5",
+          text: "Sub Category",
+          link: "#",
           type: "secondary",
         },
         {
-          category: "Flooring",
-          text: "Luxury Vinyl Tile",
-          link: "/flooring/luxury-vinyl-tiles",
-          type: "secondary",
-        },
-      ],
-    },
-  ],
-];
-
-const caDepartmentTab = [
-  [
-    {
-      mainMenu: "Garage",
-      mainMenuBtnText: "Shop All Garage",
-      mainMenuBtnLink: "/garage-storage-organization-solutions",
-      links: [
-        {
-          category: "Garage",
-          text: "Garage Cabinets",
-          link: "/ca/garage-storage-cabinets",
-          type: "primary",
-        },
-        {
-          category: "Garage",
-          text: "Pro Series",
-          link: "/ca/garage-storage-cabinets-pro-3-0-series",
-          type: "secondary",
-        },
-        {
-          category: "Garage",
-          text: "Bold Series",
-          link: "/ca/garage-storage-cabinets-bold-3-0-series",
-          type: "secondary",
-        },
-        {
-          category: "Garage",
-          text: "Racks & Shelving",
-          link: "/ca/shelves-and-off-the-floor-storage",
-          type: "primary",
-        },
-        {
-          category: "Garage",
-          text: "Wall Mounted Shelves",
-          link: "/ca/pro-series-wall-mounted-steel-shelves",
-          type: "secondary",
-        },
-        {
-          category: "Garage",
-          text: "Wall Mounted Racks",
-          link: "/ca/wall-mounted-racks",
-          type: "secondary",
-        },
-        {
-          category: "Garage",
-          text: "Slatwall & Accessories",
-          link: "/ca/wall-organization",
-          type: "primary",
-        },
-        {
-          category: "Garage",
-          text: "Workbench Solutions",
-          link: "/ca/garage-storage-organization-solutions/workbenches/",
-          type: "primary",
-        },
-        {
-          category: "Garage",
-          text: "Linkable Shop Lights",
-          link: "/ca/linkable-shop-lights",
-          type: "primary",
-        },
-        {
-          category: "Garage",
-          text: "Cabinet Lightd",
-          link: "https://ca.shopnewage.com/collections/cabinet-lighting/?_ga=2.239278731.923755039.1628501241-522633941.1615800069",
-          type: "primary",
-        },
-        {
-          category: "Garage",
-          text: "Garage Flooring",
-          link: "/ca/flooring/residential-spaces/garage-spaces/",
-          type: "primary",
-        },
-      ],
-    },
-  ],
-  [
-    {
-      mainMenu: "Outdoor",
-      mainMenuBtnText: "Shop All Outdoor",
-      mainMenuBtnLink: "/ca/outdoor-kitchen-cabinets",
-      links: [
-        {
-          category: "Outdoor",
-          text: "Kitchen Cabinets",
-          link: "/ca/outdoor-kitchen",
-          type: "primary",
-        },
-        {
-          category: "Outdoor",
-          text: "Stainless Steel Collection",
-          link: "/outdoor-kitchen-cabinets-stainless-steel",
-          type: "secondary",
-        },
-        {
-          category: "Outdoor",
-          text: "Aluminum Collection",
-          link: "/outdoor-kitchen-cabinets-aluminum",
-          type: "secondary",
-        },
-        {
-          text: "Cooking Appliances",
-          link: "/ca/outdoor-kitchen-grills/",
-          type: "primary",
-        },
-        {
-          text: "Grills",
-          link: "/ca/outdoor-kitchen-grills#learn-more1",
-          type: "secondary",
-        },
-        {
-          text: "Dual Side Burners",
-          link: "/ca/outdoor-kitchen-grills#dual-side-burners",
-          type: "secondary",
-        },
-      ],
-      // links: [
-      //   {
-      //     text: 'Kitchen Cabinet',
-      //     link: '#',
-      //     type: 'primary'
-      //   },
-      //   {
-      //     text: 'Countertops',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Stainless Steel Collection',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Alumunium Collection',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Cooking Appliances',
-      //     link: '#',
-      //     type: 'primary'
-      //   },
-      //   {
-      //     text: 'Grills',
-      //     link: '#',
-      //     type: 'secondary'
-      //   },
-      //   {
-      //     text: 'Dual Side Burners',
-      //     link: '#',
-      //     type: 'secondary'
-      //   }
-      // ]
-    },
-  ],
-  [
-    {
-      mainMenu: "Flooring",
-      mainMenuBtnLink: "/ca/flooring",
-      mainMenuBtnText: "Shop All Flooring",
-      links: [
-        {
-          category: "Flooring",
-          text: "Luxury Vinyl Plank",
-          link: "/ca/flooring/luxury-vinyl-plank/",
-          type: "secondary",
-        },
-        {
-          category: "Flooring",
-          text: "Luxury Vinyl Tile",
-          link: "/ca/flooring/luxury-vinyl-tiles/",
-          type: "secondary",
-        },
-        {
-          category: "Flooring",
-          text: "Flooring Buying Guide",
-          link: "/ca/flooring/flooring-buying-guide/",
-          type: "secondary",
-        },
-        {
-          category: "Flooring",
-          text: "Material & Tech Specs",
-          link: "/ca/flooring/flooring-material-testing/",
+          category: "Main Category 5",
+          text: "Sub Category",
+          link: "#",
           type: "secondary",
         },
       ],
@@ -1078,7 +746,7 @@ function Header({ data }) {
                     <Link href="/why-buy-from-newage">
                       <Image
                         onClick={() => setHeader(null)}
-                        src="/assets/department-1.jpg"
+                        src="/assets/category-image.jpg"
                         className="header-img"
                         alt="dept"
                         height={300}
@@ -1093,45 +761,45 @@ function Header({ data }) {
               <ExpandHeader>
                 <HeaderContent className="header-content">
                   <div>
-                    <MainMenu>Garage</MainMenu>
-                    <SecondaryLink href="/design-services">
-                      3D Design Studio
+                    <MainMenu>Other Category 1</MainMenu>
+                    <SecondaryLink href="#">
+                      Sub Category
                     </SecondaryLink>
-                    <SecondaryLink>Installation</SecondaryLink>
-                    <MainMenu>Online Support</MainMenu>
-                    <SecondaryLink>Videos &amp; Guides</SecondaryLink>
-                    <SecondaryLink>FAQ</SecondaryLink>
-                    <MainMenu>Order Support</MainMenu>
-                    <SecondaryLink>Track Shipping</SecondaryLink>
-                    <SecondaryLink>Product Replacement</SecondaryLink>
-                    <SecondaryLink>Warranty Registration</SecondaryLink>
-                    <SecondaryLink>Return Policy</SecondaryLink>
+                    <SecondaryLink>Sub Category</SecondaryLink>
+                    <MainMenu>Other Category 2</MainMenu>
+                    <SecondaryLink>Sub Category</SecondaryLink>
+                    <SecondaryLink>Sub Category</SecondaryLink> 
+                    <MainMenu>Other Category 3</MainMenu>
+                    <SecondaryLink>Sub Category</SecondaryLink>
+                    <SecondaryLink>Sub Category</SecondaryLink>
+                    <SecondaryLink>Sub Category</SecondaryLink>
+                    <SecondaryLink>Sub Category</SecondaryLink>
                   </div>
                   <div className="services-image-warpper">
                     <div>
                       <a href="#">
                         <img
-                          src="/assets/header/design.jpg"
+                          src="/assets/category-image-others.jpg"
                           className="header-img"
-                          alt="header-logo"
+                          alt="Tanzil Header"
                         />
                       </a>
                     </div>
                     <div>
                       <a href="#">
                         <img
-                          src="/assets/header/register.jpg"
+                          src="/assets/category-image-others.jpg"
                           className="header-img"
-                          alt="header-logo"
+                          alt="Tanzil Header"
                         />
                       </a>
                     </div>
                     <div>
                       <a href="#">
                         <img
-                          src="/assets/header/support.jpg"
+                          src="/assets/category-image-others.jpg"
                           className="header-img"
-                          alt="header-logo"
+                          alt="Tanzil Header"
                         />
                       </a>
                     </div>
@@ -1145,30 +813,30 @@ function Header({ data }) {
                   {/*  */}
                   <div>
                     <img
-                      src="/assets/header/inspiration-garage.jpg"
+                      src="/assets/menu-image.jpg" 
                       className="header-img"
-                      alt="header-logoaaa"
+                      alt="Tanzil Header"
                     />
                   </div>
                   <div>
                     <img
-                      src="/assets/header/inspiration-garage.jpg"
+                      src="/assets/menu-image.jpg"
                       className="header-img"
-                      alt="header-logo"
+                      alt="Tanzil Header"
                     />
                   </div>
                   <div>
                     <img
-                      src="/assets/header/inspiration-kitchen.jpg"
+                      src="/assets/menu-image.jpg"
                       className="header-img"
-                      alt="header-logo"
+                      alt="Tanzil Header"
                     />
                   </div>
                   <div>
                     <img
-                      src="/assets/header/inspiration-all.jpg"
+                      src="/assets/menu-image.jpg"
                       className="header-img"
-                      alt="header-logo"
+                      alt="Tanzil Header"
                     />
                   </div>
                 </HeaderContent>
@@ -1221,11 +889,11 @@ function Header({ data }) {
                       aria-controls="panel1a-content"
                       id="panel1a-header"
                     >
-                      Garage
+                      Main Category 1
                     </AccordionSummary>
                     <AccordionDetails>
-                      <MobileDrawerLink>Garage</MobileDrawerLink>
-                      <MobileDrawerLink>Shop All Garage</MobileDrawerLink>
+                      <MobileDrawerLink>Main Category 1</MobileDrawerLink>
+                      <MobileDrawerLink>Shop All Main Category 1</MobileDrawerLink>
                       <MobileDrawerLink>Storage Cabinets</MobileDrawerLink>
                       <MobileDrawerLink>Pro Series</MobileDrawerLink>
                       <MobileDrawerLink>Bold Series</MobileDrawerLink>
@@ -1238,7 +906,7 @@ function Header({ data }) {
                       <MobileDrawerLink>PVC Slatwall</MobileDrawerLink>
                       <MobileDrawerLink>Linkable Shop Lights</MobileDrawerLink>
                       <MobileDrawerLink>Cabinets Lights</MobileDrawerLink>
-                      <MobileDrawerLink>Garage Flooring</MobileDrawerLink>
+                      <MobileDrawerLink>Main Category 1 Flooring</MobileDrawerLink>
                     </AccordionDetails>
                   </Accordion>
                   <Accordion>
@@ -1352,7 +1020,7 @@ function Header({ data }) {
                   Menu 3
                 </AccordionSummary>
                 <AccordionDetails>
-                  <MobileDrawerLink>Garage</MobileDrawerLink>
+                  <MobileDrawerLink>Main Category 1</MobileDrawerLink>
                   <MobileDrawerLink>Kitchen</MobileDrawerLink>
                   <MobileDrawerLink>Flooring</MobileDrawerLink>
                   <MobileDrawerLink>See All Spaces</MobileDrawerLink>
