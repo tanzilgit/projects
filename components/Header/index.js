@@ -18,34 +18,25 @@ import device from "../../utils/mediaUtils";
 // import getSiteType from "@utils/custom-hooks/getSiteType";
 import { useRouter } from "next/router";
 
-const HeaderBanner = styled.div`
-  text-align: center;
-  padding: 10px;
-  background: #000;
-  color: #fff;
-`;
-const Shipping = styled.p`
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0 auto;
-  color: #fff;
-`;
-const Pincode = styled.div`
-  position: absolute;
-  left: 10px;
-  ${device.tablet} {
-    display: none;
+const MainHeaderWrapper = styled.div`
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: #000;
+    img {
+      border-radius: 50%;
+    }
   }
 `;
-const Flag = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  ${device.tablet} {
-    display: none;
-  }
+
+const NavWrapper = styled.div`
+  display: flex;
+  background: #000000d6;
+  justify-content: center;
 `;
+
 const HeaderContainer = styled.div`
   padding: 15px 0;
   position: relative;
@@ -56,6 +47,8 @@ const HeaderContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   border-bottom: 1px solid #c4c0c0;
+  justify-content: center;
+  align-items: center;
   .shop-header-content {
     justify-content: center;
     .shop-department {
@@ -82,26 +75,7 @@ const HeaderContainer = styled.div`
     /* align-items: center; */
     align-items: end;
   }
-  .first-component {
-    width: auto;
-    height: 145px;
-    background: #ebebeb;
-    /* width: 220px; */
-    width: 231px;
-    /* height: 100%; */
-  }
-  .text-component {
-    padding: 18px;
-  }
-  .text-component .ff-pr {
-    font-size: 20px;
-  }
-  .text-component .ff-psb {
-    margin-top: 5px;
-    line-height: 16px !important;
-    font-size: 16px;
-    color: #61636a;
-  }
+
   @media (max-width: 1300px) {
     .inspiration-tab {
       grid-gap: 5px;
@@ -111,19 +85,7 @@ const HeaderContainer = styled.div`
       height: 105px;
       width: 180px;
     }
-    .first-component {
-      margin-right: 5px;
-    }
-    .text-component {
-      padding: 10px 18px;
-    }
-    .text-component .ff-pr {
-      font-size: 16px;
-    }
-    .text-component .ff-psb {
-      font-size: 13px;
-      letter-spacing: 0;
-    }
+
     .header-img {
       width: 95%;
     }
@@ -140,12 +102,12 @@ const HeaderContainer = styled.div`
 `;
 const LeftHeader = styled.div`
   display: flex;
-  width: 30%;
-  padding: 0 20px;
+  width: 100%;
+  /* padding: 0 20px; */
   justify-content: space-around;
-  @media (max-width: 1450px) {
+  /* @media (max-width: 1450px) {
     width: 35%;
-  }
+  } */
 `;
 const MiddleHeader = styled.div`
   width: 20%;
@@ -227,9 +189,17 @@ const NavItem = styled.div`
   cursor: pointer;
   padding: 10px 25px;
   border-radius: 5px;
-  ${(props) => props.active && "background: #ebebeb;"}
+  color: #fff;
+  border: 1px solid #292929;
+
+  ${(props) => props.active && "background: #ff0000ba;"}
   &:hover {
-    background: #ebebeb;
+    /* background: #ebebeb; */
+    background: transparent;
+    border: 1px solid red;
+  }
+  + {
+    margin-left: 10px;
   }
 `;
 const ExpandHeader = styled.div`
@@ -238,7 +208,8 @@ const ExpandHeader = styled.div`
   top: 0;
   margin-top: 93px;
   background-color: #fff;
-  width: 100%;
+  /* width: 100%; */
+  width: auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   z-index: 10;
   /* Shop Tab */
@@ -937,7 +908,7 @@ function Header({ data }) {
   // getSiteType(setSiteType);
 
   return (
-    <>
+    <MainHeaderWrapper>
       <Head>
         <title>{data?.metaID ? data?.metaTitle : "Tanzil WorkBase"}</title>
 
@@ -1016,214 +987,195 @@ function Header({ data }) {
           }
         />
       </Head>
-
+      <div className="logo-wrapper">
+        <Link href="/">
+          <a>
+            <Image
+              src="/assets/logo-1.png"
+              width={150}
+              height={150}
+              alt="Tanzil"
+            />
+          </a>
+        </Link>
+      </div>
       <ClickAwayListener
         onClickAway={() => {
           setHeader(null);
           setShowInput(false);
         }}
       >
-        <HeaderContainer className="header-container">
-          <LeftHeader>
-            <NavItem
-              active={header === "departments"}
-              onClick={() => setHeader("departments")}
-            >
-              Menu 1
-            </NavItem>
-            <NavItem
-              active={header === "services"}
-              onClick={() => setHeader("services")}
-            >
-              Menu 2
-            </NavItem>
-            <NavItem
-              active={header === "inspiration"}
-              onClick={() => setHeader("inspiration")}
-            >
-              Menu 3
-            </NavItem>
+        <NavWrapper className="NavWrapper">
+          <HeaderContainer className="header-container">
+            <LeftHeader>
+              <NavItem
+                active={header === "departments"}
+                onClick={() => setHeader("departments")}
+              >
+                Menu 1
+              </NavItem>
+              <NavItem
+                active={header === "services"}
+                onClick={() => setHeader("services")}
+              >
+                Menu 2
+              </NavItem>
+              <NavItem
+                active={header === "inspiration"}
+                onClick={() => setHeader("inspiration")}
+              >
+                Image Menu
+              </NavItem>
 
-            <NavItem>
-              <Link href="/fetch/">
-                <a>Basic API Fetch</a>
-              </Link>
-            </NavItem>
-          </LeftHeader>
+              <NavItem>
+                <Link href="/fetch/">
+                  <a>Basic API Fetch</a>
+                </Link>
+              </NavItem>
+            </LeftHeader>
 
-          {header === "departments" && (
-            <ExpandHeader className="header-contents">
-              <HeaderContent className="checkinggg">
-                {departmentTab.map((item, index) => (
-                  <div key={index}>
-                    {item.map((i, index) => (
-                      <div key={index}>
-                        <Link href={i.mainMenuBtnLink} passHref>
-                          <MainMenu onClick={() => setHeader(null)}>
-                            {i.mainMenu}
-                          </MainMenu>
-                        </Link>
-                        <NAPButton
-                          className="sna_link"
-                          type="link"
-                          text={i.mainMenuBtnText}
+            {header === "departments" && (
+              <ExpandHeader className="header-contents">
+                <HeaderContent className="checkinggg">
+                  {departmentTab.map((item, index) => (
+                    <div key={index}>
+                      {item.map((i, index) => (
+                        <div key={index}>
+                          <Link href={i.mainMenuBtnLink} passHref>
+                            <MainMenu onClick={() => setHeader(null)}>
+                              {i.mainMenu}
+                            </MainMenu>
+                          </Link>
+                          <NAPButton
+                            className="sna_link"
+                            type="link"
+                            text={i.mainMenuBtnText}
+                          />
+                          {i?.links?.map((l, index) => (
+                            <div key={index}>
+                              {l.type === "primary" ? (
+                                <Link href={l.link} passHref>
+                                  <PrimaryLink onClick={() => setHeader(null)}>
+                                    {l.text}
+                                  </PrimaryLink>
+                                </Link>
+                              ) : (
+                                <Link href={l.link} passHref>
+                                  <SecondaryLink
+                                    onClick={() => setHeader(null)}
+                                  >
+                                    {l.text}
+                                  </SecondaryLink>
+                                </Link>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                  <div>
+                    <Link href="/why-buy-from-newage">
+                      <Image
+                        onClick={() => setHeader(null)}
+                        src="/assets/department-1.jpg"
+                        className="header-img"
+                        alt="dept"
+                        height={300}
+                        width={300}
+                      />
+                    </Link>
+                  </div>
+                </HeaderContent>
+              </ExpandHeader>
+            )}
+            {header === "services" && (
+              <ExpandHeader>
+                <HeaderContent className="header-content">
+                  <div>
+                    <MainMenu>Garage</MainMenu>
+                    <SecondaryLink href="/design-services">
+                      3D Design Studio
+                    </SecondaryLink>
+                    <SecondaryLink>Installation</SecondaryLink>
+                    <MainMenu>Online Support</MainMenu>
+                    <SecondaryLink>Videos &amp; Guides</SecondaryLink>
+                    <SecondaryLink>FAQ</SecondaryLink>
+                    <MainMenu>Order Support</MainMenu>
+                    <SecondaryLink>Track Shipping</SecondaryLink>
+                    <SecondaryLink>Product Replacement</SecondaryLink>
+                    <SecondaryLink>Warranty Registration</SecondaryLink>
+                    <SecondaryLink>Return Policy</SecondaryLink>
+                  </div>
+                  <div className="services-image-warpper">
+                    <div>
+                      <a href="#">
+                        <img
+                          src="/assets/header/design.jpg"
+                          className="header-img"
+                          alt="header-logo"
                         />
-                        {i?.links?.map((l, index) => (
-                          <div key={index}>
-                            {l.type === "primary" ? (
-                              <Link href={l.link} passHref>
-                                <PrimaryLink onClick={() => setHeader(null)}>
-                                  {l.text}
-                                </PrimaryLink>
-                              </Link>
-                            ) : (
-                              <Link href={l.link} passHref>
-                                <SecondaryLink onClick={() => setHeader(null)}>
-                                  {l.text}
-                                </SecondaryLink>
-                              </Link>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    ))}
+                      </a>
+                    </div>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="/assets/header/register.jpg"
+                          className="header-img"
+                          alt="header-logo"
+                        />
+                      </a>
+                    </div>
+                    <div>
+                      <a href="#">
+                        <img
+                          src="/assets/header/support.jpg"
+                          className="header-img"
+                          alt="header-logo"
+                        />
+                      </a>
+                    </div>
                   </div>
-                ))}
-                <div>
-                  <Link href="/why-buy-from-newage">
-                    <Image
-                      onClick={() => setHeader(null)}
-                      src="/assets/department-1.jpg"
+                </HeaderContent>
+              </ExpandHeader>
+            )}
+            {header === "inspiration" && (
+              <ExpandHeader>
+                <HeaderContent className="inspiration-tab">
+                  {/*  */}
+                  <div>
+                    <img
+                      src="/assets/header/inspiration-garage.jpg"
                       className="header-img"
-                      alt="dept"
-                      height={300}
-                      width={300}
+                      alt="header-logoaaa"
                     />
-                  </Link>
-                </div>
-              </HeaderContent>
-            </ExpandHeader>
-          )}
-          {header === "services" && (
-            <ExpandHeader>
-              <HeaderContent className="header-content">
-                <div>
-                  <MainMenu>Garage</MainMenu>
-                  <SecondaryLink href="/design-services">
-                    3D Design Studio
-                  </SecondaryLink>
-                  <SecondaryLink>Installation</SecondaryLink>
-                  <MainMenu>Online Support</MainMenu>
-                  <SecondaryLink>Videos &amp; Guides</SecondaryLink>
-                  <SecondaryLink>FAQ</SecondaryLink>
-                  <MainMenu>Order Support</MainMenu>
-                  <SecondaryLink>Track Shipping</SecondaryLink>
-                  <SecondaryLink>Product Replacement</SecondaryLink>
-                  <SecondaryLink>Warranty Registration</SecondaryLink>
-                  <SecondaryLink>Return Policy</SecondaryLink>
-                </div>
-                <div className="services-image-warpper">
-                  <div>
-                    <a href="#">
-                      <img
-                        src="/assets/header/design.jpg"
-                        className="header-img"
-                        alt="header-logo"
-                      />
-                    </a>
                   </div>
                   <div>
-                    <a href="#">
-                      <img
-                        src="/assets/header/register.jpg"
-                        className="header-img"
-                        alt="header-logo"
-                      />
-                    </a>
+                    <img
+                      src="/assets/header/inspiration-garage.jpg"
+                      className="header-img"
+                      alt="header-logo"
+                    />
                   </div>
                   <div>
-                    <a href="#">
-                      <img
-                        src="/assets/header/support.jpg"
-                        className="header-img"
-                        alt="header-logo"
-                      />
-                    </a>
+                    <img
+                      src="/assets/header/inspiration-kitchen.jpg"
+                      className="header-img"
+                      alt="header-logo"
+                    />
                   </div>
-                </div>
-              </HeaderContent>
-            </ExpandHeader>
-          )}
-          {header === "inspiration" && (
-            <ExpandHeader>
-              <HeaderContent className="inspiration-tab">
-                <div className="image-offers left-image-offers first-component">
-                  <div className="text-component">
-                    <p className="ff-pr">Shop by Spaces.</p>
-                    <p className="ff-psb">
-                      See our products in
-                      <br />
-                      unique spaces, and get
-                      <br />
-                      inspired for your next
-                      <br />
-                      renovation project.
-                    </p>
+                  <div>
+                    <img
+                      src="/assets/header/inspiration-all.jpg"
+                      className="header-img"
+                      alt="header-logo"
+                    />
                   </div>
-                </div>
-                {/*  */}
-                <div>
-                  <img
-                    src="/assets/header/inspiration-garage.jpg"
-                    className="header-img"
-                    alt="header-logoaaa"
-                  />
-                  <NAPButton
-                    type="link"
-                    text="Shop All Garage"
-                    url="/all-spaces/residential-improvement/garagesolution"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/assets/header/inspiration-garage.jpg"
-                    className="header-img"
-                    alt="header-logo"
-                  />
-                  <NAPButton
-                    type="link"
-                    text="Shop All Kitchen"
-                    url="/all-spaces/residential-improvement/kitchen-solution"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/assets/header/inspiration-kitchen.jpg"
-                    className="header-img"
-                    alt="header-logo"
-                  />
-                  <NAPButton
-                    type="link"
-                    text="Shop All Flooring"
-                    url="/flooring/residential-flooring/"
-                  />
-                </div>
-                <div>
-                  <img
-                    src="/assets/header/inspiration-all.jpg"
-                    className="header-img"
-                    alt="header-logo"
-                  />
-                  <NAPButton
-                    type="link"
-                    text="Shop All Deals"
-                    url="/all-spaces/residential-improvement/"
-                  />
-                </div>
-              </HeaderContent>
-            </ExpandHeader>
-          )}
-        </HeaderContainer>
+                </HeaderContent>
+              </ExpandHeader>
+            )}
+          </HeaderContainer>
+        </NavWrapper>
       </ClickAwayListener>
       <MobileHeader className="mobile-header">
         <MobileContainer className="mobile-header-container">
@@ -1410,7 +1362,7 @@ function Header({ data }) {
           </DrawerContainer>
         </StyledDrawer>
       </MobileHeader>
-    </>
+    </MainHeaderWrapper>
   );
 }
 
