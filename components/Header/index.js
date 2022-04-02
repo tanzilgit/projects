@@ -25,7 +25,22 @@ const MainHeaderWrapper = styled.div`
     text-align: center;
     justify-content: center;
     background: #000;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
     img {
+      border-radius: 50%;
+      /*  */
+      transform: scale(1.05);
+      transition: 0.3s all;
+      :hover {
+        /* transform: scale(1.1); */
+        transform: scale(1.1);
+        transition: 0.3s all;
+      }
+    }
+    span {
       border-radius: 50%;
     }
   }
@@ -199,7 +214,7 @@ const NavItem = styled.div`
     border: 1px solid red;
   }
   + {
-    margin-left: 10px; 
+    margin-left: 10px;
   }
 `;
 const ExpandHeader = styled.div`
@@ -212,7 +227,7 @@ const ExpandHeader = styled.div`
   /* width: 100%; */
   width: auto;
   /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); */
-  box-shadow: -3px 5px 25px rgb(0 0 0 / 50%);   
+  box-shadow: -3px 5px 25px rgb(0 0 0 / 50%);
   z-index: 10;
   /* Shop Tab */
   .flex-col {
@@ -461,14 +476,13 @@ export const departmentTab = [
           link: "#",
           type: "secondary",
         },
-        
+
         {
           category: "Main Category 1",
           text: "Sub Category 4",
           link: "#",
           type: "primary",
         },
-        
       ],
     },
   ],
@@ -514,8 +528,6 @@ export const departmentTab = [
           link: "#",
           type: "secondary",
         },
-        
-        
       ],
     },
   ],
@@ -527,13 +539,13 @@ export const departmentTab = [
       links: [
         {
           category: "Main Category 3",
-          text: 'Sub Category 1',
+          text: "Sub Category 1",
           link: "#",
           type: "secondary",
         },
         {
           category: "Main Category 3",
-          text: 'Sub Category 2',
+          text: "Sub Category 2",
           link: "#",
           type: "secondary",
         },
@@ -762,13 +774,11 @@ function Header({ data }) {
                 <HeaderContent className="header-content">
                   <div>
                     <MainMenu>Other Category 1</MainMenu>
-                    <SecondaryLink href="#">
-                      Sub Category
-                    </SecondaryLink>
+                    <SecondaryLink href="#">Sub Category</SecondaryLink>
                     <SecondaryLink>Sub Category</SecondaryLink>
                     <MainMenu>Other Category 2</MainMenu>
                     <SecondaryLink>Sub Category</SecondaryLink>
-                    <SecondaryLink>Sub Category</SecondaryLink> 
+                    <SecondaryLink>Sub Category</SecondaryLink>
                     <MainMenu>Other Category 3</MainMenu>
                     <SecondaryLink>Sub Category</SecondaryLink>
                     <SecondaryLink>Sub Category</SecondaryLink>
@@ -813,7 +823,7 @@ function Header({ data }) {
                   {/*  */}
                   <div>
                     <img
-                      src="/assets/menu-image.jpg" 
+                      src="/assets/menu-image.jpg"
                       className="header-img"
                       alt="Tanzil Header"
                     />
@@ -893,7 +903,9 @@ function Header({ data }) {
                     </AccordionSummary>
                     <AccordionDetails>
                       <MobileDrawerLink>Main Category 1</MobileDrawerLink>
-                      <MobileDrawerLink>Shop All Main Category 1</MobileDrawerLink>
+                      <MobileDrawerLink>
+                        Shop All Main Category 1
+                      </MobileDrawerLink>
                       <MobileDrawerLink>Storage Cabinets</MobileDrawerLink>
                       <MobileDrawerLink>Pro Series</MobileDrawerLink>
                       <MobileDrawerLink>Bold Series</MobileDrawerLink>
@@ -906,7 +918,9 @@ function Header({ data }) {
                       <MobileDrawerLink>PVC Slatwall</MobileDrawerLink>
                       <MobileDrawerLink>Linkable Shop Lights</MobileDrawerLink>
                       <MobileDrawerLink>Cabinets Lights</MobileDrawerLink>
-                      <MobileDrawerLink>Main Category 1 Flooring</MobileDrawerLink>
+                      <MobileDrawerLink>
+                        Main Category 1 Flooring
+                      </MobileDrawerLink>
                     </AccordionDetails>
                   </Accordion>
                   <Accordion>
