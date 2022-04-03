@@ -252,7 +252,7 @@ export default function Home() {
             Tab Two
           </TabButton>
         </div>
-        <div className="contents-wrapper ">
+        <div className="contents-wrapper "> 
           {/* Content One Datas */}
           {tabContent === "content-one" && (
             <div className="content-one">
@@ -273,7 +273,7 @@ export default function Home() {
                     alt=""
                   />
 
-                  <h3 className="grid-heading ff-psb">White Pearl Granite</h3>
+                  <h3 className="grid-heading ff-psb second-content">Tab Sub Heading</h3> 
                 </div>
                 <div className="second">
                   <Image
@@ -283,7 +283,7 @@ export default function Home() {
                     alt=""
                   />
 
-                  <h3 className="grid-heading ff-psb">Gold Sand Granite</h3>
+                  <h3 className="grid-heading ff-psb second-content">Tab Sub Heading</h3>
                 </div>
                 <div className="third">
                   <Image
@@ -293,7 +293,7 @@ export default function Home() {
                     alt=""
                   />
 
-                  <h3 className="grid-heading ff-psb">Black Galaxy Granite</h3>
+                  <h3 className="grid-heading ff-psb second-content">Tab Sub Heading</h3>
                 </div>
               </GridRowItems>
             </div>
@@ -450,7 +450,7 @@ export default function Home() {
         <SimpleAccordion />
       </section>
       {/*  */}
-      
+
     </IndexWrapper>
   );
 }
