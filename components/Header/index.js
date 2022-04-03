@@ -774,7 +774,7 @@ function Header({ data }) {
                       </div>
                     ))}
                     <div>
-                      <Link href="/why-buy-from-newage">
+                      <Link href="#" passHref> 
                         <Image
                           onClick={() => setHeader(null)}
                           src="/assets/category-image.jpg"
