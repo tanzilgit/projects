@@ -18,7 +18,7 @@ import device from "../../utils/mediaUtils";
 // import getSiteType from "@utils/custom-hooks/getSiteType";
 import { useRouter } from "next/router";
 
-const MainHeaderWrapper = styled.div`
+const MainHeaderWrapper = styled.div`        
   .logo-wrapper {
     width: 100%;
     display: flex;
@@ -27,7 +27,7 @@ const MainHeaderWrapper = styled.div`
     background: #000;
     display: block;
     position: relative;
-    overflow: hidden;
+    overflow: hidden;  
 
     img {
       border-radius: 50%;
