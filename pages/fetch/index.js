@@ -1,8 +1,11 @@
 import FetchAsync from "../../components/APIFetching/FetchAsync";
 import FetchPromise from "../../components/APIFetching/FetchPromise";
-import React from "react";
+// import React from "react";
+import React, { useRef, useEffect } from "react";
 
 function Index() {
+  // const reference = useRef(null);
+  // console.log("reference check",reference)
   return (
     <div>
       <section className="content-fetching section-top-padding section-bottom-padding">
