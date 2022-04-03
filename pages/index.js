@@ -439,19 +439,7 @@ export default function Home() {
         />
       </section>
       {/*  */}
-
-      {/*  */}
-      <section className="accordion">
-        <NAPContainer>
-          <SimpleAccordion />
-        </NAPContainer>
-      </section>
-      {/*  */}
-
-      {/*  */}
-      <Footer />
-      {/*  */}
-
+      
       {/*  */}
       <section className="bannerSwatch section-top-padding">
         <BannerSwatch {...Data1} flex_direction="column" />
