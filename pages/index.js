@@ -20,6 +20,9 @@ import Footer from "../components/Footer";
 import FetchAsync from "../components/APIFetching/FetchAsync";
 import FetchPromise from "../components/APIFetching/FetchPromise";
 import SliderPopUp from "../components/SliderPopUp";
+import NAPButton from "@components/NAPButton";
+import Modal from "@material-ui/core/Modal";
+import { CloseTag, ModalContainer } from "@components/VideoModal";
 
 const IndexWrapper = styled.div`
   header {
@@ -63,6 +66,13 @@ const TabButton = styled.button`
 export default function Home() {
   // States
   const [tabContent, setTabContent] = useState("content-one");
+
+  // Modal
+  const [modal, setModal] = useState(false);
+  const handleClick = () => {
+    // console.log("video button clicked")
+    setModal(true);
+  };
 
   // Slider
   const YMAL = {
@@ -175,7 +185,26 @@ export default function Home() {
         <div className="asset-overlay">
           <h1 className="main-heading fc-white ff-psb">Tanzil WorkBase</h1>
         </div>
+        <div className="cta-wrapper second-content">
+          <NAPButton text="Modal" type="outlined" color="#FFF" onClick={() => handleClick()} />
+        </div>
       </HeroBanner>
+      <Modal
+        open={modal}
+        onClose={() => setModal(false)}
+        disableAutoFocus={true}
+        className="modal"
+      >
+        <ModalContainer className="modal-container">
+          <header>
+            <p className="fc-white main-heading">Simple Modal Contents</p>
+          </header>
+          <CloseTag
+            className="close-icon"
+            onClick={() => setModal(false)}
+          ></CloseTag>
+        </ModalContainer>
+      </Modal>
       {/*  */}
 
       {/*  */}
