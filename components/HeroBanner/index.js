@@ -122,10 +122,10 @@ function HeroBanner({
 
 HeroBanner.defaultProps = {
   desktop: {
-    src: "/assets/heroDesktop.jpg",
+    src: "/assets/banner-1.jpg?var=111",
   },
   mobile: {
-    src: "/assets/heroMobile.jpg",
+    src: "/assets/mobile-banner.jpg",
   },
   priority: false,
   videoId: 279549964,
