@@ -8,12 +8,11 @@ import SimpleAccordion from "../components/Accordion";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <MegaMenu /> */}
+      {/* <MegaMenu /> */} 
 
       <Header />
       <Component {...pageProps} />
       <Footer />
-      <SimpleAccordion />
     </>
   );
 }
