@@ -172,7 +172,7 @@ export default function Home() {
       {/*  */}
       <HeroBanner>
         <div className="asset-overlay">
-          <h1 className="main-heading fc-white ff-psb">Tanzil's WorkBase</h1> 
+          <h1 className="main-heading fc-white ff-psb">Tanzil WorkBase</h1> 
         </div>
       </HeroBanner>
       {/*  */}
