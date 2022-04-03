@@ -4,14 +4,16 @@ import Footer from "../components/Footer";
 import "../styles/globals.css";
 import "../styles/mega.css";
 import SimpleAccordion from "../components/Accordion";
+import BackToTop from "../components/BackToTop";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <MegaMenu /> */} 
+      {/* <MegaMenu /> */}
 
       <Header />
       <Component {...pageProps} />
+      <BackToTop />
       <Footer />
     </>
   );
