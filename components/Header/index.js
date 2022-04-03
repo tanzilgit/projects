@@ -27,7 +27,7 @@ const MainHeaderWrapper = styled.div`
     background: #000;
     display: block;
     position: relative;
-    overflow: hidden;  
+    overflow: hidden;   
 
     img {
       border-radius: 50%;

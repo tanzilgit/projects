@@ -14,123 +14,118 @@ export const FooterContainer = styled.section`
   display: flex;
   flex-direction: column;
   margin: 0;
-
-  .footer-contact-social {
-    display: inline-block;
-    width: 100%;
-    float: left;
+  ${device.tablet} {
     margin-top: 20px;
-    /* padding-left: 5px; */
-
-    ${device.laptopS} {
-      display: grid;
-      width: 80px;
-      /* float: left; */
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 20px;
-      gap: 5px;
-      padding-left: 5px;
-    }
-
-    ${device.tablet} {
-      display: inline-block;
-      margin-top: 0;
-      padding-left: 0;
-      width: 100%;
-      margin-bottom: 0;
-    }
-    a {
-      display: inline-block;
-    }
-
-    a + a {
-      margin-left: 5px;
-
-      ${device.laptopM} {
-        margin-left: 3px;
-      }
-
-      ${device.laptopS} {
-        margin-left: 0;
-      }
-
-      ${device.tablet} {
-        margin-left: 7px;
-      }
-    }
-
-    .social-icons {
-      background-color: #464646;
-      height: 36px;
-      width: 36px;
-      float: left;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      font-family: FontAwesome;
-      position: relative;
-      font-size: 22px;
-      color: #fff;
-      text-align: center;
-      display: table;
-
-      ${device.desktop} {
-        height: 33px;
-        width: 33px;
-        font-size: 17px;
-      }
-
-      ${device.laptopB} {
-        height: 24px;
-        width: 24px;
-        font-size: 17px;
-      }
-
-      ${device.laptopM} {
-        height: 22px;
-        width: 22px;
-      }
-
-      ${device.tablet} {
-        height: 38px;
-        width: 38px;
-        font-size: 24px;
-      }
-
-      &:hover {
-        background: #fff;
-        color: #000;
-      }
-
-      &::after {
-        display: table-cell;
-        vertical-align: middle;
-      }
-
-      &.fb::after {
-        content: "\f09a";
-      }
-      &.insta::after {
-        content: "\f16d";
-      }
-      &.pin::after {
-        content: "\f231";
-      }
-      &.lkdin::after {
-        content: "\f0e1";
-      }
-      &.ytube::after {
-        content: "\f16a";
-      }
-      &.houzz::after {
-        content: "\f27c";
-      }
-    }
   }
 `;
 
+export const NavContainer = styled.div`
+  width: 100%;
+  background: #292929;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 65px 0;
+  > div > a {
+    color: #efefef;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    letter-spacing: 1px;
+    ${device.laptopB} {
+      font-size: 12px;
+      padding: 7px 5px;
+    }
+  }
+  > div > a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: -100%;
+    background: #efefef;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  > div > a:hover::after {
+    left: 0;
+  }
+  > div > span {
+    color: #efefef;
+    padding: 10px 0;
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    letter-spacing: 1px;
+    ${device.laptopB} {
+      font-size: 12px;
+      padding: 7px 5px;
+    }
+  }
+`;
+export const NavItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+
+  ${device.desktop} {
+    min-width: 150px;
+  }
+
+  ${device.laptopS} {
+    min-width: auto;
+  }
+
+  .MuiSvgIcon-root + .MuiSvgIcon-root {
+    margin-left: 8px;
+  }
+  .houzz-icon {
+    width: 15px;
+  }
+`;
+export const NavCategory = styled.div`
+  font-size: 22px;
+  /* font-weight: bold; */
+  font-family: "ProximaNova Semi Bold";
+  /* font-family: ProximaNova Regular; */
+  letter-spacing: 1px;
+  line-height: normal;
+  width: auto;
+  padding: 10px 0px;
+  cursor: context-menu;
+  overflow: hidden;
+  color: #fff;
+  ${device.laptopB} {
+    font-size: 15px;
+    padding: 10px 5px;
+  }
+  ${device.tablet} {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+`;
+export const ShowInDesktop = styled.div`
+  ${device.tablet} {
+    display: none;
+  }
+`;
+export const ShowInMobile = styled.div`
+  display: none;
+  ${device.tablet} {
+    display: block;
+    margin-bottom: 0;
+  }
+`;
 export const MobileNavContainer = styled.div`
-  padding: 40px 0 0;
+  padding: 30px 0;
   margin: 0 auto;
   background: #292929;
   color: #fff;
@@ -237,7 +232,30 @@ function Footer() {
 
   return (
     <FooterContainer id="footer-com" className="demo">
-      <div>
+      <ShowInDesktop>
+        <NavContainer>
+          <NavItem>
+            <NavCategory>Footer Category 1</NavCategory>
+            <a href="#">Footer Sub Category</a>
+            <a href="#">Footer Sub Category</a>
+            <a href="#">Footer Sub Category</a>
+            <a href="#">Footer Sub Category</a>
+          </NavItem>
+          <NavItem>
+            <NavCategory>Footer Category 2</NavCategory>
+            <a href="#">Footer Sub Category</a>
+            <a href="#">Footer Sub Category</a>
+            <a href="#">Footer Sub Category</a>
+          </NavItem>
+          <NavItem>
+            <NavCategory>Footer Category 3</NavCategory>
+            <a href="#">Footer Sub Category</a>
+            <a href="#">Footer Sub Category</a>
+          </NavItem>
+        </NavContainer>
+      </ShowInDesktop>
+      {/*  */}
+      <ShowInMobile>
         <MobileNavContainer>
           <Accordion
             expanded={expanded === "panel1"}
@@ -247,12 +265,13 @@ function Footer() {
               expandIcon={expanded === "panel1" ? <MinusIcon /> : <AddIcon />}
               aria-controls="panel1a-content"
             >
-              Accordion Parent 1
+              Footer Category 1
             </AccordionSummary>
             <AccordionDetails>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -263,12 +282,12 @@ function Footer() {
               expandIcon={expanded === "panel2" ? <MinusIcon /> : <AddIcon />}
               aria-controls="panel1a-content"
             >
-              Accordion Parent 2
+              Footer Category 2
             </AccordionSummary>
             <AccordionDetails>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -279,16 +298,15 @@ function Footer() {
               expandIcon={expanded === "panel3" ? <MinusIcon /> : <AddIcon />}
               aria-controls="panel1a-content"
             >
-              Accordion Parent 3
+              Footer Category 3
             </AccordionSummary>
             <AccordionDetails>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
-              <MobileFooterNav href="#">Child Accordion Title</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
+              <MobileFooterNav href="#">Footer Sub Category</MobileFooterNav>
             </AccordionDetails>
           </Accordion>
         </MobileNavContainer>
-      </div>
+      </ShowInMobile>
     </FooterContainer>
   );
 }

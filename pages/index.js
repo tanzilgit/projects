@@ -172,7 +172,7 @@ export default function Home() {
       {/*  */}
       <HeroBanner>
         <div className="asset-overlay">
-          <h1 className="main-heading fc-white ff-psb">Tanzil WorkBase</h1> 
+          <h1 className="main-heading fc-white ff-psb">Tanzil WorkBase</h1>
         </div>
       </HeroBanner>
       {/*  */}
@@ -439,12 +439,18 @@ export default function Home() {
         />
       </section>
       {/*  */}
-      
+
       {/*  */}
       <section className="bannerSwatch section-top-padding">
         <BannerSwatch {...Data1} flex_direction="column" />
       </section>
+
       {/*  */}
+      <section>
+        <SimpleAccordion />
+      </section>
+      {/*  */}
+      
     </IndexWrapper>
   );
 }
