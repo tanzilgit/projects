@@ -18,7 +18,7 @@ import device from "../../utils/mediaUtils";
 // import getSiteType from "@utils/custom-hooks/getSiteType";
 import { useRouter } from "next/router";
 
-const MainHeaderWrapper = styled.div`        
+const MainHeaderWrapper = styled.div`
   .logo-wrapper {
     width: 100%;
     display: flex;
@@ -27,7 +27,7 @@ const MainHeaderWrapper = styled.div`
     background: #000;
     display: block;
     position: relative;
-    overflow: hidden;   
+    overflow: hidden;
 
     img {
       border-radius: 50%;
@@ -902,47 +902,22 @@ function Header({ data }) {
                       Main Category 1
                     </AccordionSummary>
                     <AccordionDetails>
-                      <MobileDrawerLink>Main Category 1</MobileDrawerLink>
-                      <MobileDrawerLink>
-                        Shop All Main Category 1
-                      </MobileDrawerLink>
-                      <MobileDrawerLink>Storage Cabinets</MobileDrawerLink>
-                      <MobileDrawerLink>Pro Series</MobileDrawerLink>
-                      <MobileDrawerLink>Bold Series</MobileDrawerLink>
-                      <MobileDrawerLink>Racks and Shelving</MobileDrawerLink>
-                      <MobileDrawerLink>Wall Mounted Shelving</MobileDrawerLink>
-                      <MobileDrawerLink>Wall Mounted Racks</MobileDrawerLink>
-                      <MobileDrawerLink>
-                        Slatwall &amp; Accessories
-                      </MobileDrawerLink>
-                      <MobileDrawerLink>PVC Slatwall</MobileDrawerLink>
-                      <MobileDrawerLink>Linkable Shop Lights</MobileDrawerLink>
-                      <MobileDrawerLink>Cabinets Lights</MobileDrawerLink>
-                      <MobileDrawerLink>
-                        Main Category 1 Flooring
-                      </MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
                     </AccordionDetails>
                   </Accordion>
+
                   <Accordion>
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
                       aria-controls="panel1a-content"
                       id="panel1a-header"
                     >
-                      Outdoor
+                      Main Category 2
                     </AccordionSummary>
                     <AccordionDetails>
-                      <MobileDrawerLink>Outdoor</MobileDrawerLink>
-                      <MobileDrawerLink>Shop All Outdoor</MobileDrawerLink>
-                      <MobileDrawerLink>Kitchen Cabinets</MobileDrawerLink>
-                      <MobileDrawerLink>Countertops</MobileDrawerLink>
-                      <MobileDrawerLink>
-                        Stainless Steel Collection
-                      </MobileDrawerLink>
-                      <MobileDrawerLink>Aluminum Collection</MobileDrawerLink>
-                      <MobileDrawerLink>Cooking Appliances</MobileDrawerLink>
-                      <MobileDrawerLink>Grills</MobileDrawerLink>
-                      <MobileDrawerLink>Dual Side Burners</MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
                     </AccordionDetails>
                   </Accordion>
                   <Accordion>
@@ -951,21 +926,12 @@ function Header({ data }) {
                       aria-controls="panel1a-content"
                       id="panel1a-header"
                     >
-                      Kitchen
+                      Main Category 3
                     </AccordionSummary>
                     <AccordionDetails header="Kitchen" key="4">
-                      <MobileDrawerLink>Kitchen</MobileDrawerLink>
-                      <MobileDrawerLink>Shop All Kitchen</MobileDrawerLink>
-                      <MobileDrawerLink>Cabinets</MobileDrawerLink>
-                      <MobileDrawerLink>Sinks</MobileDrawerLink>
-                      <MobileDrawerLink>Faucets</MobileDrawerLink>
-                      <MobileDrawerLink>Granite Countertops</MobileDrawerLink>
-                      <MobileDrawerLink>Backsplash</MobileDrawerLink>
-                      <MobileDrawerLink>Cabinets Hardware</MobileDrawerLink>
-                      <MobileDrawerLink>Millwork</MobileDrawerLink>
-                      <MobileDrawerLink>Cabinets Organization</MobileDrawerLink>
-                      <MobileDrawerLink>Lighting</MobileDrawerLink>
-                      <MobileDrawerLink>Flooring</MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
                     </AccordionDetails>
                   </Accordion>
                   <Accordion>
@@ -974,41 +940,13 @@ function Header({ data }) {
                       aria-controls="panel1a-content"
                       id="panel1a-header"
                     >
-                      Home Bar
+                      Main Category 4
                     </AccordionSummary>
                     <AccordionDetails header="Home Bar" key="5">
-                      <MobileDrawerLink>Home Bar</MobileDrawerLink>
-                      <MobileDrawerLink>Shop All Home Bar</MobileDrawerLink>
+                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
                     </AccordionDetails>
                   </Accordion>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      Laundry
-                    </AccordionSummary>
-                    <AccordionDetails header="Laundry" key="6">
-                      <MobileDrawerLink>Laundry</MobileDrawerLink>
-                      <MobileDrawerLink>Shop All Laundry</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      Flooring
-                    </AccordionSummary>
-                    <AccordionDetails header="Flooring" key="7">
-                      <MobileDrawerLink>Flooring</MobileDrawerLink>
-                      <MobileDrawerLink>Shop All Flooring</MobileDrawerLink>
-                      <MobileDrawerLink>Luxury Vinyl Plank</MobileDrawerLink>
-                      <MobileDrawerLink>Luxury Vinyl Tile</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
+                  
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -1020,9 +958,9 @@ function Header({ data }) {
                   Menu 2
                 </AccordionSummary>
                 <AccordionDetails>
-                  <MobileDrawerLink>Our Menu 2</MobileDrawerLink>
-                  <MobileDrawerLink>Online Support</MobileDrawerLink>
-                  <MobileDrawerLink>Order Support</MobileDrawerLink>
+                  <MobileDrawerLink>Other Category 1</MobileDrawerLink>
+                  <MobileDrawerLink>Other Category 2</MobileDrawerLink>
+                  <MobileDrawerLink>Other Category 3</MobileDrawerLink>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
@@ -1034,10 +972,9 @@ function Header({ data }) {
                   Menu 3
                 </AccordionSummary>
                 <AccordionDetails>
-                  <MobileDrawerLink>Main Category 1</MobileDrawerLink>
-                  <MobileDrawerLink>Kitchen</MobileDrawerLink>
-                  <MobileDrawerLink>Flooring</MobileDrawerLink>
-                  <MobileDrawerLink>See All Spaces</MobileDrawerLink>
+                  <MobileDrawerLink>Menu Image Link 1</MobileDrawerLink>
+                  <MobileDrawerLink>Menu Image Link 2</MobileDrawerLink>
+                  <MobileDrawerLink>Menu Image Link 3</MobileDrawerLink>
                 </AccordionDetails>
               </Accordion>
             </DrawerContent>

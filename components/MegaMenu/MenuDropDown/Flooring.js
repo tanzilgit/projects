@@ -31,7 +31,6 @@ const Div = styled.div`
 function Flooring() {
 	return (
 		<Div className="flooring-header-main ds-flex">
-			<Script src="https://www.roomvo.com/static/scripts/b2b/newageproducts.js"></Script>
 
 			<div className="ds-flex left-menu">
 				<div className="first-col main-col">
