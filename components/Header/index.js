@@ -14,9 +14,12 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import NAPButton from "../NAPButton";
+import Modal from "@material-ui/core/Modal";
+
 import device from "../../utils/mediaUtils";
 // import getSiteType from "@utils/custom-hooks/getSiteType";
 import { useRouter } from "next/router";
+import { CloseTag, ModalContainer } from "@components/VideoModal";
 
 const MainHeaderWrapper = styled.div`
   .logo-wrapper {
@@ -585,403 +588,435 @@ function Header({ data }) {
   const [showInput, setShowInput] = useState(false);
   const [pageUrl, setPageUrl] = useState();
 
+  // Modal
+  const [modal, setModal] = useState(false);
+  const handleClick = () => {
+    // console.log("video button clicked")
+    setModal(true);
+  };
+
   // getSiteType(setSiteType);
 
   return (
-    <MainHeaderWrapper>
-      <Head>
-        <title>{data?.metaID ? data?.metaTitle : "Tanzil WorkBase"}</title>
+    <div className="header-parent">
+      <MainHeaderWrapper className="MainHeaderWrapper">
+        <Head>
+          <title>{data?.metaID ? data?.metaTitle : "Tanzil WorkBase"}</title>
 
-        {/* Main Meta Fields */}
-        <link
-          rel="canonical"
-          href={
-            pageUrl == data?.metaID
-              ? `https://workbase.vercel.app${data?.metaID}`
-              : "https://workbase.vercel.app/"
-          }
-        />
-        <meta
-          name="robots"
-          content={
-            data?.metaIndexing == "Indexable" ? "index" : "noindex, nofollow"
-          }
-        />
+          {/* Main Meta Fields */}
+          <link
+            rel="canonical"
+            href={
+              pageUrl == data?.metaID
+                ? `https://workbase.vercel.app${data?.metaID}`
+                : "https://workbase.vercel.app/"
+            }
+          />
+          <meta
+            name="robots"
+            content={
+              data?.metaIndexing == "Indexable" ? "index" : "noindex, nofollow"
+            }
+          />
 
-        <meta
-          name="description"
-          content={
-            data?.metaDescription != null
-              ? data?.metaDescription
-              : "Organize and enjoy your space with premium NewAge home improvement products. Modular designs make it easy to create customized storage solutions for garage, kitchen, outdoor kitchen, home bar and more."
-          }
-        />
+          <meta
+            name="description"
+            content={
+              data?.metaDescription != null
+                ? data?.metaDescription
+                : "Organize and enjoy your space with premium NewAge home improvement products. Modular designs make it easy to create customized storage solutions for garage, kitchen, outdoor kitchen, home bar and more."
+            }
+          />
 
-        {/* (og:) OG meta Fields (Open Graph Protocol = FaceBook Content Reading) */}
-        <meta property="og:locale" content="en_US" />
-        <meta
-          name="og:type"
-          content={
-            pageUrl == data?.metaID ? data?.metaType : "Tanzil META Type"
-          }
-        />
-        <meta
-          property="og:title"
-          content={
-            pageUrl == data?.metaID ? data?.metaTitle : "Tanzil WorkBase"
-          }
-        />
-        <meta
-          property="og:description"
-          content={
-            data?.metaDescription != null
-              ? data?.metaDescription
-              : "Meta Description"
-          }
-        />
+          {/* (og:) OG meta Fields (Open Graph Protocol = FaceBook Content Reading) */}
+          <meta property="og:locale" content="en_US" />
+          <meta
+            name="og:type"
+            content={
+              pageUrl == data?.metaID ? data?.metaType : "Tanzil META Type"
+            }
+          />
+          <meta
+            property="og:title"
+            content={
+              pageUrl == data?.metaID ? data?.metaTitle : "Tanzil WorkBase"
+            }
+          />
+          <meta
+            property="og:description"
+            content={
+              data?.metaDescription != null
+                ? data?.metaDescription
+                : "Meta Description"
+            }
+          />
 
-        <meta
-          property="og:url"
-          content={
-            pageUrl == data?.metaID
-              ? `https://workbase.vercel.app${data?.metaID}`
-              : "https://workbase.vercel.app/"
-          }
-        />
-        <meta property="og:site_name" content="Tanzil WorkBase Site Name" />
+          <meta
+            property="og:url"
+            content={
+              pageUrl == data?.metaID
+                ? `https://workbase.vercel.app${data?.metaID}`
+                : "https://workbase.vercel.app/"
+            }
+          />
+          <meta property="og:site_name" content="Tanzil WorkBase Site Name" />
 
-        {/* Twitter Meta Fields */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:description"
-          content={
-            pageUrl == data?.metaID
-              ? data?.metaTwitterDescription
-              : "Tanzil WorkBase"
-          }
-        />
-        <meta
-          name="twitter:title"
-          content={
-            pageUrl == data?.metaID ? data?.metaTwitterTitle : "Tanzil WorkBase"
-          }
-        />
-      </Head>
-      <div className="logo-wrapper">
-        <Link href="/">
-          <a>
-            <Image
-              src="/assets/logo-1.png"
-              width={150}
-              height={150}
-              alt="Tanzil"
-            />
-          </a>
-        </Link>
-      </div>
-      <ClickAwayListener
-        onClickAway={() => {
-          setHeader(null);
-          setShowInput(false);
-        }}
-      >
-        <NavWrapper className="NavWrapper">
-          <HeaderContainer className="header-container">
-            <LeftHeader>
-              <NavItem
-                active={header === "departments"}
-                onClick={() => setHeader("departments")}
-              >
-                Menu 1
-              </NavItem>
-              <NavItem
-                active={header === "services"}
-                onClick={() => setHeader("services")}
-              >
-                Menu 2
-              </NavItem>
-              <NavItem
-                active={header === "inspiration"}
-                onClick={() => setHeader("inspiration")}
-              >
-                Image Menu
-              </NavItem>
-
-              <NavItem>
-                <Link href="/fetch/">
-                  <a>Basic API Fetch</a>
-                </Link>
-              </NavItem>
-            </LeftHeader>
-
-            {header === "departments" && (
-              <ExpandHeader className="header-contents">
-                <HeaderContent className="checkinggg">
-                  {departmentTab.map((item, index) => (
-                    <div key={index}>
-                      {item.map((i, index) => (
-                        <div key={index}>
-                          <Link href={i.mainMenuBtnLink} passHref>
-                            <MainMenu onClick={() => setHeader(null)}>
-                              {i.mainMenu}
-                            </MainMenu>
-                          </Link>
-                          <NAPButton
-                            className="sna_link"
-                            type="link"
-                            text={i.mainMenuBtnText}
-                          />
-                          {i?.links?.map((l, index) => (
-                            <div key={index}>
-                              {l.type === "primary" ? (
-                                <Link href={l.link} passHref>
-                                  <PrimaryLink onClick={() => setHeader(null)}>
-                                    {l.text}
-                                  </PrimaryLink>
-                                </Link>
-                              ) : (
-                                <Link href={l.link} passHref>
-                                  <SecondaryLink
-                                    onClick={() => setHeader(null)}
-                                  >
-                                    {l.text}
-                                  </SecondaryLink>
-                                </Link>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                  <div>
-                    <Link href="/why-buy-from-newage">
-                      <Image
-                        onClick={() => setHeader(null)}
-                        src="/assets/category-image.jpg"
-                        className="header-img"
-                        alt="dept"
-                        height={300}
-                        width={300}
-                      />
-                    </Link>
-                  </div>
-                </HeaderContent>
-              </ExpandHeader>
-            )}
-            {header === "services" && (
-              <ExpandHeader>
-                <HeaderContent className="header-content">
-                  <div>
-                    <MainMenu>Other Category 1</MainMenu>
-                    <SecondaryLink href="#">Sub Category</SecondaryLink>
-                    <SecondaryLink>Sub Category</SecondaryLink>
-                    <MainMenu>Other Category 2</MainMenu>
-                    <SecondaryLink>Sub Category</SecondaryLink>
-                    <SecondaryLink>Sub Category</SecondaryLink>
-                    <MainMenu>Other Category 3</MainMenu>
-                    <SecondaryLink>Sub Category</SecondaryLink>
-                    <SecondaryLink>Sub Category</SecondaryLink>
-                    <SecondaryLink>Sub Category</SecondaryLink>
-                    <SecondaryLink>Sub Category</SecondaryLink>
-                  </div>
-                  <div className="services-image-warpper">
-                    <div>
-                      <a href="#">
-                        <img
-                          src="/assets/category-image-others.jpg"
-                          className="header-img"
-                          alt="Tanzil Header"
-                        />
-                      </a>
-                    </div>
-                    <div>
-                      <a href="#">
-                        <img
-                          src="/assets/category-image-others.jpg"
-                          className="header-img"
-                          alt="Tanzil Header"
-                        />
-                      </a>
-                    </div>
-                    <div>
-                      <a href="#">
-                        <img
-                          src="/assets/category-image-others.jpg"
-                          className="header-img"
-                          alt="Tanzil Header"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </HeaderContent>
-              </ExpandHeader>
-            )}
-            {header === "inspiration" && (
-              <ExpandHeader>
-                <HeaderContent className="inspiration-tab">
-                  {/*  */}
-                  <div>
-                    <img
-                      src="/assets/menu-image.jpg"
-                      className="header-img"
-                      alt="Tanzil Header"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="/assets/menu-image.jpg"
-                      className="header-img"
-                      alt="Tanzil Header"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="/assets/menu-image.jpg"
-                      className="header-img"
-                      alt="Tanzil Header"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="/assets/menu-image.jpg"
-                      className="header-img"
-                      alt="Tanzil Header"
-                    />
-                  </div>
-                </HeaderContent>
-              </ExpandHeader>
-            )}
-          </HeaderContainer>
-        </NavWrapper>
-      </ClickAwayListener>
-      <MobileHeader className="mobile-header">
-        <MobileContainer className="mobile-header-container">
-          <div>
-            <MenuIcon
-              style={{ color: "#fff" }}
-              onClick={() => setDrawer(true)}
-            />
-          </div>
-        </MobileContainer>
-        <StyledDrawer
-          anchor="left"
-          closable={false}
-          onClose={() => setDrawer(false)}
-          open={drawer}
+          {/* Twitter Meta Fields */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:description"
+            content={
+              pageUrl == data?.metaID
+                ? data?.metaTwitterDescription
+                : "Tanzil WorkBase"
+            }
+          />
+          <meta
+            name="twitter:title"
+            content={
+              pageUrl == data?.metaID
+                ? data?.metaTwitterTitle
+                : "Tanzil WorkBase"
+            }
+          />
+        </Head>
+        <div className="logo-wrapper">
+          <Link href="/">
+            <a>
+              <Image
+                src="/assets/logo-1.png"
+                width={150}
+                height={150}
+                alt="Tanzil"
+              />
+            </a>
+          </Link>
+        </div>
+        <ClickAwayListener
+          onClickAway={() => {
+            setHeader(null);
+            setShowInput(false);
+          }}
         >
-          <DrawerContainer className="drawer-container">
-            <DrawerHeader className="drawer-header">
-              <div>
-                <CloseIcon
-                  style={{ color: "#fff", fontSize: "20px" }}
-                  onClick={() => setDrawer(false)}
-                />
-              </div>
-              <MobileLogo>
-                {/* <img src="/assets/logo-white.svg" alt="logo" /> */}
-              </MobileLogo>
-              <div />
-            </DrawerHeader> 
-            <DrawerContent className="drawer-content">
-              <Accordion expandIconPosition="right">
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
+          <NavWrapper className="NavWrapper">
+            <HeaderContainer className="header-container">
+              <LeftHeader>
+                <NavItem
+                  active={header === "departments"}
+                  onClick={() => setHeader("departments")}
                 >
                   Menu 1
-                </AccordionSummary>
-                <AccordionDetails header="Menu 1" key="1">
-                  <Accordion expandIconPosition="right">
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      Main Category 1
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
-
-                  <Accordion>   
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      Main Category 2
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>   
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header" 
-                    >
-                      Main Category 3
-                    </AccordionSummary>
-                    <AccordionDetails header="Kitchen" key="4">
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      Main Category 4
-                    </AccordionSummary>
-                    <AccordionDetails header="Home Bar" key="5">
-                      <MobileDrawerLink>Basic Name</MobileDrawerLink>
-                    </AccordionDetails>
-                  </Accordion>
-                  
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
+                </NavItem>
+                <NavItem
+                  active={header === "services"}
+                  onClick={() => setHeader("services")}
                 >
                   Menu 2
-                </AccordionSummary>
-                <AccordionDetails>
-                  <MobileDrawerLink>Other Category 1</MobileDrawerLink>
-                  <MobileDrawerLink>Other Category 2</MobileDrawerLink>
-                  <MobileDrawerLink>Other Category 3</MobileDrawerLink>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
+                </NavItem>
+                <NavItem
+                  active={header === "inspiration"}
+                  onClick={() => setHeader("inspiration")}
                 >
-                  Menu 3
-                </AccordionSummary>
-                <AccordionDetails>
-                  <MobileDrawerLink>Menu Image Link 1</MobileDrawerLink>
-                  <MobileDrawerLink>Menu Image Link 2</MobileDrawerLink>
-                  <MobileDrawerLink>Menu Image Link 3</MobileDrawerLink>
-                </AccordionDetails>
-              </Accordion>
-            </DrawerContent>
-          </DrawerContainer>
-        </StyledDrawer>
-      </MobileHeader>
-    </MainHeaderWrapper>
+                  Image Menu
+                </NavItem>
+
+                <NavItem>
+                  <Link href="/fetch/">
+                    <a>Basic API Fetch</a>
+                  </Link>
+                </NavItem>
+
+                <NavItem onClick={() => handleClick()}>
+                  <p>Modal</p>
+                </NavItem>
+              </LeftHeader>
+
+              {header === "departments" && (
+                <ExpandHeader className="header-contents">
+                  <HeaderContent className="checkinggg">
+                    {departmentTab.map((item, index) => (
+                      <div key={index}>
+                        {item.map((i, index) => (
+                          <div key={index}>
+                            <Link href={i.mainMenuBtnLink} passHref>
+                              <MainMenu onClick={() => setHeader(null)}>
+                                {i.mainMenu}
+                              </MainMenu>
+                            </Link>
+                            <NAPButton
+                              className="sna_link"
+                              type="link"
+                              text={i.mainMenuBtnText}
+                            />
+                            {i?.links?.map((l, index) => (
+                              <div key={index}>
+                                {l.type === "primary" ? (
+                                  <Link href={l.link} passHref>
+                                    <PrimaryLink
+                                      onClick={() => setHeader(null)}
+                                    >
+                                      {l.text}
+                                    </PrimaryLink>
+                                  </Link>
+                                ) : (
+                                  <Link href={l.link} passHref>
+                                    <SecondaryLink
+                                      onClick={() => setHeader(null)}
+                                    >
+                                      {l.text}
+                                    </SecondaryLink>
+                                  </Link>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                    <div>
+                      <Link href="/why-buy-from-newage">
+                        <Image
+                          onClick={() => setHeader(null)}
+                          src="/assets/category-image.jpg"
+                          className="header-img"
+                          alt="dept"
+                          height={300}
+                          width={300}
+                        />
+                      </Link>
+                    </div>
+                  </HeaderContent>
+                </ExpandHeader>
+              )}
+              {header === "services" && (
+                <ExpandHeader>
+                  <HeaderContent className="header-content">
+                    <div>
+                      <MainMenu>Other Category 1</MainMenu>
+                      <SecondaryLink href="#">Sub Category</SecondaryLink>
+                      <SecondaryLink>Sub Category</SecondaryLink>
+                      <MainMenu>Other Category 2</MainMenu>
+                      <SecondaryLink>Sub Category</SecondaryLink>
+                      <SecondaryLink>Sub Category</SecondaryLink>
+                      <MainMenu>Other Category 3</MainMenu>
+                      <SecondaryLink>Sub Category</SecondaryLink>
+                      <SecondaryLink>Sub Category</SecondaryLink>
+                      <SecondaryLink>Sub Category</SecondaryLink>
+                      <SecondaryLink>Sub Category</SecondaryLink>
+                    </div>
+                    <div className="services-image-warpper">
+                      <div>
+                        <a href="#">
+                          <img
+                            src="/assets/category-image-others.jpg"
+                            className="header-img"
+                            alt="Tanzil Header"
+                          />
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#">
+                          <img
+                            src="/assets/category-image-others.jpg"
+                            className="header-img"
+                            alt="Tanzil Header"
+                          />
+                        </a>
+                      </div>
+                      <div>
+                        <a href="#">
+                          <img
+                            src="/assets/category-image-others.jpg"
+                            className="header-img"
+                            alt="Tanzil Header"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </HeaderContent>
+                </ExpandHeader>
+              )}
+              {header === "inspiration" && (
+                <ExpandHeader>
+                  <HeaderContent className="inspiration-tab">
+                    {/*  */}
+                    <div>
+                      <img
+                        src="/assets/menu-image.jpg"
+                        className="header-img"
+                        alt="Tanzil Header"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/menu-image.jpg"
+                        className="header-img"
+                        alt="Tanzil Header"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/menu-image.jpg"
+                        className="header-img"
+                        alt="Tanzil Header"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/menu-image.jpg"
+                        className="header-img"
+                        alt="Tanzil Header"
+                      />
+                    </div>
+                  </HeaderContent>
+                </ExpandHeader>
+              )}
+            </HeaderContainer>
+          </NavWrapper>
+        </ClickAwayListener>
+        <MobileHeader className="mobile-header">
+          <MobileContainer className="mobile-header-container">
+            <div>
+              <MenuIcon
+                style={{ color: "#fff" }}
+                onClick={() => setDrawer(true)}
+              />
+            </div>
+          </MobileContainer>
+          <StyledDrawer
+            anchor="left"
+            closable={false}
+            onClose={() => setDrawer(false)}
+            open={drawer}
+          >
+            <DrawerContainer className="drawer-container">
+              <DrawerHeader className="drawer-header">
+                <div>
+                  <CloseIcon
+                    style={{ color: "#fff", fontSize: "20px" }}
+                    onClick={() => setDrawer(false)}
+                  />
+                </div>
+                <MobileLogo>
+                  {/* <img src="/assets/logo-white.svg" alt="logo" /> */}
+                </MobileLogo>
+                <div />
+              </DrawerHeader>
+              <DrawerContent className="drawer-content">
+                <Accordion expandIconPosition="right">
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    Menu 1
+                  </AccordionSummary>
+                  <AccordionDetails header="Menu 1" key="1">
+                    <Accordion expandIconPosition="right">
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                      >
+                        Main Category 1
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      </AccordionDetails>
+                    </Accordion>
+
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                      >
+                        Main Category 2
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                      >
+                        Main Category 3
+                      </AccordionSummary>
+                      <AccordionDetails header="Kitchen" key="4">
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                      >
+                        Main Category 4
+                      </AccordionSummary>
+                      <AccordionDetails header="Home Bar" key="5">
+                        <MobileDrawerLink>Basic Name</MobileDrawerLink>
+                      </AccordionDetails>
+                    </Accordion>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    Menu 2
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <MobileDrawerLink>Other Category 1</MobileDrawerLink>
+                    <MobileDrawerLink>Other Category 2</MobileDrawerLink>
+                    <MobileDrawerLink>Other Category 3</MobileDrawerLink>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    Menu 3
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <MobileDrawerLink>Menu Image Link 1</MobileDrawerLink>
+                    <MobileDrawerLink>Menu Image Link 2</MobileDrawerLink>
+                    <MobileDrawerLink>Menu Image Link 3</MobileDrawerLink>
+                  </AccordionDetails>
+                </Accordion>
+              </DrawerContent>
+            </DrawerContainer>
+          </StyledDrawer>
+        </MobileHeader>
+      </MainHeaderWrapper> 
+      <Modal
+        open={modal}
+        onClose={() => setModal(false)}
+        disableAutoFocus={true}
+        className="modal"
+      >
+        <ModalContainer className="modal-container">
+          <header>
+            <p className="fc-white main-heading">Contents Inside Modal</p>
+          </header>
+          <CloseTag
+            className="close-icon"
+            onClick={() => setModal(false)}
+          ></CloseTag>
+        </ModalContainer>
+      </Modal>
+    </div>
   );
 }
 
