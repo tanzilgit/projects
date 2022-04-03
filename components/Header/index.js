@@ -882,7 +882,7 @@ function Header({ data }) {
                 {/* <img src="/assets/logo-white.svg" alt="logo" /> */}
               </MobileLogo>
               <div />
-            </DrawerHeader>
+            </DrawerHeader> 
             <DrawerContent className="drawer-content">
               <Accordion expandIconPosition="right">
                 <AccordionSummary
@@ -907,7 +907,7 @@ function Header({ data }) {
                     </AccordionDetails>
                   </Accordion>
 
-                  <Accordion>
+                  <Accordion>   
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
                       aria-controls="panel1a-content"
@@ -919,12 +919,12 @@ function Header({ data }) {
                       <MobileDrawerLink>Basic Name</MobileDrawerLink>
                       <MobileDrawerLink>Basic Name</MobileDrawerLink>
                     </AccordionDetails>
-                  </Accordion>
+                  </Accordion>   
                   <Accordion>
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
                       aria-controls="panel1a-content"
-                      id="panel1a-header"
+                      id="panel1a-header" 
                     >
                       Main Category 3
                     </AccordionSummary>

@@ -19,6 +19,7 @@ import Footer from "../components/Footer";
 
 import FetchAsync from "../components/APIFetching/FetchAsync";
 import FetchPromise from "../components/APIFetching/FetchPromise";
+import SliderPopUp from "../components/SliderPopUp";
 
 const IndexWrapper = styled.div`
   header {
@@ -252,7 +253,7 @@ export default function Home() {
             Tab Two
           </TabButton>
         </div>
-        <div className="contents-wrapper "> 
+        <div className="contents-wrapper ">
           {/* Content One Datas */}
           {tabContent === "content-one" && (
             <div className="content-one">
@@ -273,7 +274,9 @@ export default function Home() {
                     alt=""
                   />
 
-                  <h3 className="grid-heading ff-psb second-content">Tab Sub Heading</h3> 
+                  <h3 className="grid-heading ff-psb second-content">
+                    Tab Sub Heading
+                  </h3>
                 </div>
                 <div className="second">
                   <Image
@@ -283,7 +286,9 @@ export default function Home() {
                     alt=""
                   />
 
-                  <h3 className="grid-heading ff-psb second-content">Tab Sub Heading</h3>
+                  <h3 className="grid-heading ff-psb second-content">
+                    Tab Sub Heading
+                  </h3>
                 </div>
                 <div className="third">
                   <Image
@@ -293,7 +298,9 @@ export default function Home() {
                     alt=""
                   />
 
-                  <h3 className="grid-heading ff-psb second-content">Tab Sub Heading</h3>
+                  <h3 className="grid-heading ff-psb second-content">
+                    Tab Sub Heading
+                  </h3>
                 </div>
               </GridRowItems>
             </div>
@@ -444,13 +451,23 @@ export default function Home() {
       <section className="bannerSwatch section-top-padding">
         <BannerSwatch {...Data1} flex_direction="column" />
       </section>
+      {/*  */}
 
       {/*  */}
+      <section className="section-top-padding">
+        <header>
+          <h3 className="main-heading ff-psb first-content">
+            On Image Click Open Modal
+          </h3>
+        </header>
+        <SliderPopUp />
+      </section>
+      {/*  */}
+
       <section>
         <SimpleAccordion />
       </section>
       {/*  */}
-
     </IndexWrapper>
   );
 }
