@@ -773,7 +773,7 @@ function Header({ data }) {
                         ))}
                       </div>
                     ))}
-                    <div>
+                    <div> 
                       <Link href="#" passHref> 
                         <Image
                           onClick={() => setHeader(null)}
@@ -783,7 +783,7 @@ function Header({ data }) {
                           height={300}
                           width={300}
                         />
-                      </Link>
+                      </Link> 
                     </div>
                   </HeaderContent>
                 </ExpandHeader>
