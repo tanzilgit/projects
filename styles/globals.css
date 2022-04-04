@@ -640,7 +640,7 @@ img.ds-toggle-sliders.ds-slide-toggle-left {
 
 .slick-arrow:hover {
   background-color: rgb(255 255 255 / 100%) !important;
-}
+} 
 
 .slick-arrow::before {
   content: none;
