@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import device from "../../utils/mediaUtils";
 import Image from 'next/image'
@@ -30,6 +31,10 @@ const Container = styled.div`
       display: block !important;
     }
   }
+  .handle {
+    width: 90px;
+    margin-top: -180px;
+  }
 `;
 
 function CompareSlider({
@@ -47,11 +52,10 @@ function CompareSlider({
         className="slider"
         handle={
           <div style={{ display: "grid", height: "100%", placeContent: "end" }}>
-            <Image
+            <img
               alt=""
               className="handle"
               src="/assets/img-compare-icon.png"
-              style={{ width: 90, marginTop: -180 }}
               layout="fill"
             />
           </div>

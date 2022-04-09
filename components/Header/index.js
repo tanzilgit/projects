@@ -216,7 +216,9 @@ const NavItem = styled.div`
     background: transparent;
     border: 1px solid red;
   }
-  
+  & + & {
+    margin-left: 10px;
+  }
 `;
 const ExpandHeader = styled.div`
   position: absolute;
@@ -714,7 +716,7 @@ function Header({ data }) {
                 <NavItem
                   active={header === "inspiration"}
                   onClick={() => setHeader("inspiration")}
-                > 
+                >
                   Image Menu
                 </NavItem>
 
@@ -724,6 +726,11 @@ function Header({ data }) {
                   </Link>
                 </NavItem>
 
+                <NavItem> 
+                  <Link href="/dynamic-routing/">
+                    <a>Dynamic Routing</a>
+                  </Link>
+                </NavItem>
 
                 <NavItem onClick={() => handleClick()}>
                   <p>Modal</p>
