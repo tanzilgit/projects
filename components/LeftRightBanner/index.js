@@ -125,7 +125,7 @@ function LeftRightBanner({
   className,
   ...otherProps
 }) {
-  console.log(desktop);
+  // console.log(desktop);
   return (
     <ParentContainer className="left-right-banner">
       <Container
