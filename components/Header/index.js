@@ -216,7 +216,7 @@ const NavItem = styled.div`
     background: transparent;
     border: 1px solid red;
   }
-  + {
+  & + & {
     margin-left: 10px;
   }
 `;
@@ -582,7 +582,7 @@ export const departmentTab = [
 ];
 
 function Header({ data }) {
-  const [siteType, setSiteType] = useState(null);
+  const [siteType, setSiteType] = useState(null); 
   const [header, setHeader] = useState(null);
   const [drawer, setDrawer] = useState(false);
   const [showInput, setShowInput] = useState(false);
@@ -720,9 +720,15 @@ function Header({ data }) {
                   Image Menu
                 </NavItem>
 
-                <NavItem>
+                <NavItem> 
                   <Link href="/fetch/">
                     <a>Basic API Fetch</a>
+                  </Link>
+                </NavItem>
+
+                <NavItem> 
+                  <Link href="/dynamic-routing/">
+                    <a>Dynamic Routing</a>
                   </Link>
                 </NavItem>
 
