@@ -92,6 +92,10 @@ const CompareContainer = styled.div`
     width: 100%;
     margin-left: ${(props) => (props.mobReverse ? "10%" : "0")};
   }
+  .handle {
+    width: 90px;
+    margin-top: -180px;
+  }
 
   .slider div:nth-of-type(3) {
     border-left: 4px solid rgb(51 51 51 / 50%);
@@ -215,7 +219,6 @@ function LeftRightBanner({
                   <img
                     className="handle"
                     src="/assets/img-compare-icon.png"
-                    style={{ width: 90, marginTop: -180 }}
                     alt="image"
                   />
                 </div>
