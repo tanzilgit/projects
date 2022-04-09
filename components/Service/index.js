@@ -255,7 +255,9 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
                   <img src={item.img} alt="" />
                   {item.url && (
                     <Link href={item.url}>
-                      <Main black={bgDark}>{item.heading}</Main>
+                      <a>
+                        <Main black={bgDark}>{item.heading}</Main>
+                      </a>
                     </Link>
                   )}
                   <Description black={bgDark}>{item.description}</Description>
@@ -270,7 +272,9 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
                   <ColOne key={index}>
                     <img src={item.img} alt="" />
                     <Link href={item.url}>
-                      <Main black={bgDark}>{item.heading}</Main>
+                      <a>
+                        <Main black={bgDark}>{item.heading}</Main>
+                      </a>
                     </Link>
                     <Description black={bgDark}>{item.description}</Description>
                   </ColOne>
@@ -290,7 +294,9 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
                   <img src={item.img} alt="" />
                   {item.url && (
                     <Link href={item.url}>
-                      <Main black={bgDark}>{item.heading}</Main>
+                      <a>
+                        <Main black={bgDark}>{item.heading}</Main>
+                      </a>
                     </Link>
                   )}
                   <Description black={bgDark}>{item.description}</Description>
@@ -305,7 +311,9 @@ function index({ items, bgDark, mainHeading, ...otherProps }) {
                   <ColOne key={index}>
                     <img src={item.img} alt="" />
                     <Link href={item.url}>
-                      <Main black={bgDark}>{item.heading}</Main>
+                      <a>
+                        <Main black={bgDark}>{item.heading}</Main>
+                      </a>
                     </Link>
                     <Description black={bgDark}>{item.description}</Description>
                   </ColOne>
