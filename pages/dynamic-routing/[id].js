@@ -43,7 +43,7 @@ const IndividualDynamicPage = ({ datas }) => {
   // let a = 10;
   //     a = 15;
 
-  /* can be done with let as both variables are in different blockS */
+  /* can be done with let as both variables are in different blockS,so both variables will output different results */
   // let title3;
   // {
   //   let title3;
@@ -56,7 +56,7 @@ const IndividualDynamicPage = ({ datas }) => {
   // const title5 = "Hello";
   // const title5 = "Whats up!"
 
-  /* can be done with CONST as both variables are in different blockS */
+  /* can be done with CONST as both variables are in different blockS,so both variables will output different results */
 
   // const title6 = 'Good Morning';
   // {
