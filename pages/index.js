@@ -23,6 +23,7 @@ import SliderPopUp from "../components/SliderPopUp";
 import NAPButton from "@components/NAPButton";
 import Modal from "@material-ui/core/Modal";
 import { CloseTag, ModalContainer } from "@components/VideoModal";
+import Gallery from "@components/Gallery";
 
 const IndexWrapper = styled.div`
   header {
@@ -60,6 +61,15 @@ const TabButton = styled.button`
   }
   + button {
     margin-left: 30px;
+  }
+`;
+
+export const GalleryWrapper = styled.div`
+  svg.slick-prev {
+    left: -60px;
+  }
+  svg.slick-next {
+    right: -60px;
   }
 `;
 
@@ -186,7 +196,12 @@ export default function Home() {
           <h1 className="main-heading fc-white ff-psb">Tanzil WorkBase</h1>
         </div>
         <div className="cta-wrapper second-content">
-          <NAPButton text="Modal" type="outlined" color="#FFF" onClick={() => handleClick()} />
+          <NAPButton
+            text="Modal"
+            type="outlined"
+            color="#FFF"
+            onClick={() => handleClick()}
+          />
         </div>
       </HeroBanner>
       <Modal
