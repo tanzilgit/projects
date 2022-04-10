@@ -182,6 +182,472 @@ export default function Home() {
     },
   ];
 
+  const galleryitems = [
+    [
+      {
+        id: 1,
+        img: "/assets/pvc-slatwall/g-c1r1.JPG",
+        title: "Sports Equipment",
+        cover: "30%",
+        height: 711,
+        width: 650,
+      },
+      {
+        id: 2,
+        img: "/assets/pvc-slatwall/g-c1r2.JPG",
+        title: "Home Gym",
+        cover: "40%",
+        height: 893,
+        width: 650,
+      },
+      {
+        id: 3,
+        img: "/assets/pvc-slatwall/g-c1r3.JPG",
+        title: "Creative Space",
+        cover: "30%",
+        height: 711,
+        width: 650,
+      },
+    ],
+    //
+    [
+      {
+        id: 4,
+        img: "/assets/pvc-slatwall/g-c2r1.JPG",
+        title: "Tool Storage",
+        cover: "20%",
+        height: 358,
+        width: 450,
+      },
+      {
+        id: 5,
+        img: "/assets/pvc-slatwall/g-c2r2.JPG",
+        title: "Craft Room",
+        cover: "30%",
+        height: 666,
+        width: 450,
+      },
+      {
+        id: 6,
+        img: "/assets/pvc-slatwall/g-c2r3.JPG",
+        title: "Gardening",
+        cover: "30%",
+        height: 722,
+        width: 450,
+      },
+      {
+        id: 7,
+        img: "/assets/pvc-slatwall/g-c2r4.JPG",
+        title: "Bike Storage",
+        cover: "20%",
+        height: 484,
+        width: 450,
+      },
+    ],
+    //
+    [
+      {
+        id: 8,
+        img: "/assets/pvc-slatwall/g-c3r1.JPG",
+        title: "Home Office",
+        cover: "60%",
+        height: 676,
+        width: 650,
+      },
+      {
+        id: 9,
+        img: "/assets/pvc-slatwall/g-c3r2.JPG",
+        title: "Everyday Family Organization",
+        cover: "40%",
+        height: 444,
+        width: 650,
+      },
+      {
+        id: 10,
+        img: "/assets/pvc-slatwall/g-c3r3.JPG",
+        title: "Laundry Room",
+        cover: "60%",
+        height: 447,
+        width: 650,
+      },
+      {
+        id: 11,
+        img: "/assets/pvc-slatwall/g-c3r4.JPG",
+        title: "Garage",
+        cover: "40%",
+        height: 711,
+        width: 650,
+      },
+    ],
+  ];
+
+  // Gallery Modal Images Desktop
+  const modalItems = [
+    {
+      id: 1,
+      img: "/assets/pvc-slatwall/collage/garage-slatwall.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Sports Equipment</h3>
+          <p className="desc">
+            Add PVC Slatwall and Slatwall Accessories to your garage cabinet
+            system, and organize all of your difficult to store items like
+            sports equipment, grass trimmers, shovels, boots, and more.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 2,
+      img: "/assets/pvc-slatwall/collage/newage-garage-slatwall.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Home Gym</h3>
+          <p className="desc">
+            Add function to your workout space with heavy-duty PVC Slatwall and
+            Slatwall Accessories to hold your weights, ropes, bands, rollers,
+            yoga mats, and sports gear.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 3,
+      img: "/assets/pvc-slatwall/collage/slatwall-organization.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Creative Space</h3>
+          <p className="desc">
+            Keep your art studio tidy and allow space for creativity to flow
+            with PVC Slatwall, Slatwall Accessories and Bold Series cabinetry.
+          </p>
+        </>
+      ),
+    },
+    //
+    {
+      id: 4,
+      img: "/assets/pvc-slatwall/collage/garage-pvc-slatwall.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Tool Storage</h3>
+          <p className="desc">
+            PVC Slatwall and Slatwall Accessories like our Magnetic Tool Bar and
+            Parts Bins are the perfect companion for the DIY homeowner looking
+            to store small hand tools, hardware, power tools, levels, and
+            ladders.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 5,
+      img: "/assets/pvc-slatwall/collage/premium-garage-slatwall.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Craft Room</h3>
+          <p className="desc">
+            Keep your workspace organized with shelves and hooks for storing
+            craft supplies, materials and tools, while beautifying your space
+            with a modern wall treatment.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 6,
+      img: "/assets/pvc-slatwall/collage/pvc-slatwall-organization.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Gardening</h3>
+          <p className="desc">
+            Store hoses, rakes, shovels, and gardening tools with ease with our
+            variety of hooks, baskets and shelves on our easy-to-clean PVC
+            Slatwall.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 7,
+      img: "/assets/pvc-slatwall/collage/newage-garage-pvc-slatwall.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Bike Storage</h3>
+          <p className="desc">
+            Get your bikes and helmets off the floor and onto your walls with
+            PVC Slatwall and Shallow Basket with Bike Hook accessories.
+          </p>
+        </>
+      ),
+    },
+    //
+    {
+      id: 8,
+      img: "/assets/pvc-slatwall/collage/garage-slatwall-organization.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Home Office</h3>
+          <p className="desc">
+            Create the perfect home office space to store binders, books, pens
+            and office supplies with PVC Slatwall, Slatwall Accessories and the
+            Pro Series Workbench.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 9,
+      img: "/assets/pvc-slatwall/collage/garage-slatwall-organization2.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Everyday Family Organization</h3>
+          <p className="desc">
+            Store all of your familys gear from bikes, trikes, balls, golf bags,
+            and other sports and recreational equipment, as well as seasonal
+            items with PVC Slatwall, bike hooks, and shelf accessories.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 10,
+      img: "/assets/pvc-slatwall/collage/garage-pvc-slatwall-organizer.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Laundry Room</h3>
+          <p className="desc">
+            Elegant off-the-floor storage for your ironing board, iron, drying
+            rack, and cleaning supplies with our PVC Slatwall and Accessories.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 11,
+      img: "/assets/pvc-slatwall/collage/newage-products-garage-slatwall.jpg",
+      height: 950,
+      width: 1920,
+      caption: (
+        <>
+          <h3 className="grid-heading">Garage</h3>
+          <p className="desc">
+            Get all of your garage items and seasonal gear off the ground and
+            onto your walls with PVC Slatwall and Slatwall Accessories.
+          </p>
+        </>
+      ),
+    },
+  ];
+
+  // Mobile Galleries below galleryItems1 and galleryItems2
+  // Mobile Gallery 1
+  const galleryItems1 = [
+    [
+      {
+        id: 1,
+        img: "/assets/pvc-slatwall/g-c1r1.JPG",
+        title: "Bikes and Sports Equipment",
+        cover: "100%",
+        height: 200,
+        width: 250,
+      },
+      {
+        id: 2,
+        img: "/assets/pvc-slatwall/g-c2r3.JPG",
+        title: "Small Tool Storage",
+        cover: "40%",
+        height: 300,
+        width: 250,
+      },
+    ],
+    [
+      {
+        id: 3,
+        img: "/assets/pvc-slatwall/g-c3r1.JPG",
+        title: "Golf Bags and Gears",
+        cover: "60%",
+        height: 300,
+        width: 166,
+      },
+      {
+        id: 4,
+        img: "/assets/pvc-slatwall/g-c2r1.JPG",
+        title: "Ladders and Bulky Items",
+        cover: "60%",
+        height: 200,
+        width: 166,
+      },
+    ],
+  ];
+
+  // Mobile Gallery 2
+  const galleryItems2 = [
+    [
+      {
+        id: 5,
+        img: "/assets/pvc-slatwall/g-c3r4.JPG",
+        title: "Bikes and Sports Equipment",
+        cover: "100%",
+        height: 200,
+        width: 180,
+      },
+      {
+        id: 6,
+        img: "/assets/pvc-slatwall/g-c3r2.JPG",
+        title: "Small Tool Storage",
+        cover: "40%",
+        height: 150,
+        width: 180,
+      },
+    ],
+    [
+      {
+        id: 7,
+        img: "/assets/pvc-slatwall/g-c1r2.JPG",
+        title: "Golf Bags and Gear",
+        cover: "60%",
+        height: 380,
+        width: 220,
+      },
+    ],
+  ];
+
+  // Mobile Gallery Modal Images
+  const galleryModalMobile = [
+    {
+      id: 1,
+      img: "/assets/pvc-slatwall/collage/mobile/9.jpg",
+      height: 295,
+      width: 360,
+      caption: (
+        <>
+          <h3 className="grid-heading">Sports Equipment</h3>
+          <p className="desc">
+            Add PVC Slatwall and Slatwall Accessories to your garage cabinet
+            system, and organize all of your difficult to store items like
+            sports equipment, grass trimmers, shovels, boots, and more.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 2,
+      img: "/assets/pvc-slatwall/collage/mobile/2.jpg",
+      height: 295,
+      width: 360,
+      caption: (
+        <>
+          <h3 className="grid-heading">Home Gym</h3>
+          <p className="desc">
+            Add function to your workout space with heavy-duty PVC Slatwall and
+            Slatwall Accessories to hold your weights, ropes, bands, rollers,
+            yoga mats, and sports gear.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 3,
+      img: "/assets/pvc-slatwall/collage/mobile/8.jpg",
+      height: 295,
+      width: 360,
+      caption: (
+        <>
+          <h3 className="grid-heading">Creative Space</h3>
+          <p className="desc">
+            Keep your art studio tidy and allow space for creativity to flow
+            with PVC Slatwall, Slatwall Accessories and Bold Series cabinetry.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 4,
+      img: "/assets/pvc-slatwall/collage/mobile/11.jpg",
+      height: 295,
+      width: 360,
+      caption: (
+        <>
+          <h3 className="grid-heading">Tool Storage</h3>
+          <p className="desc">
+            PVC Slatwall and Slatwall Accessories like our Magnetic Tool Bar and
+            Parts Bins are the perfect companion for the DIY homeowner looking
+            to store small hand tools, hardware, power tools, levels, and
+            ladders.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 5,
+      img: "/assets/pvc-slatwall/collage/mobile/4.jpg",
+      height: 295,
+      width: 360,
+      caption: (
+        <>
+          <h3 className="grid-heading">Craft Room</h3>
+          <p className="desc">
+            Keep your workspace organized with shelves and hooks for storing
+            craft supplies, materials and tools, while beautifying your space
+            with a modern wall treatment.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 6,
+      img: "/assets/pvc-slatwall/collage/mobile/7.jpg",
+      height: 295,
+      width: 360,
+      caption: (
+        <>
+          <h3 className="grid-heading">Gardening</h3>
+          <p className="desc">
+            Store hoses, rakes, shovels, and gardening tools with ease with our
+            variety of hooks, baskets and shelves on our easy-to-clean PVC
+            Slatwall.
+          </p>
+        </>
+      ),
+    },
+    {
+      id: 7,
+      img: "/assets/pvc-slatwall/collage/mobile/5.jpg",
+      height: 295,
+      width: 360,
+      caption: (
+        <>
+          <h3 className="grid-heading">Bike Storage</h3>
+          <p className="desc">
+            Get your bikes and helmets off the floor and onto your walls with
+            PVC Slatwall and Shallow Basket with Bike Hook accessories.
+          </p>
+        </>
+      ),
+    },
+  ];
+
   return (
     <IndexWrapper className="">
       <Head>
@@ -387,6 +853,49 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      {/* Gallery */}
+      <section className="section-bottom-padding">
+      <header>
+          <h3
+            className="main-heading ff-psb first-content"
+          >
+            Gallery Collage Component with Popup Modal
+          </h3>
+        </header>
+        <GalleryWrapper className="GalleryWrapper">
+          <div className="showInDesktop">
+            <Gallery
+              className="outer-collage custom-gallery"
+              items={galleryitems}
+              popUpItems={modalItems}
+              caption
+              sliderCaption
+              arrowsColor="white"
+            />
+          </div>
+          <div className="showInMobile">
+            <Gallery
+              className="gallery-1"
+              items={galleryItems1}
+              caption
+              sliderCaption
+              popUpItems={galleryModalMobile}
+              arrowsColor="#fff"
+            />
+            <Gallery
+              className="gallery-2"
+              items={galleryItems2}
+              caption
+              sliderCaption
+              popUpItems={galleryModalMobile}
+              arrowsColor="#fff"
+            />
+          </div>
+        </GalleryWrapper>
+      </section>
+
+      {/* Gallery */}
 
       {/*  */}
       <section className="left-right-component">
