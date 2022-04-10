@@ -28,6 +28,71 @@ export const getStaticProps = async (context) => {
 };
 
 const IndividualDynamicPage = ({ datas }) => {
+
+  /* can be done with var as its is MUTABLE */
+  // var title;
+  // var title;
+  // var a = 10;
+  //     a = 15; 
+
+  /* cannot be done with let in same block scope as let is IMMUTABLE */
+  // let title2;
+  // let title2;
+
+  /* LET, can reassign same variable as they are in same block scope (PARTIAL IMMUTABLE)*/
+  // let a = 10;
+  //     a = 15;
+
+  /* can be done with let as both variables are in different blockS */
+  // let title3;
+  // {
+  //   let title3;
+  // }
+
+  /* CONST cannot be empty, if initialized, then it should have some value */
+  // const title4; // error
+
+  /* cannot be done with const in same block scope CONST is IMMUTABLE */
+  // const title5 = "Hello";
+  // const title5 = "Whats up!"
+
+  /* can be done with CONST as both variables are in different blockS */
+
+  // const title6 = 'Good Morning';
+  // {
+  //   const title6 = 'Good AfterNoon';
+  // }
+
+  /* var initialized and declared in anywhere will have the latest value*/
+
+  var age1; //initialized only
+  console.log("AGE", age1); // undefined
+  {
+    var age1 = "10";
+    console.log("AGE", age1); // 10
+  }
+  console.log("AGE", age1); // 10
+
+  /* let initialized and value assigned in other scope / block will have the latest value even outside the scope since its not reinitialized with 
+  new value in others scope, its using the same as initialized earlier*/
+
+  let age2; //initialized only
+  console.log("AGE", age2); // undefined
+  {
+    age2 = "10";
+    console.log("AGE", age2); // 10
+  }
+  console.log("AGE", age2); // 10
+
+  /* let initialized in once scope and again initialized in other scope with same declare name*/
+  let age3; //initialized only
+  console.log("AGE", age3); // undefined
+  {
+    let age3 = "10";
+    console.log("AGE", age3); // 10
+  }
+  console.log("AGE", age3); // undefined
+
   // Var Console
   console.log("Var CONSOLEEEEEEEEEEEEEEEEE");
   var city1 = "Mumbai";
