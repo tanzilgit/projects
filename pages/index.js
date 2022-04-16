@@ -24,6 +24,7 @@ import NAPButton from "@components/NAPButton";
 import Modal from "@material-ui/core/Modal";
 import { CloseTag, ModalContainer } from "@components/VideoModal";
 import Gallery from "@components/Gallery";
+import HomeGridView from "@components/HomePage/HomeGridView";
 
 const IndexWrapper = styled.div`
   header {
@@ -83,6 +84,33 @@ export default function Home() {
     // console.log("video button clicked")
     setModal(true);
   };
+
+  const HomeGridViewData = [
+    {
+      desktopImg: '/assets/test-image.jpg',
+      hoverDesktopImg: '/assets/hp-cycle/img/march-cycle-1-2022/dining.jpg',
+      mobileImg: '/assets/test-image.jpg',
+      productTitle: 'Grid Title',
+      productCTA: 'Grid Linking',
+      productURL: '#'
+    },
+    {
+      desktopImg: '/assets/test-image.jpg',
+      hoverDesktopImg: '/assets/hp-cycle/img/march-cycle-1-2022/of.jpg',
+      mobileImg: '/assets/test-image.jpg',
+      productTitle: 'Grid Title',
+      productCTA: 'Grid Linking',
+      productURL: '#'
+    },
+    {
+      desktopImg: '/assets/test-image.jpg',
+      hoverDesktopImg: '/assets/hp-cycle/img/march-cycle-1-2022/of.jpg',
+      mobileImg: '/assets/test-image.jpg',
+      productTitle: 'Grid Title',
+      productCTA: 'Grid Linking',
+      productURL: '#'
+    }
+  ]
 
   // Slider
   const YMAL = {
@@ -693,9 +721,9 @@ export default function Home() {
         <header>
           <h3 className="main-heading ff-psb first-content">Grid Component</h3>
         </header>
-        <GridRowItems className="quality-cabinets inspiration" mobileSlider>
+        {/* <GridRowItems className="quality-cabinets inspiration" mobileSlider> */}
           {/* <Slider {...YMAL}> */}
-          <div className="item">
+          {/* <div className="item">
             <Image
               src="/assets/test-image.jpg"
               width={525}
@@ -721,9 +749,12 @@ export default function Home() {
               alt=""
             />
             <h3 className="category-sub-heading ff-psb">Sub Headings 3</h3>
-          </div>
+          </div> */}
           {/* </Slider> */}
-        </GridRowItems>
+        {/* </GridRowItems> */}
+        <NAPContainer>
+        <HomeGridView HomeGridViewData={HomeGridViewData} mobileSlider dots arrows mobFullWidth/>
+        </NAPContainer>
       </section>
       {/*  */}
 
