@@ -1,3 +1,5 @@
+import { FetchAsync } from "@components/FetchAsync";
+import FetchPromise from "@components/FetchPromise";
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -27,6 +29,12 @@ const Test = () => {
 
   return (
     <ParentContainer>
+      <h1>Fetch Async Await Method</h1>
+      <FetchAsync/>
+
+      <h1>Fetch Promise .then method</h1>
+
+      <FetchPromise/>
       <h1>Using Styled Component props </h1>
       <Tab
         styleActiveProp={active === "first" ? 1 : 0}
