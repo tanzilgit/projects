@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+
 const ParentContainer = styled.div`
   .normal {
     font-size: 20px;
@@ -20,8 +21,10 @@ const Tab = styled.button`
 
 const Test = () => {
   const [active, setActive] = useState("first");
-
   const [classState, setClassState] = useState("one");
+
+  
+
   return (
     <ParentContainer>
       <h1>Using Styled Component props </h1>
@@ -44,6 +47,7 @@ const Test = () => {
       <button className={classState === "two" ? "activeClass normal" : "normal"} onClick={()=>setClassState("two") }>
         Two
       </button>
+      
     </ParentContainer>
   );
 };
