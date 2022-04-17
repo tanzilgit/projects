@@ -25,9 +25,7 @@ function FetchAsync() {
 
   const fetchAsyncAxios = async () => {
     try {
-      const result = await axios.get(
-        "https://shopnewage.com/collections/garage/products.json"
-      );
+      const result = await axios.get("https://shopnewage.com/collections/garage/products.json");
       //    const result2 = await axios.get('2 api');
       //    const result3 = await axios.get('3 api');
 
