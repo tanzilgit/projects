@@ -40,9 +40,9 @@ const ParentDiv = styled.div`
 `;
 
 export default function StockData() {
-  //
   // const [tab, setTab] = useState("9.5");
-
+  // const [activeTab, setActiveTab] = useState("vision");
+  /* */
   const [number1, setNumber1] = useState("");
   const [number2, setNumber2] = useState("");
   const [total, setTotal] = useState();
