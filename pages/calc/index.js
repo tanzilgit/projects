@@ -23,6 +23,7 @@ export default function StockData() {
 
   return (
     <div className="layout-column align-items-center mt-50">
+      {/* <h1>{number1}</h1> */}
       <input
         type="number"
         placeholder="Enter Number"
