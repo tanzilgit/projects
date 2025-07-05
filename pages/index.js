@@ -7,7 +7,6 @@ import HeroBanner from "../components/HeroBanner";
 import MegaMenu from "../components/MegaMenu";
 // import styles from "../styles/Home.module.css";
 import styles from "../styles/Home.module.css";
-import '../styles/crm.css'
 
 //import '../styles/crm.css';
 import styled from "styled-components";
