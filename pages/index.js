@@ -6,6 +6,8 @@ import Header from "../components/Header";
 import HeroBanner from "../components/HeroBanner";
 import MegaMenu from "../components/MegaMenu";
 // import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
+import '../styles/crm.css';
 import styled from "styled-components";
 import GridRowItems from "../components/GridRowItems";
 import Slider from "react-slick";
@@ -77,6 +79,8 @@ export const GalleryWrapper = styled.div`
   }
 `;
 
+
+
 export default function Home() {
   // States
   const [tabContent, setTabContent] = useState("content-one");
@@ -90,30 +94,30 @@ export default function Home() {
 
   const HomeGridViewData = [
     {
-      desktopImg: '/assets/test-image.jpg',
-      hoverDesktopImg: '/assets/hp-cycle/img/march-cycle-1-2022/dining.jpg',
-      mobileImg: '/assets/test-image.jpg',
-      productTitle: 'Grid Title',
-      productCTA: 'Grid Linking',
-      productURL: '#'
+      desktopImg: "/assets/test-image.jpg",
+      hoverDesktopImg: "/assets/hp-cycle/img/march-cycle-1-2022/dining.jpg",
+      mobileImg: "/assets/test-image.jpg",
+      productTitle: "Grid Title",
+      productCTA: "Grid Linking",
+      productURL: "#",
     },
     {
-      desktopImg: '/assets/test-image.jpg',
-      hoverDesktopImg: '/assets/hp-cycle/img/march-cycle-1-2022/of.jpg',
-      mobileImg: '/assets/test-image.jpg',
-      productTitle: 'Grid Title',
-      productCTA: 'Grid Linking',
-      productURL: '#'
+      desktopImg: "/assets/test-image.jpg",
+      hoverDesktopImg: "/assets/hp-cycle/img/march-cycle-1-2022/of.jpg",
+      mobileImg: "/assets/test-image.jpg",
+      productTitle: "Grid Title",
+      productCTA: "Grid Linking",
+      productURL: "#",
     },
     {
-      desktopImg: '/assets/test-image.jpg',
-      hoverDesktopImg: '/assets/hp-cycle/img/march-cycle-1-2022/of.jpg',
-      mobileImg: '/assets/test-image.jpg',
-      productTitle: 'Grid Title',
-      productCTA: 'Grid Linking',
-      productURL: '#'
-    }
-  ]
+      desktopImg: "/assets/test-image.jpg",
+      hoverDesktopImg: "/assets/hp-cycle/img/march-cycle-1-2022/of.jpg",
+      mobileImg: "/assets/test-image.jpg",
+      productTitle: "Grid Title",
+      productCTA: "Grid Linking",
+      productURL: "#",
+    },
+  ];
 
   // Slider
   const YMAL = {
@@ -687,11 +691,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
       {/*  */}
       <HeroBanner>
         <div className="asset-overlay">
-          <h1 className="main-heading fc-white ff-psb">Tanzil WorkBase1</h1>
+          <h1 className="main-heading fc-white ff-psb">Tanzil WorkBase</h1>
         </div>
         <div className="cta-wrapper second-content">
           <NAPButton
@@ -726,8 +729,8 @@ export default function Home() {
           <h3 className="main-heading ff-psb first-content">Grid Component</h3>
         </header>
         {/* <GridRowItems className="quality-cabinets inspiration" mobileSlider> */}
-          {/* <Slider {...YMAL}> */}
-          {/* <div className="item">
+        {/* <Slider {...YMAL}> */}
+        {/* <div className="item">
             <Image
               src="/assets/test-image.jpg"
               width={525}
@@ -754,10 +757,16 @@ export default function Home() {
             />
             <h3 className="category-sub-heading ff-psb">Sub Headings 3</h3>
           </div> */}
-          {/* </Slider> */}
+        {/* </Slider> */}
         {/* </GridRowItems> */}
         <NAPContainer>
-        <HomeGridView HomeGridViewData={HomeGridViewData} mobileSlider dots arrows mobFullWidth/>
+          <HomeGridView
+            HomeGridViewData={HomeGridViewData}
+            mobileSlider
+            dots
+            arrows
+            mobFullWidth
+          />
         </NAPContainer>
       </section>
       {/*  */}
@@ -891,10 +900,8 @@ export default function Home() {
 
       {/* Gallery */}
       <section className="section-bottom-padding">
-      <header>
-          <h3
-            className="main-heading ff-psb first-content"
-          >
+        <header>
+          <h3 className="main-heading ff-psb first-content">
             Gallery Collage Component with Popup Modal
           </h3>
         </header>
@@ -1056,6 +1063,292 @@ export default function Home() {
         <SimpleAccordion />
       </section>
       {/*  */}
+      <section>
+        <div class="floating-elements">
+          <div class="floating-element"></div>
+          <div class="floating-element"></div>
+          <div class="floating-element"></div>
+          <div class="floating-element"></div>
+        </div>
+        <div class="container">
+          <div class="header">
+            <div class="profile-img">TA</div>
+            <h1 class="name">Tanzil Ansari</h1>
+            <p class="title">Senior Consultant</p>
+            <p class="subtitle">Technology Consulting</p>
+            <div class="contact-info">
+              <a href="tel:+919821778945" class="contact-item">
+                📞 +91 9821778945
+              </a>
+              <a
+                href="mailto:tanzil.ansari@pwc.banglobal.in"
+                class="contact-item"
+              >
+                ✉️ Email
+              </a>
+              <a href="#" class="contact-item">
+                💼 LinkedIn
+              </a>
+              <a href="#" class="contact-item">
+                🐙 GitHub
+              </a>
+            </div>
+          </div>
+          <div class="content-wrapper">
+            <div class="card">
+              <h2>🚀 Areas of Expertise</h2>
+              <div class="expertise-grid">
+                <div class="skill-tag">Microsoft Dynamics 365</div>
+                <div class="skill-tag">Power Platform</div>
+                <div class="skill-tag">Logic Apps</div>
+                <div class="skill-tag">Client-Side Validations</div>
+                <div class="skill-tag">Web Development</div>
+                <div class="skill-tag">Quality Testing</div>
+                <div class="skill-tag">Scrum & Pre-Sales</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">ReactJS</div>
+                <div class="skill-tag">NextJS</div>
+                <div class="skill-tag">SharePoint</div>
+                <div class="skill-tag">Data Analytics</div>
+                <div class="skill-tag">Reporting Solutions</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h2>💼 Professional Experience</h2>
+              <div class="experience-summary">
+                <h3>5.5 Years of Excellence</h3>
+                <p>
+                  Diverse consulting and product-based industry experience with
+                  deep knowledge in CRM frameworks, Microsoft Sales and Project
+                  Operations CRM Module Customization and Configuration.
+                </p>
+              </div>
+              <div class="experience-summary">
+                <h3>Technical Leadership</h3>
+                <p>
+                  Expertise in Power Platform Technical and Functional
+                  consulting across various D365 implementations. Skilled in
+                  JavaScript, Business Rules, Workflows and Dataverse
+                  integrations.
+                </p>
+              </div>
+              <div class="experience-summary">
+                <h3>Frontend Development Expertise</h3>
+                <p>
+                  Extensive experience in Frontend Development with technologies
+                  like JavaScript, ReactJS, NextJS, HTML, CSS. Cross-browser
+                  testing and site optimization using analytics tools like
+                  Google Analytics.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="projects-section">
+            <h2>🎯 Major Projects Portfolio</h2>
+            <div class="projects-grid">
+              <div class="project-card">
+                <h3>CRM Technical Developer</h3>
+                <div class="company">Engineering Services Company</div>
+                <p>
+                  Led the complete transformation of customer management systems
+                  with Full Revamp of Microsoft Sales Model Driven App featuring
+                  advanced customizations and seamless integrations.
+                </p>
+                <div class="project-highlights">
+                  <ul>
+                    <li>
+                      Managed all client-side validations and third-party
+                      integrations
+                    </li>
+                    <li>
+                      Implemented Power Platform Automate and System Workflows
+                    </li>
+                    <li>
+                      Developed Dataverse integrations with external systems
+                    </li>
+                    <li>
+                      Handled Resource Allocation and legacy system migration
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Microsoft Dynamics 365</span>
+                  <span class="tech-tag">Power Platform</span>
+                  <span class="tech-tag">Dataverse</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Power Automate</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <h3>Microsoft Project Operations Implementation</h3>
+                <div class="company">Resource Management System</div>
+                <p>
+                  Led implementation of Microsoft Project Operations for
+                  comprehensive resource allocation and project management,
+                  integrating with existing D365 ecosystem for seamless
+                  operations.
+                </p>
+                <div class="project-highlights">
+                  <ul>
+                    <li>
+                      Configured Project Operations modules for resource
+                      tracking
+                    </li>
+                    <li>Implemented custom timesheet and expense management</li>
+                    <li>
+                      Integrated with Microsoft Sales for unified customer
+                      experience
+                    </li>
+                    <li>Developed custom reporting and analytics solutions</li>
+                  </ul>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Project Operations</span>
+                  <span class="tech-tag">Resource Management</span>
+                  <span class="tech-tag">D365 Integration</span>
+                  <span class="tech-tag">Custom Workflows</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <h3>D365 Customer Experience Implementation</h3>
+                <div class="company">Technology Consulting Project</div>
+                <p>
+                  Served as Technical Consultant for comprehensive D365 Customer
+                  Experience Sales implementation, specializing in custom and
+                  system-level client-side validations.
+                </p>
+                <div class="project-highlights">
+                  <ul>
+                    <li>Handled custom and system-level validations</li>
+                    <li>Implemented business process automation</li>
+                    <li>Configured sales pipeline and lead management</li>
+                    <li>Integrated with third-party applications</li>
+                  </ul>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">D365 Sales</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Business Rules</span>
+                  <span class="tech-tag">Workflows</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <h3>POC Development Projects</h3>
+                <div class="company">Multiple Client Implementations</div>
+                <p>
+                  Developed and implemented various Proof of Concept solutions
+                  involving Power Platform understanding and integration using
+                  LogicApps for diverse business requirements.
+                </p>
+                <div class="project-highlights">
+                  <ul>
+                    <li>
+                      Built scalable POC solutions for client requirements
+                    </li>
+                    <li>Implemented Logic Apps for process automation</li>
+                    <li>Integrated multiple systems using Power Platform</li>
+                    <li>Created custom connectors and workflows</li>
+                  </ul>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Logic Apps</span>
+                  <span class="tech-tag">Power Platform</span>
+                  <span class="tech-tag">API Integration</span>
+                  <span class="tech-tag">Automation</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <h3>Web Application Development</h3>
+                <div class="company">Product-Based Company</div>
+                <p>
+                  Developed comprehensive web applications for household, garage
+                  and kitchen products using modern JavaScript frameworks with
+                  focus on user experience and performance optimization.
+                </p>
+                <div class="project-highlights">
+                  <ul>
+                    <li>
+                      Built responsive web applications using ReactJS and NextJS
+                    </li>
+                    <li>
+                      Implemented comprehensive Quality Assurance processes
+                    </li>
+                    <li>
+                      Optimized applications for search engine performance
+                    </li>
+                    <li>Created scalable and maintainable code architecture</li>
+                  </ul>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">ReactJS</span>
+                  <span class="tech-tag">NextJS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">SEO Optimization</span>
+                  <span class="tech-tag">Quality Assurance</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <h3>GitHub Repository Management</h3>
+                <div class="company">Code Management & Collaboration</div>
+                <p>
+                  Maintained comprehensive code repositories using GitHub for
+                  all project implementations, ensuring version control,
+                  collaboration, and code quality standards.
+                </p>
+                <div class="project-highlights">
+                  <ul>
+                    <li>Maintained clean and organized code repositories</li>
+                    <li>
+                      Implemented proper branching strategies and workflows
+                    </li>
+                    <li>Ensured code quality through reviews and testing</li>
+                    <li>
+                      Facilitated team collaboration and knowledge sharing
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">GitHub</span>
+                  <span class="tech-tag">Version Control</span>
+                  <span class="tech-tag">Code Review</span>
+                  <span class="tech-tag">Team Collaboration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="education-cert-section">
+            <div class="education-cert-section">
+              <div class="education-card">
+                <h2>🎓 Education</h2>
+                <div class="degree">Bachelor of Engineering</div>
+                <div class="university">
+                  Information Technology
+                  <br />
+                  Mumbai University
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <h2>📜 Professional Certifications</h2>
+                <div class="cert-item">
+                  <h4>Web Development Certification</h4>
+                  <p>Completed comprehensive web development program</p>
+                </div>
+                <div class="cert-item">
+                  <h4>CRM Training - Microsoft Modules</h4>
+                  <p>Ongoing specialized training in Microsoft CRM solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </IndexWrapper>
   );
 }
