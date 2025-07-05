@@ -1064,59 +1064,59 @@ export default function Home() {
       </section>
       {/*  */}
       <section>
-        <div class="floating-elements">
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
-          <div class="floating-element"></div>
+        <div className="floating-elements">
+          <div className="floating-element"></div>
+          <div className="floating-element"></div>
+          <div className="floating-element"></div>
+          <div className="floating-element"></div>
         </div>
-        <div class="container">
-          <div class="header">
-            <div class="profile-img">TA</div>
-            <h1 class="name">Tanzil Ansari</h1>
-            <p class="title">Senior Consultant</p>
-            <p class="subtitle">Technology Consulting</p>
-            <div class="contact-info">
-              <a href="tel:+919821778945" class="contact-item">
+        <div className="container">
+          <div className="header">
+            <div className="profile-img">TA</div>
+            <h1 className="name">Tanzil Ansari</h1>
+            <p className="title">Senior Consultant</p>
+            <p className="subtitle">Technology Consulting</p>
+            <div className="contact-info">
+              <a href="tel:+919821778945" className="contact-item">
                 📞 +91 9821778945
               </a>
               <a
                 href="mailto:tanzil.ansari@pwc.banglobal.in"
-                class="contact-item"
+                className="contact-item"
               >
                 ✉️ Email
               </a>
-              <a href="#" class="contact-item">
+              <a href="#" className="contact-item">
                 💼 LinkedIn
               </a>
-              <a href="#" class="contact-item">
+              <a href="#" className="contact-item">
                 🐙 GitHub
               </a>
             </div>
           </div>
-          <div class="content-wrapper">
-            <div class="card">
+          <div className="content-wrapper">
+            <div className="card">
               <h2>🚀 Areas of Expertise</h2>
-              <div class="expertise-grid">
-                <div class="skill-tag">Microsoft Dynamics 365</div>
-                <div class="skill-tag">Power Platform</div>
-                <div class="skill-tag">Logic Apps</div>
-                <div class="skill-tag">Client-Side Validations</div>
-                <div class="skill-tag">Web Development</div>
-                <div class="skill-tag">Quality Testing</div>
-                <div class="skill-tag">Scrum & Pre-Sales</div>
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">ReactJS</div>
-                <div class="skill-tag">NextJS</div>
-                <div class="skill-tag">SharePoint</div>
-                <div class="skill-tag">Data Analytics</div>
-                <div class="skill-tag">Reporting Solutions</div>
+              <div className="expertise-grid">
+                <div className="skill-tag">Microsoft Dynamics 365</div>
+                <div className="skill-tag">Power Platform</div>
+                <div className="skill-tag">Logic Apps</div>
+                <div className="skill-tag">Client-Side Validations</div>
+                <div className="skill-tag">Web Development</div>
+                <div className="skill-tag">Quality Testing</div>
+                <div className="skill-tag">Scrum & Pre-Sales</div>
+                <div className="skill-tag">JavaScript</div>
+                <div className="skill-tag">ReactJS</div>
+                <div className="skill-tag">NextJS</div>
+                <div className="skill-tag">SharePoint</div>
+                <div className="skill-tag">Data Analytics</div>
+                <div className="skill-tag">Reporting Solutions</div>
               </div>
             </div>
 
-            <div class="card">
+            <div className="card">
               <h2>💼 Professional Experience</h2>
-              <div class="experience-summary">
+              <div className="experience-summary">
                 <h3>5.5 Years of Excellence</h3>
                 <p>
                   Diverse consulting and product-based industry experience with
@@ -1124,7 +1124,7 @@ export default function Home() {
                   Operations CRM Module Customization and Configuration.
                 </p>
               </div>
-              <div class="experience-summary">
+              <div className="experience-summary">
                 <h3>Technical Leadership</h3>
                 <p>
                   Expertise in Power Platform Technical and Functional
@@ -1133,7 +1133,7 @@ export default function Home() {
                   integrations.
                 </p>
               </div>
-              <div class="experience-summary">
+              <div className="experience-summary">
                 <h3>Frontend Development Expertise</h3>
                 <p>
                   Extensive experience in Frontend Development with technologies
@@ -1144,18 +1144,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div class="projects-section">
+          <div className="projects-section">
             <h2>🎯 Major Projects Portfolio</h2>
-            <div class="projects-grid">
-              <div class="project-card">
+            <div className="projects-grid">
+              <div className="project-card">
                 <h3>CRM Technical Developer</h3>
-                <div class="company">Engineering Services Company</div>
+                <div className="company">Engineering Services Company</div>
                 <p>
                   Led the complete transformation of customer management systems
                   with Full Revamp of Microsoft Sales Model Driven App featuring
                   advanced customizations and seamless integrations.
                 </p>
-                <div class="project-highlights">
+                <div className="project-highlights">
                   <ul>
                     <li>
                       Managed all client-side validations and third-party
@@ -1172,25 +1172,25 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">Microsoft Dynamics 365</span>
-                  <span class="tech-tag">Power Platform</span>
-                  <span class="tech-tag">Dataverse</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Power Automate</span>
+                <div className="tech-tags">
+                  <span className="tech-tag">Microsoft Dynamics 365</span>
+                  <span className="tech-tag">Power Platform</span>
+                  <span className="tech-tag">Dataverse</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">Power Automate</span>
                 </div>
               </div>
 
-              <div class="project-card">
+              <div className="project-card">
                 <h3>Microsoft Project Operations Implementation</h3>
-                <div class="company">Resource Management System</div>
+                <div className="company">Resource Management System</div>
                 <p>
                   Led implementation of Microsoft Project Operations for
                   comprehensive resource allocation and project management,
                   integrating with existing D365 ecosystem for seamless
                   operations.
                 </p>
-                <div class="project-highlights">
+                <div className="project-highlights">
                   <ul>
                     <li>
                       Configured Project Operations modules for resource
@@ -1204,23 +1204,23 @@ export default function Home() {
                     <li>Developed custom reporting and analytics solutions</li>
                   </ul>
                 </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">Project Operations</span>
-                  <span class="tech-tag">Resource Management</span>
-                  <span class="tech-tag">D365 Integration</span>
-                  <span class="tech-tag">Custom Workflows</span>
+                <div className="tech-tags">
+                  <span className="tech-tag">Project Operations</span>
+                  <span className="tech-tag">Resource Management</span>
+                  <span className="tech-tag">D365 Integration</span>
+                  <span className="tech-tag">Custom Workflows</span>
                 </div>
               </div>
 
-              <div class="project-card">
+              <div className="project-card">
                 <h3>D365 Customer Experience Implementation</h3>
-                <div class="company">Technology Consulting Project</div>
+                <div className="company">Technology Consulting Project</div>
                 <p>
                   Served as Technical Consultant for comprehensive D365 Customer
                   Experience Sales implementation, specializing in custom and
                   system-level client-side validations.
                 </p>
-                <div class="project-highlights">
+                <div className="project-highlights">
                   <ul>
                     <li>Handled custom and system-level validations</li>
                     <li>Implemented business process automation</li>
@@ -1228,23 +1228,23 @@ export default function Home() {
                     <li>Integrated with third-party applications</li>
                   </ul>
                 </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">D365 Sales</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Business Rules</span>
-                  <span class="tech-tag">Workflows</span>
+                <div className="tech-tags">
+                  <span className="tech-tag">D365 Sales</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">Business Rules</span>
+                  <span className="tech-tag">Workflows</span>
                 </div>
               </div>
 
-              <div class="project-card">
+              <div className="project-card">
                 <h3>POC Development Projects</h3>
-                <div class="company">Multiple Client Implementations</div>
+                <div className="company">Multiple Client Implementations</div>
                 <p>
                   Developed and implemented various Proof of Concept solutions
                   involving Power Platform understanding and integration using
                   LogicApps for diverse business requirements.
                 </p>
-                <div class="project-highlights">
+                <div className="project-highlights">
                   <ul>
                     <li>
                       Built scalable POC solutions for client requirements
@@ -1254,23 +1254,23 @@ export default function Home() {
                     <li>Created custom connectors and workflows</li>
                   </ul>
                 </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">Logic Apps</span>
-                  <span class="tech-tag">Power Platform</span>
-                  <span class="tech-tag">API Integration</span>
-                  <span class="tech-tag">Automation</span>
+                <div className="tech-tags">
+                  <span className="tech-tag">Logic Apps</span>
+                  <span className="tech-tag">Power Platform</span>
+                  <span className="tech-tag">API Integration</span>
+                  <span className="tech-tag">Automation</span>
                 </div>
               </div>
 
-              <div class="project-card">
+              <div className="project-card">
                 <h3>Web Application Development</h3>
-                <div class="company">Product-Based Company</div>
+                <div className="company">Product-Based Company</div>
                 <p>
                   Developed comprehensive web applications for household, garage
                   and kitchen products using modern JavaScript frameworks with
                   focus on user experience and performance optimization.
                 </p>
-                <div class="project-highlights">
+                <div className="project-highlights">
                   <ul>
                     <li>
                       Built responsive web applications using ReactJS and NextJS
@@ -1284,24 +1284,24 @@ export default function Home() {
                     <li>Created scalable and maintainable code architecture</li>
                   </ul>
                 </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">ReactJS</span>
-                  <span class="tech-tag">NextJS</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">SEO Optimization</span>
-                  <span class="tech-tag">Quality Assurance</span>
+                <div className="tech-tags">
+                  <span className="tech-tag">ReactJS</span>
+                  <span className="tech-tag">NextJS</span>
+                  <span className="tech-tag">JavaScript</span>
+                  <span className="tech-tag">SEO Optimization</span>
+                  <span className="tech-tag">Quality Assurance</span>
                 </div>
               </div>
 
-              <div class="project-card">
+              <div className="project-card">
                 <h3>GitHub Repository Management</h3>
-                <div class="company">Code Management & Collaboration</div>
+                <div className="company">Code Management & Collaboration</div>
                 <p>
                   Maintained comprehensive code repositories using GitHub for
                   all project implementations, ensuring version control,
                   collaboration, and code quality standards.
                 </p>
-                <div class="project-highlights">
+                <div className="project-highlights">
                   <ul>
                     <li>Maintained clean and organized code repositories</li>
                     <li>
@@ -1313,34 +1313,34 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div class="tech-tags">
-                  <span class="tech-tag">GitHub</span>
-                  <span class="tech-tag">Version Control</span>
-                  <span class="tech-tag">Code Review</span>
-                  <span class="tech-tag">Team Collaboration</span>
+                <div className="tech-tags">
+                  <span className="tech-tag">GitHub</span>
+                  <span className="tech-tag">Version Control</span>
+                  <span className="tech-tag">Code Review</span>
+                  <span className="tech-tag">Team Collaboration</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="education-cert-section">
-            <div class="education-cert-section">
-              <div class="education-card">
+          <div className="education-cert-section">
+            <div className="education-cert-section">
+              <div className="education-card">
                 <h2>🎓 Education</h2>
-                <div class="degree">Bachelor of Engineering</div>
-                <div class="university">
+                <div className="degree">Bachelor of Engineering</div>
+                <div className="university">
                   Information Technology
                   <br />
                   Mumbai University
                 </div>
               </div>
 
-              <div class="cert-card">
+              <div className="cert-card">
                 <h2>📜 Professional Certifications</h2>
-                <div class="cert-item">
+                <div className="cert-item">
                   <h4>Web Development Certification</h4>
                   <p>Completed comprehensive web development program</p>
                 </div>
-                <div class="cert-item">
+                <div className="cert-item">
                   <h4>CRM Training - Microsoft Modules</h4>
                   <p>Ongoing specialized training in Microsoft CRM solutions</p>
                 </div>
