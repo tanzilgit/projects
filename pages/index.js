@@ -788,7 +788,7 @@ export default function Home() {
                 <div className="skill-tag">Data Analytics</div>
                 <div className="skill-tag">Reporting Solutions</div>
               </div>
-              <div class="experience-summary">
+              <div className="experience-summary">
                 <h3>Industry Expertise</h3>
                 <p>
                   Public and Private sector industries, including Technology Consulting and
