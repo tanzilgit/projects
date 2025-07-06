@@ -694,12 +694,25 @@ export default function Home() {
 
       {/* CRM starts */}
       <section className="CRM">
-        <div className="floating-elements">
+        {/* <div className="floating-elements">
           <div className="floating-element"></div>
           <div className="floating-element"></div>
           <div className="floating-element"></div>
           <div className="floating-element"></div>
-        </div>
+        </div> */}
+        <div className="logo-wrapper">
+                  <Link href="/">
+                    <a>
+                      <Image
+                        src="/assets/logo-1.png"
+                        width={150}
+                        height={150}
+                        alt="Tanzil"
+                      />
+                    </a>
+                  </Link>
+                </div>
+
         <div className="container">
           <div className="header">
             <div className="profile-img">TA</div>
