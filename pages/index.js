@@ -86,7 +86,7 @@ const MainHeaderWrapper = styled.div`
     display: flex;
     text-align: center;
     justify-content: center;
-    background: #000;
+    background: transparent;
     display: block;
     position: relative;
     overflow: hidden;
@@ -727,6 +727,8 @@ export default function Home() {
           <div className="floating-element"></div>
         </div> */}
 
+
+        <div className="container">
       <MainHeaderWrapper className="MainHeaderWrapper">
           <div className="logo-wrapper">
             <Link href="/">
@@ -740,11 +742,8 @@ export default function Home() {
               </a>
             </Link>
           </div>
-        </MainHeaderWrapper>
-
-        <div className="container">
+      </MainHeaderWrapper>
           <div className="header">
-            <div className="profile-img">TA</div>
             <h1 className="name">Tanzil Ansari</h1>
             <p className="title">Senior Consultant</p>
             <p className="subtitle">Technology Consulting</p>
