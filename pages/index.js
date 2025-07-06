@@ -727,7 +727,7 @@ export default function Home() {
           <div className="floating-element"></div>
         </div> */}
 
-        <div className="MainHeaderWrapper">
+      <MainHeaderWrapper className="MainHeaderWrapper">
           <div className="logo-wrapper">
             <Link href="/">
               <a>
@@ -740,7 +740,7 @@ export default function Home() {
               </a>
             </Link>
           </div>
-        </div>
+        </MainHeaderWrapper>
 
         <div className="container">
           <div className="header">
