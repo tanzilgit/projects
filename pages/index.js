@@ -751,15 +751,15 @@ export default function Home() {
                 📞 +91 9821778945
               </a>
               <a
-                href="mailto:tanzil.ansari@pwc.banglobal.in"
+                href="mailto:tanzilahmed.ansari7@gmail.com"
                 className="contact-item"
               >
                 ✉️ Email
               </a>
-              <a href="#" className="contact-item">
+              <a href="linkedin.com/in/tanzilahmedansari" className="contact-item">
                 💼 LinkedIn
               </a>
-              <a href="#" className="contact-item">
+              <a href="https://github.com/tanzilgit/projects" className="contact-item">
                 🐙 GitHub
               </a>
             </div>
