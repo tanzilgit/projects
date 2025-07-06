@@ -1016,21 +1016,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="education-cert-section">
-            <Link href="nextjs-components">
-              <a className="contact-item">My NextJS components</a>
-            </Link>
+
+            <div className="">
+              <Link href="nextjs-components">
+                <a className="contact-item">My NextJS components</a>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
       {/* CRM Ends */}
 
-      
       {/* Earlier NextJS code use to start from here, fir component was <HeroBanner>
       Then entire code is moved to nextjs-components page */}
-      
-      
     </IndexWrapper>
   );
 }
