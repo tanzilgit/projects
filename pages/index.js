@@ -1018,9 +1018,9 @@ export default function Home() {
             </div>
           </div>
           <div className="education-cert-section">
-            <a href="/nextjs-components/" className="contact-item">
-              My NextJS components
-            </a>
+            <Link href="nextjs-components">
+              <a className="contact-item">My NextJS components</a>
+            </Link>
           </div>
         </div>
       </section>
