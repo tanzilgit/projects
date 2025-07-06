@@ -756,10 +756,16 @@ export default function Home() {
               >
                 ✉️ Email
               </a>
-              <a href="linkedin.com/in/tanzilahmedansari" className="contact-item">
+              <a
+                href="linkedin.com/in/tanzilahmedansari"
+                className="contact-item"
+              >
                 💼 LinkedIn
               </a>
-              <a href="https://github.com/tanzilgit/projects" className="contact-item">
+              <a
+                href="https://github.com/tanzilgit/projects"
+                className="contact-item"
+              >
                 🐙 GitHub
               </a>
             </div>
@@ -781,6 +787,13 @@ export default function Home() {
                 <div className="skill-tag">SharePoint</div>
                 <div className="skill-tag">Data Analytics</div>
                 <div className="skill-tag">Reporting Solutions</div>
+              </div>
+              <div class="experience-summary">
+                <h3>Industry Expertise</h3>
+                <p>
+                  Public and Private sector industries, including Technology Consulting and
+                  Product based companies.
+                </p>
               </div>
             </div>
 
