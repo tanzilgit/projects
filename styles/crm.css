@@ -358,6 +358,8 @@ align-items: center;
 
 .projects-grid {
 grid-template-columns: 1fr;
+display: grid;
+
 }
 }
 
