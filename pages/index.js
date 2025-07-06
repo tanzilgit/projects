@@ -31,7 +31,6 @@ import Gallery from "@components/Gallery";
 import HomeGridView from "@components/HomePage/HomeGridView";
 import Link from "next/link";
 
-
 /* CHECK calc -> index.js - FOR BUTTON STATE CHANGE AS PER USING STYLED COMPONENTS AND OTHER WAY IS USING className  */
 
 const IndexWrapper = styled.div`
@@ -81,8 +80,33 @@ export const GalleryWrapper = styled.div`
     right: -60px;
   }
 `;
+const MainHeaderWrapper = styled.div`
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: #000;
+    display: block;
+    position: relative;
+    overflow: hidden;
 
-
+    img {
+      border-radius: 50%;
+      /*  */
+      transform: scale(1.05);
+      transition: 0.3s all;
+      :hover {
+        /* transform: scale(1.1); */
+        transform: scale(1.1);
+        transition: 0.3s all;
+      }
+    }
+    span {
+      border-radius: 50%;
+    }
+  }
+`;
 
 export default function Home() {
   // States
@@ -702,18 +726,21 @@ export default function Home() {
           <div className="floating-element"></div>
           <div className="floating-element"></div>
         </div> */}
-        <div className="logo-wrapper">
-                  <Link href="/">
-                    <a>
-                      <Image
-                        src="/assets/logo-1.png"
-                        width={150}
-                        height={150}
-                        alt="Tanzil"
-                      />
-                    </a>
-                  </Link>
-                </div>
+
+        <div className="MainHeaderWrapper">
+          <div className="logo-wrapper">
+            <Link href="/">
+              <a>
+                <Image
+                  src="/assets/logo-1.png"
+                  width={150}
+                  height={150}
+                  alt="Tanzil"
+                />
+              </a>
+            </Link>
+          </div>
+        </div>
 
         <div className="container">
           <div className="header">
@@ -1367,7 +1394,6 @@ export default function Home() {
       <section>
         <SimpleAccordion />
       </section>
-
     </IndexWrapper>
   );
 }
