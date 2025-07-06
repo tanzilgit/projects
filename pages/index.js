@@ -727,23 +727,22 @@ export default function Home() {
           <div className="floating-element"></div>
         </div> */}
 
-
         <div className="container">
-      <MainHeaderWrapper className="MainHeaderWrapper">
-          <div className="logo-wrapper">
-            <Link href="/">
-              <a>
-                <Image
-                  src="/assets/logo-1.png"
-                  width={150}
-                  height={150}
-                  alt="Tanzil"
-                />
-              </a>
-            </Link>
-          </div>
-      </MainHeaderWrapper>
           <div className="header">
+            <MainHeaderWrapper className="MainHeaderWrapper">
+              <div className="logo-wrapper">
+                <Link href="/">
+                  <a>
+                    <Image
+                      src="/assets/logo-1.png"
+                      width={150}
+                      height={150}
+                      alt="Tanzil"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </MainHeaderWrapper>
             <h1 className="name">Tanzil Ansari</h1>
             <p className="title">Senior Consultant</p>
             <p className="subtitle">Technology Consulting</p>
