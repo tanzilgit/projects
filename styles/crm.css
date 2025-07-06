@@ -343,6 +343,7 @@ grid-template-columns: 1fr;
 
 .education-cert-section {
 grid-template-columns: 1fr;
+display: grid;
 }
 }
 
