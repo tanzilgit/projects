@@ -1,28 +1,28 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import BannerSwatch from "../components/BannerSwatch";
-import Header from "../components/Header";
-import HeroBanner from "../components/HeroBanner";
-import MegaMenu from "../components/MegaMenu";
+import BannerSwatch from "../../components/BannerSwatch";
+import Header from "../../components/Header";
+import HeroBanner from "../../components/HeroBanner";
+import MegaMenu from "../../components/MegaMenu";
 // import styles from "../styles/Home.module.css";
-import styles from "../styles/Home.module.css";
+//import styles from "../styles/Home.module.css";
 
 import styled from "styled-components";
-import GridRowItems from "../components/GridRowItems";
+import GridRowItems from "../../components/GridRowItems";
 import Slider from "react-slick";
-import CompareSlider from "../components/CompareSlider";
+import CompareSlider from "../../components/CompareSlider";
 
-import LeftRightBanner from "../components/LeftRightBanner";
-import BannerSlider from "../components/BannerSlider";
-import ServiceBlack from "../components/ServiceBlack";
-import SimpleAccordion from "../components/Accordion";
-import { NAPContainer } from "../components/CommonComponents";
-import Footer from "../components/Footer";
+import LeftRightBanner from "../../components/LeftRightBanner";
+import BannerSlider from "../../components/BannerSlider";
+import ServiceBlack from "../../components/ServiceBlack";
+import SimpleAccordion from "../../components/Accordion";
+import { NAPContainer } from "../../components/CommonComponents";
+import Footer from "../../components/Footer";
 
-import FetchAsync from "../components/APIFetching/FetchAsync";
-import FetchPromise from "../components/APIFetching/FetchPromise";
-import SliderPopUp from "../components/SliderPopUp";
+import FetchAsync from "../../components/APIFetching/FetchAsync";
+import FetchPromise from "../../components/APIFetching/FetchPromise";
+import SliderPopUp from "../../components/SliderPopUp";
 import NAPButton from "@components/NAPButton";
 import Modal from "@material-ui/core/Modal";
 import { CloseTag, ModalContainer } from "@components/VideoModal";
