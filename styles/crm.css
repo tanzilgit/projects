@@ -339,6 +339,8 @@ display: grid;
 
 .content-wrapper {
 grid-template-columns: 1fr;
+display: grid;
+
 }
 
 .education-cert-section {
