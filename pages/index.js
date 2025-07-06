@@ -29,6 +29,8 @@ import Modal from "@material-ui/core/Modal";
 import { CloseTag, ModalContainer } from "@components/VideoModal";
 import Gallery from "@components/Gallery";
 import HomeGridView from "@components/HomePage/HomeGridView";
+import Link from "next/link";
+
 
 /* CHECK calc -> index.js - FOR BUTTON STATE CHANGE AS PER USING STYLED COMPONENTS AND OTHER WAY IS USING className  */
 
