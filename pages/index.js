@@ -1017,9 +1017,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="">
+            <div className="nextjs-wrapper">
               <Link href="nextjs-components">
-                <a className="contact-item">My NextJS components</a>
+                <a className="contact-item">Some of my NextJS Components</a>
               </Link>
             </div>
           </div>

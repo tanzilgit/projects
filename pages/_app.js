@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <>
       {/* <MegaMenu /> */}
 
-      <Header />
+      {/* <Header /> */}
       <Component {...pageProps} />
       <BackToTop />
       <Footer />

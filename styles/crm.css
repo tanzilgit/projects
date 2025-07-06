@@ -404,3 +404,9 @@ animation: float 8s ease-in-out infinite;
 0%, 100% { transform: translateY(0px); }
 50% { transform: translateY(-25px); }
 }
+
+.nextjs-wrapper {
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+}
