@@ -757,7 +757,7 @@ export default function Home() {
                 ✉️ Email
               </a>
               <a
-                href="https://linkedin.com/in/tanzilahmedansari"
+                href="https://linkedin.com/in/ansaritanzil"
                 className="contact-item"
               >
                 💼 LinkedIn
