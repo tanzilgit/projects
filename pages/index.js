@@ -757,7 +757,7 @@ export default function Home() {
                 ✉️ Email
               </a>
               <a
-                href="linkedin.com/in/tanzilahmedansari"
+                href="https://linkedin.com/in/tanzilahmedansari"
                 className="contact-item"
               >
                 💼 LinkedIn
@@ -776,17 +776,15 @@ export default function Home() {
               <div className="expertise-grid">
                 <div className="skill-tag">Microsoft Dynamics 365</div>
                 <div className="skill-tag">Power Platform</div>
-                <div className="skill-tag">Logic Apps</div>
+                <div className="skill-tag">Dataverse understanding</div>
                 <div className="skill-tag">Client-Side Validations</div>
-                <div className="skill-tag">Web Development</div>
+                <div className="skill-tag">Custom Connectors</div>
+                <div className="skill-tag">Logic Apps</div>
                 <div className="skill-tag">Quality Testing</div>
-                <div className="skill-tag">Scrum & Pre-Sales</div>
+                <div className="skill-tag">Web Development</div>
                 <div className="skill-tag">JavaScript</div>
-                <div className="skill-tag">ReactJS</div>
-                <div className="skill-tag">NextJS</div>
-                <div className="skill-tag">SharePoint</div>
-                <div className="skill-tag">Data Analytics</div>
-                <div className="skill-tag">Reporting Solutions</div>
+                <div className="skill-tag">ReactJS and NextJS</div>
+                <div className="skill-tag">Scrum & Pre-Sales</div>
               </div>
               <div className="experience-summary">
                 <h3>Industry Expertise</h3>
@@ -803,8 +801,7 @@ export default function Home() {
                 <h3>5.5 Years of Excellence</h3>
                 <p>
                   Diverse consulting and product-based industry experience with
-                  deep knowledge in CRM frameworks, Microsoft Sales and Project
-                  Operations CRM Module Customization and Configuration.
+                  deep knowledge in D365 CRM frameworks, Power Platform and understanding of Microsoft Sales and Project Operations CRM Module with Customization and Configuration.
                 </p>
               </div>
               <div className="experience-summary">
@@ -856,8 +853,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="tech-tags">
-                  <span className="tech-tag">Microsoft Dynamics 365</span>
-                  <span className="tech-tag">Power Platform</span>
+                  <span className="tech-tag">Power Apps</span>
                   <span className="tech-tag">Dataverse</span>
                   <span className="tech-tag">JavaScript</span>
                   <span className="tech-tag">Power Automate</span>
@@ -888,10 +884,11 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="tech-tags">
-                  <span className="tech-tag">Project Operations</span>
-                  <span className="tech-tag">Resource Management</span>
-                  <span className="tech-tag">D365 Integration</span>
+                  <span className="tech-tag">D365 Project Operations</span>
+                  <span className="tech-tag">Dataverse</span>
+                  <span className="tech-tag">Custom Connectors to call External APIS</span>
                   <span className="tech-tag">Custom Workflows</span>
+                  <span className="tech-tag">Resource Management</span>
                 </div>
               </div>
 
@@ -938,10 +935,11 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="tech-tags">
+                  <span className="tech-tag">Power Apps</span>
+                  <span className="tech-tag">Power Automate</span>
                   <span className="tech-tag">Logic Apps</span>
-                  <span className="tech-tag">Power Platform</span>
                   <span className="tech-tag">API Integration</span>
-                  <span className="tech-tag">Automation</span>
+                  <span className="tech-tag">Plugins</span>
                 </div>
               </div>
 
