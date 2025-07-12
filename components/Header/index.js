@@ -624,7 +624,7 @@ function Header({ data }) {
             content={
               data?.metaDescription != null
                 ? data?.metaDescription
-                : "Organize and enjoy your space with premium NewAge home improvement products. Modular designs make it easy to create customized storage solutions for garage, kitchen, outdoor kitchen, home bar and more."
+                : "Tanzil"
             }
           />
 

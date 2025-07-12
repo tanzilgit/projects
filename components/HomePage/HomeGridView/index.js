@@ -188,7 +188,7 @@ function HomeGridView({
                       width="615"
                       height="500"
                       layout="responsive"
-                      alt="NewAge Products"
+                      alt="Tanzil"
                     />
                   </div>
                 ) : (
@@ -199,7 +199,7 @@ function HomeGridView({
                         width="615"
                         height="500"
                         layout="responsive"
-                        alt="NewAge Products"
+                        alt="Tanzil"
                       />
                     </div>
                     <div className="on-hover-image-show">
@@ -208,7 +208,7 @@ function HomeGridView({
                         width="615"
                         height="500"
                         layout="responsive"
-                        alt="NewAge Products"
+                        alt="Tanzil"
                       />
                     </div>
                   </div>
@@ -239,7 +239,7 @@ function HomeGridView({
                   width="285"
                   height="285"
                   layout="responsive"
-                  alt="NewAge Products"
+                  alt="Tanzil"
                 />
               </div>
               <div className="content">
