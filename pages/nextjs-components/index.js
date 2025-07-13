@@ -166,7 +166,7 @@ export default function Home() {
 
   // Image Swatch Change, Datas
   const Data1 = {
-    heading: <>FrameWorks<br/> Click on below icons to see different images as respectively </>,
+    heading: <>FrameWorks<br/> Click on below icons to see different banner images  respectively </>,
     // description: (
     //   <>
     //     <ul>
