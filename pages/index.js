@@ -798,7 +798,7 @@ export default function Home() {
             <div className="card">
               <h2>💼 Professional Experience</h2>
               <div className="experience-summary">
-                <h3>5.5 Years of Excellence</h3>
+                <h3>5+ Years of Excellence</h3>
                 <p>
                   Diverse consulting and product-based industry experience with
                   deep knowledge in D365 CRM frameworks, Power Platform and understanding of Microsoft Sales and Project Operations CRM Module with Customization and Configuration.
