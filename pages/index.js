@@ -875,7 +875,7 @@ export default function Home() {
                       Configured Project Operations modules for resource
                       tracking
                     </li>
-                    <li>Implemented custom timesheet and expense management</li>
+                    <li>Implemented customizations in D365 Timesheet management module</li>
                     <li>
                       Integrated with Microsoft Sales for unified customer
                       experience
@@ -939,7 +939,7 @@ export default function Home() {
                   <span className="tech-tag">Power Automate</span>
                   <span className="tech-tag">Logic Apps</span>
                   <span className="tech-tag">API Integration</span>
-                  <span className="tech-tag">Plugins</span>
+                  <span className="tech-tag">Basic of Plugins customizations</span>
                 </div>
               </div>
 
