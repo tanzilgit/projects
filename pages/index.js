@@ -796,7 +796,7 @@ export default function Home() {
             </div>
 
             <div className="card">
-              <h2>💼 Professional Experience</h2>
+              <h2>💼 Professional Experience.</h2>
               <div className="experience-summary">
                 <h3>5+ Years of Excellence</h3>
                 <p>
