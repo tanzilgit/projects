@@ -160,7 +160,7 @@ export default function Home() {
       },
       {
         breakpoint: 767,
-      },
+      }, 
     ],
   };
 
