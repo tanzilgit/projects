@@ -171,7 +171,7 @@ export default function Home() {
     //   <>
     //     <ul>
     //       <li>ReactJS</li>
-    //       <li>NextJS</li>
+    //       <li>NextJS</li> 
     //       <li>WordPress</li>
     //     </ul>
     //   </>
