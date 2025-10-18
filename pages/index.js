@@ -743,7 +743,7 @@ export default function Home() {
                 </Link>
               </div>
             </MainHeaderWrapper>
-            <h1 className="name">Tanzil Ansari</h1>
+            <h1 className="name">Tanzil Ansari.</h1>
             <p className="title">Senior Consultant</p>
             <p className="subtitle">Technology Consulting</p>
             <div className="contact-info">
