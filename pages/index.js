@@ -870,7 +870,7 @@ export default function Home() {
                 <div className="project-highlights">
                   <ul>
                     <li>
-                      Implemented Copilot Studio for User Experience of helping Users to sort out their Level 1 queries with companies's knowledge base, without reaching out any team or human.
+                      Implemented Copilot Studio for User Experience of helping Users to sort out their Level 1 queries with companies knowledge base, without reaching out any team or human.
                     </li>
                     <li>
                       Use Power Automate, read the file from Email and using Power Automate AI Hub, analyze and get the meta data of it then, send the output from the AI Hub response to user with formatting. 
