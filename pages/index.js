@@ -860,6 +860,35 @@ export default function Home() {
                   <span className="tech-tag">Power Automate</span>
                 </div>
               </div>
+              <div className="project-card">
+                <h3>Copilot Agents and Power Automate Implementation</h3>
+                <div className="company">Engineering Services Company</div>
+                <p>
+                  Implemented Copilot Agents, both User based and Autonomous type Agents using Copilot Studio Platform and Power Automate.
+                  Let them Automate their existing Invoice, Expense and HR Onboarding Process. 
+                </p>
+                <div className="project-highlights">
+                  <ul>
+                    <li>
+                      Implemented Copilot Studio for User Experience of helping Users to sort out their Level 1 queries with companies's knowledge base, without reaching out any team or human.
+                    </li>
+                    <li>
+                      Use Power Automate, read the file from Email and using Power Automate AI Hub, analyze and get the meta data of it then, send the output from the AI Hub response to user with formatting. 
+                    </li>
+                    <li>
+                      Implemented Power Automate, to send Email Notification to User with Agent Response.
+                    </li>
+                    <li>
+                      Developed Dataverse integrations with external systems for maintaining Data.
+                    </li>
+                  </ul>
+                </div>
+                <div className="tech-tags">
+                  <span className="tech-tag">Copilot Studio</span>
+                  <span className="tech-tag">Power Automate</span>
+                  <span className="tech-tag">Dataverse</span>
+                </div>
+              </div>
 
               <div className="project-card">
                 <h3>Microsoft Project Operations Implementation</h3>
