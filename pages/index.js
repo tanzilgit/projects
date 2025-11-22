@@ -879,7 +879,7 @@ export default function Home() {
                       Implemented Power Automate, to send Email Notification to User with Agent Response.
                     </li>
                     <li>
-                      Developed Dataverse integrations with external systems for maintaining Data.
+                      Developed Dataverse integrations with external systems for maintaining Data. 
                     </li>
                   </ul>
                 </div>
