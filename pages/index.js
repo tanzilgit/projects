@@ -800,19 +800,26 @@ export default function Home() {
               <h2>💼 Professional Experience</h2>
               <div className="experience-summary">
                 <h3>5+ Years of Excellence</h3>
-                <p>
+                {/* <p>
                   Diverse consulting and product-based industry experience with
                   deep knowledge in D365 CRM frameworks, Power Platform and understanding of Microsoft Sales and Project Operations CRM Module with Customization and Configuration.
+                </p> */}
+                <p>
+                  Diverse consulting and product-based industry experience with extensive expertise in D365 CRM frameworks, the Power Platform, and Microsoft Sales and Project Operations modules, including both customization and configuration. Additionally, has hands-on experience using Microsoft Copilot Studio to build advanced copilots and autonomous agents that enhance business processes and user productivity.
                 </p>
               </div>
               <div className="experience-summary">
                 <h3>Technical Leadership</h3>
-                <p>
+                {/* <p>
                   Expertise in Power Platform Technical and Functional
                   consulting across various D365 implementations. Skilled in
                   JavaScript, Business Rules, Workflows and Dataverse
                   integrations.
+                </p> */}
+                <p>
+                Expertise in both technical and functional Power Platform consulting across multiple D365 implementations, with strong skills in JavaScript, Business Rules, Workflows, and Dataverse integrations. Also familiar with the fundamentals of Copilot Studio for building AI-driven enhancements.
                 </p>
+
               </div>
               <div className="experience-summary">
                 <h3>Frontend Development Expertise</h3>
