@@ -818,7 +818,7 @@ export default function Home() {
                 </p> */}
                 <p>
                 Expertise in both technical and functional Power Platform consulting across multiple D365 implementations, with strong skills in JavaScript, Business Rules, Workflows, and Dataverse integrations. Also familiar with the fundamentals of Copilot Studio for building AI-driven enhancements.
-                </p>
+                </p> 
 
               </div>
               <div className="experience-summary">
