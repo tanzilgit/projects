@@ -806,7 +806,7 @@ export default function Home() {
                 </p> */}
                 <p>
                   Diverse consulting and product-based industry experience with extensive expertise in D365 CRM frameworks, the Power Platform, and Microsoft Sales and Project Operations modules, including both customization and configuration. Additionally, has hands-on experience using Microsoft Copilot Studio to build advanced copilots and autonomous agents that enhance business processes and user productivity.
-                </p>
+                </p> 
               </div>
               <div className="experience-summary">
                 <h3>Technical Leadership</h3>
